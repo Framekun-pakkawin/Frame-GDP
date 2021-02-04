@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterSwitch : MonoBehaviour
 {
-    public bool ControlingP1 = true;
+    public bool IsControling = true;
     void Start()
     {
         
@@ -15,13 +15,13 @@ public class CharacterSwitch : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (ControlingP1 == true)
+            if (IsControling == true)
             {
-                ControlingP1 = false;
+                IsControling = false;
             }
             else
             {
-                ControlingP1 = true;
+                IsControling = true;
             }
         }
         

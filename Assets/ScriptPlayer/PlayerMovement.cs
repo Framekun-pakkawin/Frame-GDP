@@ -5,20 +5,34 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
+    public CharacterSwitch characterswitch;
     float horizontalmove = 0.0f;
     public float runspeed = 3.0f;
+    public HealthBar healthBar;
+    public int maxHealth = 100;
+    public int currentHealth;
     bool jump = false;
     void Start()
     {
-        
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
     {
-        horizontalmove = Input.GetAxisRaw("Horizontal")* runspeed;
-        if (Input.GetButtonDown("Jump"))
+        if (characterswitch.IsControling == true)
         {
-            jump = true;
+
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                TakeDamage(10);
+            }
+            horizontalmove = Input.GetAxisRaw("Horizontal") * runspeed;
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+            }
         }
     }
 
@@ -26,5 +40,10 @@ public class PlayerMovement : MonoBehaviour
     {
         controller.Move(horizontalmove * Time.deltaTime,false,jump);
         jump = false;
+    }
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
 }

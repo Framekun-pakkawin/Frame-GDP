@@ -1,7 +1,175 @@
 fileFormatVersion: 2
 guid: 402a1c1c2be5e1b4fbeb77bc0fb0a168
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3886037640992526394
+    second: kirb1_0
+  - first:
+      213: -6536651685162897207
+    second: kirb1_1
+  - first:
+      213: -2178899910879592716
+    second: kirb1_2
+  - first:
+      213: 3379747223539048268
+    second: kirb1_3
+  - first:
+      213: 1490780297958118933
+    second: kirb1_4
+  - first:
+      213: -357062498233228709
+    second: kirb1_5
+  - first:
+      213: -2657855892798115908
+    second: kirb1_6
+  - first:
+      213: 6848366604180021299
+    second: kirb1_7
+  - first:
+      213: 1341962860504649629
+    second: kirb1_8
+  - first:
+      213: 6389519541624533068
+    second: kirb1_9
+  - first:
+      213: -3806381746280629559
+    second: kirb1_10
+  - first:
+      213: 3187048668853074347
+    second: kirb1_11
+  - first:
+      213: -3077353141827682793
+    second: kirb1_12
+  - first:
+      213: -8142362612270061002
+    second: kirb1_13
+  - first:
+      213: 862327645530091773
+    second: kirb1_14
+  - first:
+      213: -7898966982310648623
+    second: kirb1_15
+  - first:
+      213: 7938240828194694934
+    second: kirb1_16
+  - first:
+      213: -3960506626987051506
+    second: kirb1_17
+  - first:
+      213: 8544179713908818964
+    second: kirb1_18
+  - first:
+      213: -6418377822714135569
+    second: kirb1_19
+  - first:
+      213: -2507810204120617681
+    second: kirb1_20
+  - first:
+      213: 1209084394647095580
+    second: kirb1_21
+  - first:
+      213: -4622570259768671314
+    second: kirb1_22
+  - first:
+      213: -7862942106255220013
+    second: kirb1_23
+  - first:
+      213: -7391484175697958045
+    second: kirb1_24
+  - first:
+      213: -5863315540548647408
+    second: kirb1_25
+  - first:
+      213: 2248973564722745409
+    second: kirb1_26
+  - first:
+      213: 3912674715184146597
+    second: kirb1_27
+  - first:
+      213: -5038574040852900056
+    second: kirb1_28
+  - first:
+      213: 1384871041934068907
+    second: kirb1_29
+  - first:
+      213: -679887338410622536
+    second: kirb1_30
+  - first:
+      213: -8581568465442960012
+    second: kirb1_31
+  - first:
+      213: -1874762354553394594
+    second: kirb1_32
+  - first:
+      213: -2023918085838292991
+    second: kirb1_33
+  - first:
+      213: 1239003121684989066
+    second: kirb1_34
+  - first:
+      213: 9095166800452883777
+    second: kirb1_35
+  - first:
+      213: 6576060782774527969
+    second: kirb1_36
+  - first:
+      213: 6967056198163750304
+    second: kirb1_37
+  - first:
+      213: 1389896745432183184
+    second: kirb1_38
+  - first:
+      213: 4631751874347731586
+    second: kirb1_39
+  - first:
+      213: -4830779334449691521
+    second: kirb1_40
+  - first:
+      213: 8114372549619267381
+    second: kirb1_41
+  - first:
+      213: -3399576656503187992
+    second: kirb1_42
+  - first:
+      213: 9090928733263285544
+    second: kirb1_43
+  - first:
+      213: -8708026936944760106
+    second: kirb1_44
+  - first:
+      213: -4982154680446962051
+    second: kirb1_45
+  - first:
+      213: -1263110074666353226
+    second: kirb1_46
+  - first:
+      213: 5957333207256070209
+    second: kirb1_47
+  - first:
+      213: 6793727004036109188
+    second: kirb1_48
+  - first:
+      213: 8961929458362219727
+    second: kirb1_49
+  - first:
+      213: 4707731906685279786
+    second: kirb1_50
+  - first:
+      213: 8931875683021602571
+    second: kirb1_51
+  - first:
+      213: -7450629325189907513
+    second: kirb1_52
+  - first:
+      213: -4298356823726817573
+    second: kirb1_53
+  - first:
+      213: -669836464055045435
+    second: kirb1_54
+  - first:
+      213: 951707618126049669
+    second: kirb1_55
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +208,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +239,1269 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: kirb1_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 319
+        width: 38
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30182735aafde530800000000000000
+      internalID: 3886037640992526394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 318
+        width: 36
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0386dcce52945a0800000000000000
+      internalID: -6536651685162897207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 318
+        width: 49
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe34ea431ef2c1e0800000000000000
+      internalID: -2178899910879592716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 319
+        width: 44
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f58a1713647ee20800000000000000
+      internalID: 3379747223539048268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_4
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 321
+        width: 53
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516d1f158c050b410800000000000000
+      internalID: 1490780297958118933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 323
+        width: 63
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52e136bc857b0bf0800000000000000
+      internalID: -357062498233228709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 321
+        width: 47
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfe69db5266d1bd0800000000000000
+      internalID: -2657855892798115908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_7
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 319
+        width: 47
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3306ccd64294a0f50800000000000000
+      internalID: 6848366604180021299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_8
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 320
+        width: 47
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f85229c1c9f9210800000000000000
+      internalID: 1341962860504649629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_9
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 255
+        width: 40
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4072f38b222ca850800000000000000
+      internalID: 6389519541624533068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 255
+        width: 44
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca796508f30d2bc0800000000000000
+      internalID: -3806381746280629559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_11
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 256
+        width: 40
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba97edce0ebaa3c20800000000000000
+      internalID: 3187048668853074347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 259
+        width: 35
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ebdec3f9b0b45d0800000000000000
+      internalID: -3077353141827682793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_13
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 258
+        width: 34
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63aa83f1854800f80800000000000000
+      internalID: -8142362612270061002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_14
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 256
+        width: 33
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0f1dfbc6a97fb00800000000000000
+      internalID: 862327645530091773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_15
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 255
+        width: 38
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4a5de416b316290800000000000000
+      internalID: -7898966982310648623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_16
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 257
+        width: 40
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6172c0289fb4a2e60800000000000000
+      internalID: 7938240828194694934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_17
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 258
+        width: 38
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e063bd7d4347909c0800000000000000
+      internalID: -3960506626987051506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 191
+        width: 57
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41442a84e26039670800000000000000
+      internalID: 8544179713908818964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_19
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 190
+        width: 47
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febf0e250675de6a0800000000000000
+      internalID: -6418377822714135569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_20
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 190
+        width: 46
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d6a4308e7723dd0800000000000000
+      internalID: -2507810204120617681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 192
+        width: 45
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c198866d9d787c010800000000000000
+      internalID: 1209084394647095580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_22
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 191
+        width: 50
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3043517d459dfb0800000000000000
+      internalID: -4622570259768671314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_23
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 190
+        width: 50
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2223360d731e290800000000000000
+      internalID: -7862942106255220013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_24
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 190
+        width: 38
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b2a90dd4c2c6990800000000000000
+      internalID: -7391484175697958045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_25
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 179
+        width: 50
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016029fb49151aea0800000000000000
+      internalID: -5863315540548647408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_26
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 190
+        width: 40
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1401b82aa85f53f10800000000000000
+      internalID: 2248973564722745409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_27
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 115
+        width: 50
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a824385cec9c4630800000000000000
+      internalID: 3912674715184146597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_28
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 128
+        width: 44
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8275578fa93631ab0800000000000000
+      internalID: -5038574040852900056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_29
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 118
+        width: 48
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac843210ec083310800000000000000
+      internalID: 1384871041934068907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_30
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 131
+        width: 44
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1cfb2611e8096f0800000000000000
+      internalID: -679887338410622536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_31
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 128
+        width: 40
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d0491a2f428e880800000000000000
+      internalID: -8581568465442960012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_32
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 128
+        width: 37
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ae19a42918bf5e0800000000000000
+      internalID: -1874762354553394594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_33
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 127
+        width: 52
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108be1f593999e3e0800000000000000
+      internalID: -2023918085838292991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_34
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 127
+        width: 50
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8442af46c2d13110800000000000000
+      internalID: 1239003121684989066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_35
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 128
+        width: 40
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1459be94406883e70800000000000000
+      internalID: 9095166800452883777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_36
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 65
+        width: 58
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e727a2c07cd24b50800000000000000
+      internalID: 6576060782774527969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 56
+        width: 43
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0addbbdf2b4ffa060800000000000000
+      internalID: 6967056198163750304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_38
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 57
+        width: 59
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091f4f9d9b7e94310800000000000000
+      internalID: 1389896745432183184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_39
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 57
+        width: 39
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a0f362ac9474040800000000000000
+      internalID: 4631751874347731586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_40
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 65
+        width: 43
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7404d53acf95fcb0800000000000000
+      internalID: -4830779334449691521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_41
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 66
+        width: 54
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537bc3397da0c9070800000000000000
+      internalID: 8114372549619267381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_42
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 65
+        width: 38
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5da6aea0742d0d0800000000000000
+      internalID: -3399576656503187992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_43
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 51
+        width: 49
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dcc806487792e70800000000000000
+      internalID: 9090928733263285544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_44
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 65
+        width: 40
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6daefd053afd62780800000000000000
+      internalID: -8708026936944760106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_45
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 56
+        width: 8
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76b8e7f6b4dbdab0800000000000000
+      internalID: -4982154680446962051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_46
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 56
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd7b4f4418887ee0800000000000000
+      internalID: -1263110074666353226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_47
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3
+        width: 47
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148f22b1df2bca250800000000000000
+      internalID: 5957333207256070209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_48
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1
+        width: 47
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4831d8827ba284e50800000000000000
+      internalID: 6793727004036109188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_49
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2
+        width: 51
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fccf9cb2c5b2f5c70800000000000000
+      internalID: 8961929458362219727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_50
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 3
+        width: 44
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e9fbbf939355140800000000000000
+      internalID: 4707731906685279786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_51
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 40
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fb3705c9564fb70800000000000000
+      internalID: 8931875683021602571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_52
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 0
+        width: 37
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb72f69a1c0a9890800000000000000
+      internalID: -7450629325189907513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_53
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 2
+        width: 47
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdef2e31e3b2954c0800000000000000
+      internalID: -4298356823726817573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_54
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 2
+        width: 42
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2356ee84344b6f0800000000000000
+      internalID: -669836464055045435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kirb1_55
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 2
+        width: 44
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581bf6c4905253d00800000000000000
+      internalID: 951707618126049669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
