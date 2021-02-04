@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     float horizontalmove = 0.0f;
     public float runspeed = 3.0f;
     public HealthBar healthBar;
-    public int maxHealth = 100;
-    public int currentHealth;
+    public float maxHealth = 100;
+    public float currentHealth;
     bool jump = false;
     void Start()
     {
@@ -20,14 +20,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+        }
         if (characterswitch.IsControling == true)
         {
-
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                TakeDamage(10);
-            }
             horizontalmove = Input.GetAxisRaw("Horizontal") * runspeed;
             if (Input.GetButtonDown("Jump"))
             {
@@ -41,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontalmove * Time.deltaTime,false,jump);
         jump = false;
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
