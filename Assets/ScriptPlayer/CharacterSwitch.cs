@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterSwitch : MonoBehaviour
 {
     public bool IsControling = true;
+    public PlayerMovement player;
     void Start()
     {
         
@@ -24,6 +25,16 @@ public class CharacterSwitch : MonoBehaviour
                 IsControling = true;
             }
         }
-        
+    }
+    void FixedUpdate()
+    {
+        if (IsControling == true)
+        {
+            player.TakeDamage(1);
+        }
+        else if (IsControling == false)
+        {
+            player.TakeDamage(-2);
+        }
     }
 }
