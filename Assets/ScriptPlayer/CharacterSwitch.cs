@@ -19,6 +19,7 @@ public class CharacterSwitch : MonoBehaviour
             if (IsControling == true)
             {
                 IsControling = false;
+                player.SwitchOut();
             }
             else
             {

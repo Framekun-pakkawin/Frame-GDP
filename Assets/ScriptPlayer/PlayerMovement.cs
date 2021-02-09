@@ -48,4 +48,8 @@ public class PlayerMovement : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
+    public void SwitchOut()
+    {
+        gameObject.SetActive(false);
+    }
 }
