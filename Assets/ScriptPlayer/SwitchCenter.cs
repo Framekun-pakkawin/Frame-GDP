@@ -30,8 +30,13 @@ public class SwitchCenter : MonoBehaviour
     }
     void Switch(GameObject playerin,GameObject playerout)
     {
+        CharacterSwitch playerincode = playerin.GetComponent<CharacterSwitch>();
+        CharacterSwitch playeroutcode = playerout.GetComponent<CharacterSwitch>();
         Transform currplayer = playerout.gameObject.transform;
         playerin.transform.position = new Vector3(currplayer.position.x, currplayer.position.y, currplayer.position.z);
+        playeroutcode.IsControling = false;
+        playerout.SetActive(false);
         playerin.SetActive(true);
+        playerincode.IsControling = true;
     }
 }
