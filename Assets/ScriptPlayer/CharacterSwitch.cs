@@ -29,13 +29,6 @@ public class CharacterSwitch : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (IsControling == true)
-        {
-            player.TakeDamage(1);
-        }
-        else if (IsControling == false)
-        {
-            player.TakeDamage(-2);
-        }
+        
     }
 }
