@@ -11,9 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public HealthBar healthBar;
     public PlayerHp playerhp;
     bool jump = false;
+    public Animator anim;
     void Start()
     {
-        
+        anim.Play("Ideal");
     }
 
     void Update()
