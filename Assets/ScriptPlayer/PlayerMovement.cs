@@ -58,13 +58,9 @@ public class PlayerMovement : MonoBehaviour
         {
             ChangeAnimationState(PLAYER_RUNRIGHT);
         }
-        else if (horizontalmove > 0)
+        else if (horizontalmove < 0)
         {
             ChangeAnimationState(PLAYER_RUNLEFT);
-        }
-        else 
-        {
-            
         }
     }
 
