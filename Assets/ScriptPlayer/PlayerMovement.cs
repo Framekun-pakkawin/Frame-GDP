@@ -10,11 +10,38 @@ public class PlayerMovement : MonoBehaviour
     public float runspeed = 3.0f;
     public HealthBar healthBar;
     public PlayerHp playerhp;
+    public bool isplayer2 = false;
     bool jump = false;
-    public Animator anim;
+    public Animator animator;
+    private string CurrentState;
+
+    //Animation State Name Player1//
+
+    string PLAYER_IDEALRIGHT = "Ideal";
+    string PLAYER_IDEALLEFT = "Idealback";
+    string PLAYER_RUNRIGHT = "Run_Foward";
+    string PLAYER_RUNLEFT = "Run_backWard";
+    string PLAYER_ATTACK = "Attack1";
+    string PLAYER_DAMAGERIGHT = "Damage_front";
+    string PLAYER_DAMAGELEFT = "Damage_back";
+
+    ////////////////////////////////
+    
     void Start()
     {
-        anim.Play("Ideal");
+        //Animation State Name Player2//
+        if (isplayer2 == true)
+        {
+            PLAYER_IDEALRIGHT = "Ideal";
+            PLAYER_IDEALLEFT = "Idealback";
+            PLAYER_RUNRIGHT = "Run_Foward";
+            PLAYER_RUNLEFT = "Run_backWard";
+            PLAYER_ATTACK = "Attack1";
+            PLAYER_DAMAGERIGHT = "Damage_front";
+            PLAYER_DAMAGELEFT = "Damage_back";
+        }
+
+        ////////////////////////////////
     }
 
     void Update()
@@ -26,6 +53,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 jump = true;
             }
+        }
+        if (horizontalmove > 0)
+        {
+            ChangeAnimationState(PLAYER_RUNRIGHT);
+        }
+        else if (horizontalmove > 0)
+        {
+            ChangeAnimationState(PLAYER_RUNLEFT);
+        }
+        else 
+        {
+            
         }
     }
 
@@ -42,5 +81,13 @@ public class PlayerMovement : MonoBehaviour
     public void SwitchOut()
     {
         gameObject.SetActive(false);
+    }
+    public void ChangeAnimationState(string NewState) 
+    {
+        if (CurrentState == NewState) { return; }
+
+        animator.Play(NewState);
+
+        CurrentState = NewState;
     }
 }
