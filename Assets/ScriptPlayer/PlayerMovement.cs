@@ -15,11 +15,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     private string CurrentState;
 
-    //Animation State Name Player1//
+
+    //ใส่anim ตัวผู้หญิง//
 
     string PLAYER_IDEALRIGHT = "Ideal";
     string PLAYER_IDEALLEFT = "Idealback";
-    string PLAYER_RUNRIGHT = "Run_Foward";
+    string PLAYER_RUNRIGHT = "Run_Forward";
     string PLAYER_RUNLEFT = "Run_backWard";
     string PLAYER_ATTACK = "Attack1";
     string PLAYER_DAMAGERIGHT = "Damage_front";
@@ -27,18 +28,30 @@ public class PlayerMovement : MonoBehaviour
 
     ////////////////////////////////
     
+    //ใส่anim ตัวผู้ชาย//
+
+    string PLAYER_IDEALRIGHT2 = "Ideal";
+    string PLAYER_IDEALLEFT2 = "Idealback";
+    string PLAYER_RUNRIGHT2 = "Run_Foward";
+    string PLAYER_RUNLEFT2 = "Run_backWard";
+    string PLAYER_ATTACK2 = "Attack1";
+    string PLAYER_DAMAGERIGHT2 = "Damage_front";
+    string PLAYER_DAMAGELEFT2 = "Damage_back";
+
+    ////////////////////////////////
+    
     void Start()
     {
-        //Animation State Name Player2//
+        //ใส่anim ผู้ชาย// 2 = ผู้ชาย
         if (isplayer2 == true)
         {
-            PLAYER_IDEALRIGHT = "Ideal";
-            PLAYER_IDEALLEFT = "Idealback";
-            PLAYER_RUNRIGHT = "Run_Foward";
-            PLAYER_RUNLEFT = "Run_backWard";
-            PLAYER_ATTACK = "Attack1";
-            PLAYER_DAMAGERIGHT = "Damage_front";
-            PLAYER_DAMAGELEFT = "Damage_back";
+            PLAYER_IDEALRIGHT = PLAYER_IDEALRIGHT2;
+            PLAYER_IDEALLEFT = PLAYER_IDEALLEFT2;
+            PLAYER_RUNRIGHT = PLAYER_RUNRIGHT2;
+            PLAYER_RUNLEFT = PLAYER_RUNLEFT2;
+            PLAYER_ATTACK = PLAYER_ATTACK2;
+            PLAYER_DAMAGERIGHT = PLAYER_DAMAGERIGHT2;
+            PLAYER_DAMAGELEFT = PLAYER_DAMAGELEFT2;
         }
 
         ////////////////////////////////
