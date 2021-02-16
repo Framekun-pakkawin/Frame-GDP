@@ -8,6 +8,7 @@ public class SwitchCenter : MonoBehaviour
     public GameObject player1object;
     public CharacterSwitch player2code;
     public GameObject player2object;
+    public bool isplayer1 = true;
     void Start()
     {
         
@@ -20,11 +21,13 @@ public class SwitchCenter : MonoBehaviour
             {
                 player1code.IsControling = false;
                 Switch(player2object, player1object);
+                isplayer1 = false;
             }
             else if(player2code.IsControling == true)
             {
                 player2code.IsControling = false;
                 Switch(player1object, player2object);
+                isplayer1 = true;
             }
         }
     }

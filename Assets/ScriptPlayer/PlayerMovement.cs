@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public HealthBar healthBar;
     public PlayerHp playerhp;
     public bool isplayer2 = false;
+    bool isFacingright = true;
     bool jump = false;
     public Animator animator;
     private string CurrentState;
@@ -31,11 +32,11 @@ public class PlayerMovement : MonoBehaviour
     //ใส่anim ตัวผู้ชาย//
 
     string PLAYER_IDEALRIGHT2 = "Ideal";
-    string PLAYER_IDEALLEFT2 = "Idealback";
-    string PLAYER_RUNRIGHT2 = "Run_Foward";
-    string PLAYER_RUNLEFT2 = "Run_backWard";
-    string PLAYER_ATTACK2 = "Attack1";
-    string PLAYER_DAMAGERIGHT2 = "Damage_front";
+    string PLAYER_IDEALLEFT2 = "Ideal_Back";
+    string PLAYER_RUNRIGHT2 = "Runforward";
+    string PLAYER_RUNLEFT2 = "RunBackward";
+    string PLAYER_ATTACK2 = "Attack";
+    string PLAYER_DAMAGERIGHT2 = "Damage";
     string PLAYER_DAMAGELEFT2 = "Damage_back";
 
     ////////////////////////////////
@@ -61,19 +62,44 @@ public class PlayerMovement : MonoBehaviour
     {
         if (characterswitch.IsControling == true)
         {
-            horizontalmove = Input.GetAxisRaw("Horizontal") * runspeed;
-            if (Input.GetButtonDown("Jump"))
+            if (isplayer2 == false)
             {
-                jump = true;
+                horizontalmove = Input.GetAxisRaw("Horizontal") * runspeed;
+                if (Input.GetButtonDown("Jump"))
+                {
+                    jump = true;
+                }
             }
+            else
+            {
+                horizontalmove = Input.GetAxisRaw("Horizontal2") * runspeed;
+                if (Input.GetButtonDown("Jump2"))
+                {
+                    jump = true;
+                }
+            }
+            
         }
         if (horizontalmove > 0)
         {
             ChangeAnimationState(PLAYER_RUNRIGHT);
+            isFacingright = true;
         }
         else if (horizontalmove < 0)
         {
             ChangeAnimationState(PLAYER_RUNLEFT);
+            isFacingright = false;
+        }
+        else 
+        {
+            if (isFacingright == true)
+            {
+                ChangeAnimationState(PLAYER_IDEALRIGHT);
+            }
+            else
+            {
+                ChangeAnimationState(PLAYER_IDEALLEFT);
+            }
         }
     }
 
