@@ -1956,7 +1956,7 @@ GameObject:
   - component: {fileID: 192547909}
   m_Layer: 0
   m_Name: beanblue
-  m_TagString: Enemy
+  m_TagString: Demon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4034,7 +4034,7 @@ GameObject:
   - component: {fileID: 1088456241}
   m_Layer: 0
   m_Name: fireSpirit
-  m_TagString: Enemy
+  m_TagString: Spirit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4341,6 +4341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1431955347}
   - component: {fileID: 1431955348}
+  - component: {fileID: 1431955349}
   m_Layer: 0
   m_Name: slashhitbox
   m_TagString: Untagged
@@ -4388,6 +4389,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1718488, y: 1.0931058}
   m_EdgeRadius: 0
+--- !u!114 &1431955349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431955346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b78f865a901b14a8cf37dc4fbba0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1434815777
 GameObject:
   m_ObjectHideFlags: 0

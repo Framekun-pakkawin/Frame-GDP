@@ -15,7 +15,6 @@ public class Spirit_Behavior : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
     Transform starttranform;
-    // Start is called before the first frame update
     void Start()
     {
         starttranform = gameObject.transform;
@@ -41,7 +40,6 @@ public class Spirit_Behavior : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (path == null)
@@ -56,17 +54,15 @@ public class Spirit_Behavior : MonoBehaviour
         {
             reachedEndOfPath = false;
         }
-        if (reachedEndOfPath == true)
-        {
+        
             Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
             Vector2 force = direction * speed * Time.deltaTime;
 
             rb.AddForce(force);
-        }
-        else 
-        {
+        
+        
             transform.position = Vector2.MoveTowards(transform.position, starttranform.position, speed * Time.deltaTime);
-        }
+        
             float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
        
 
