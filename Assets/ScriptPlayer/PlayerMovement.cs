@@ -119,10 +119,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void ChangeAnimationState(string NewState) 
     {
-        if (CurrentState == NewState) { return; }
+        if (CurrentState != NewState)
+        {
+            animator.Play(NewState);
 
-        animator.Play(NewState);
-
-        CurrentState = NewState;
+            CurrentState = NewState;
+        }
     }
 }
