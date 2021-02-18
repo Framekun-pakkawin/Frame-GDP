@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySta : MonoBehaviour
+public class EnemyStatus : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float Enemyhp = 20.0f;
     void Start()
     {
         
@@ -14,5 +14,9 @@ public class EnemySta : MonoBehaviour
     void Update()
     {
         
+    }
+    public void TakeDamage(float Damage)
+    {
+        Enemyhp -= Damage;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class bulletsaber : MonoBehaviour
 {
     public float speed = 20.0f;
+    public float bulletdamage = 5.0f;
     Rigidbody2D rb;
     void Start()
     {
@@ -14,9 +15,8 @@ public class bulletsaber : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.gameObject.CompareTag("Enemy") == true)
-        {   
-
+        if (hitInfo.gameObject.CompareTag("Spirit") == true)
+        {
             Destroy(gameObject);
         }
     }
