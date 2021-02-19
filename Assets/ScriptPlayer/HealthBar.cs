@@ -13,8 +13,8 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        fill.color = new Color(fill.color.r, fill.color.g, fill.color.b,1.0f- (playerhp.currentHealth/ playerhp.maxHealth));
-        border.color = new Color(border.color.r, border.color.g, border.color.b, 1.0f - (playerhp.currentHealth / playerhp.maxHealth));
+        //fill.color = new Color(fill.color.r, fill.color.g, fill.color.b,1.0f- (playerhp.currentHealth/ playerhp.maxHealth));
+        //border.color = new Color(border.color.r, border.color.g, border.color.b, 1.0f - (playerhp.currentHealth / playerhp.maxHealth));
 
     }
     public void SetMaxHealth(float health) 

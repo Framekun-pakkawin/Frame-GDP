@@ -266,7 +266,7 @@ PrefabInstance:
     - target: {fileID: -6664970162505751883, guid: 97b5e0a2cfb735d4da93656d181a9e13,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 4.2180443
+      value: 4.218046
       objectReference: {fileID: 0}
     - target: {fileID: -6664970162505751883, guid: 97b5e0a2cfb735d4da93656d181a9e13,
         type: 3}
@@ -1960,7 +1960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &192547906
 Transform:
   m_ObjectHideFlags: 0
@@ -2653,6 +2653,7 @@ MonoBehaviour:
   firepoint: {fileID: 1273230787}
   bulletPrefab: {fileID: 2241605972437509092, guid: af036d2f7fa325c4e89235334bb5c24d,
     type: 3}
+  playermove: {fileID: 431491901}
 --- !u!1 &432197832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,7 +4059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1088456238
 Rigidbody2D:
   serializedVersion: 4

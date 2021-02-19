@@ -84,21 +84,29 @@ public class PlayerMovement : MonoBehaviour
         {
             ChangeAnimationState(PLAYER_RUNRIGHT);
             isFacingright = true;
+            animator.SetBool("isFacingRight", true);
         }
         else if (horizontalmove < 0)
         {
             ChangeAnimationState(PLAYER_RUNLEFT);
             isFacingright = false;
+            animator.SetBool("isFacingRight", false);
         }
         else 
         {
             if (isFacingright == true)
             {
-                ChangeAnimationState(PLAYER_IDEALRIGHT);
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == false)
+                {
+                    ChangeAnimationState(PLAYER_IDEALRIGHT);
+                }
             }
             else
             {
-                ChangeAnimationState(PLAYER_IDEALLEFT);
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == false)
+                {
+                    ChangeAnimationState(PLAYER_IDEALLEFT);
+                }
             }
         }
     }
