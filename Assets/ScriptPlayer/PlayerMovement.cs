@@ -121,10 +121,6 @@ public class PlayerMovement : MonoBehaviour
         playerhp.currentHealth -= damage;
         healthBar.SetHealth(playerhp.currentHealth);
     }
-    public void SwitchOut()
-    {
-        gameObject.SetActive(false);
-    }
     public void ChangeAnimationState(string NewState) 
     {
         if (CurrentState != NewState)

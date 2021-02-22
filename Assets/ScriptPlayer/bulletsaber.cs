@@ -17,6 +17,8 @@ public class bulletsaber : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Spirit") == true)
         {
+            EnemyStatus enemy = hitInfo.GetComponent<EnemyStatus>();
+            enemy.TakeDamage(10);
             Destroy(gameObject);
         }
     }
