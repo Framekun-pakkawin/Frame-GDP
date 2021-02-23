@@ -8,6 +8,7 @@ public class SwitchCenter : MonoBehaviour
     public GameObject player1object;
     public CharacterSwitch player2code;
     public GameObject player2object;
+    public Transform savespot;
     public bool isplayer1 = true;
     void Start()
     {
@@ -38,8 +39,7 @@ public class SwitchCenter : MonoBehaviour
         Transform currplayer = playerout.gameObject.transform;
         playerin.transform.position = new Vector3(currplayer.position.x, currplayer.position.y, currplayer.position.z);
         playeroutcode.IsControling = false;
-        playerout.SetActive(false);
-        playerin.SetActive(true);
+        playerout.transform.position = new Vector3(savespot.position.x, savespot.position.y, savespot.position.z);
         playerincode.IsControling = true;
     }
 }

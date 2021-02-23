@@ -116,14 +116,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontalmove * Time.deltaTime,false,jump);
         jump = false;
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         playerhp.currentHealth -= damage;
         healthBar.SetHealth(playerhp.currentHealth);
-    }
-    public void SwitchOut()
-    {
-        gameObject.SetActive(false);
     }
     public void ChangeAnimationState(string NewState) 
     {

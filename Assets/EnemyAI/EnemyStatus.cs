@@ -10,7 +10,6 @@ public class EnemyStatus : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -18,5 +17,9 @@ public class EnemyStatus : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         Enemyhp -= Damage;
+        if (Enemyhp <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
