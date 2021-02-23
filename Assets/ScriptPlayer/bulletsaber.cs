@@ -10,7 +10,12 @@ public class bulletsaber : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
         rb.velocity = transform.right * speed;
+    }
+    void Update()
+    {
+        
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
@@ -18,7 +23,7 @@ public class bulletsaber : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Spirit") == true)
         {
             EnemyStatus enemy = hitInfo.GetComponent<EnemyStatus>();
-            enemy.TakeDamage(10);
+            enemy.TakeDamage(bulletdamage);
             Destroy(gameObject);
         }
     }
