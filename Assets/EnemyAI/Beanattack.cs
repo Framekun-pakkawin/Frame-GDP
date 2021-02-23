@@ -22,7 +22,7 @@ public class Beanattack : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
-            PlayerMovement player = GetComponent<PlayerMovement>();
+            PlayerMovement player = hitInfo.gameObject.GetComponent<PlayerMovement>();
             player.TakeDamage(enemydamage);
             knowback(knowbackX, knowbackY);
         }
