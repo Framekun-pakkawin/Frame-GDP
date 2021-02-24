@@ -10,6 +10,7 @@ public class SwitchCenter : MonoBehaviour
     public GameObject player2object;
     public Transform savespot;
     public bool isplayer1 = true;
+    public bool Switching = false;
     KeyCode player1key = KeyCode.E;
     KeyCode player2key = KeyCode.Mouse1;
     void Start()
@@ -22,7 +23,7 @@ public class SwitchCenter : MonoBehaviour
         {
             if (Input.GetKeyDown(player1key))
             {
-
+                Switching = true;
                 player1code.IsControling = false;
                 Switch(player2object, player1object);
                 isplayer1 = false;
@@ -32,6 +33,7 @@ public class SwitchCenter : MonoBehaviour
         {
             if (Input.GetKeyDown(player2key))
             {
+                Switching = true;
                 player2code.IsControling = false;
                 Switch(player1object, player2object);
                 isplayer1 = true;

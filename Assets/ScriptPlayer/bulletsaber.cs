@@ -6,16 +6,32 @@ public class bulletsaber : MonoBehaviour
 {
     public float speed = 20.0f;
     public float bulletdamage = 5.0f;
+    public float distance = 50.0f;
+    public int countdown = 50;
     Rigidbody2D rb;
+    Transform starttrans;
     void Start()
     {
+        starttrans = GetComponent<Transform>();
+        starttrans.position = gameObject.transform.position;
         rb = GetComponent<Rigidbody2D>();
-
         rb.velocity = transform.right * speed;
     }
     void Update()
     {
-        
+        if (countdown > 0)
+        {
+            countdown -= 1;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        if (Mathf.Abs(starttrans.position.x - gameObject.transform.position.x) >= distance)
+        {
+            Debug.Log("Destory");
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
