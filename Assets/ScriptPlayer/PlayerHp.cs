@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHp : MonoBehaviour
 {
@@ -8,8 +9,10 @@ public class PlayerHp : MonoBehaviour
     public float currentHealth;
     public HealthBar healthBar;
     public CharacterSwitch characterswitch;
+    string scenename;
     void Start()
     {
+        scenename = SceneManager.GetActiveScene().name;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -24,6 +27,7 @@ public class PlayerHp : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            SceneManager.LoadScene(scenename);
         }
     }
     void FixedUpdate()

@@ -6,9 +6,8 @@ public class Beanattack : MonoBehaviour
 {
     public float enemydamage = 5.0f;
     bool ishitting = false;
-    bool knockbackright = true;
     Rigidbody2D rb;
-    EnemyStatus enemyStatus;
+    EnemyStatus enemyStatus = null;
     float knowbackX = 1000.0f;
     float knowbackY = 400.0f;
     void Start()
@@ -30,12 +29,12 @@ public class Beanattack : MonoBehaviour
             if (gameObject.transform.position.x >= hitInfo.gameObject.transform.position.x)
             {
                 player.knockbackright = false;
-                knockbackright = true;
+                enemyStatus.knockbackright = true;
             }
             else
             {
                 player.knockbackright = true;
-                knockbackright = false;
+                enemyStatus.knockbackright = false;
             }
             enemyStatus.knockback(knowbackX, knowbackY);
             player.knockback(knowbackX/2, knowbackY/2);
