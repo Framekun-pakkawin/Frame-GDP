@@ -56,13 +56,17 @@ public class BeanPatrol : MonoBehaviour
         {
             if (waitTime >= 0f && waitTime <= startWaitTime)
             {
+                print(gameObject.name +"1");
                 moveSpot.position = new Vector2(minX, minY);
-                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                Transform currtrans = gameObject.transform;
+                transform.localScale = new Vector3(currtrans.localScale.x, currtrans.localScale.y, currtrans.localScale.z);
             }
             else if (waitTime > startWaitTime)
             {
+                print(gameObject.name + "2");
                 moveSpot.position = new Vector2(maxX, minY);
-                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+                Transform currtrans = gameObject.transform;
+                transform.localScale = new Vector3(-currtrans.localScale.x, currtrans.localScale.y, currtrans.localScale.z);
             }
             waitTime += Time.deltaTime;
 
@@ -83,13 +87,16 @@ public class BeanPatrol : MonoBehaviour
         {
             //Vector2 currentVelocity = beanRigid.velocity;
             //beanRigid.velocity = new Vector2(speed , currentVelocity.y);
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+            Transform currtrans = gameObject.transform;
+            transform.localScale = new Vector3(currtrans.localScale.x, currtrans.localScale.y, currtrans.localScale.z);
         }
         else if (targetPosition.x > currentPosition.x)
         {
             //Vector2 currentVelocity = beanRigid.velocity;
             //beanRigid.velocity = new Vector2(speed, currentVelocity.y);
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+            Transform currtrans = gameObject.transform;
+            transform.localScale = new Vector3(-currtrans.localScale.x, currtrans.localScale.y, currtrans.localScale.z);
         }
     }
 }
