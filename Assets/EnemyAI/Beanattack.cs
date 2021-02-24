@@ -5,13 +5,15 @@ using UnityEngine;
 public class Beanattack : MonoBehaviour
 {
     public float enemydamage = 5.0f;
+    bool ishitting = false;
     bool knockbackright = true;
     Rigidbody2D rb;
-    float knowbackX = 500.0f;
-    float knowbackY = 200.0f;
+    EnemyStatus enemyStatus;
+    float knowbackX = 1000.0f;
+    float knowbackY = 400.0f;
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        enemyStatus = gameObject.GetComponent<EnemyStatus>();
     }
 
     
@@ -21,7 +23,7 @@ public class Beanattack : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D hitInfo)
     {
-        if (hitInfo.gameObject.CompareTag("Player"))
+        if (hitInfo.gameObject.CompareTag("Player") && ishitting == false)
         {
             PlayerMovement player = hitInfo.gameObject.GetComponent<PlayerMovement>();
             player.TakeDamage(enemydamage);
@@ -35,16 +37,16 @@ public class Beanattack : MonoBehaviour
                 player.knockbackright = true;
                 knockbackright = false;
             }
-            knockback(knowbackX, knowbackY);
-            player.knockback(knowbackX, knowbackY);
+            enemyStatus.knockback(knowbackX, knowbackY);
+            player.knockback(knowbackX/2, knowbackY/2);
+            ishitting = true;
         }
     }
-    void knockback(float forceX,float forceY)
+    private void OnCollisionExit2D(Collision2D hitInfo)
     {
-        if (knockbackright == false)
+        if (hitInfo.gameObject.CompareTag("Player"))
         {
-            forceX = -forceX;
+            ishitting = false;
         }
-        rb.AddForce(new Vector2(forceX, forceY));
     }
 }
