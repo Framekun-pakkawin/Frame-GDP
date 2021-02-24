@@ -5,6 +5,7 @@ using UnityEngine;
 public class Beanattack : MonoBehaviour
 {
     public float enemydamage = 5.0f;
+    bool knockbackright = true;
     Rigidbody2D rb;
     float knowbackX = 500.0f;
     float knowbackY = 200.0f;
@@ -24,11 +25,26 @@ public class Beanattack : MonoBehaviour
         {
             PlayerMovement player = hitInfo.gameObject.GetComponent<PlayerMovement>();
             player.TakeDamage(enemydamage);
-            knowback(knowbackX, knowbackY);
+            if (gameObject.transform.position.x >= hitInfo.gameObject.transform.position.x)
+            {
+                player.knockbackright = false;
+                knockbackright = true;
+            }
+            else
+            {
+                player.knockbackright = true;
+                knockbackright = false;
+            }
+            knockback(knowbackX, knowbackY);
+            player.knockback(knowbackX, knowbackY);
         }
     }
-    void knowback(float forceX,float forceY)
+    void knockback(float forceX,float forceY)
     {
+        if (knockbackright == false)
+        {
+            forceX = -forceX;
+        }
         rb.AddForce(new Vector2(forceX, forceY));
     }
 }

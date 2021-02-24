@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public HealthBar healthBar;
     public PlayerHp playerhp;
     public bool isplayer2 = false;
+    public bool knockbackright = false;
     bool isFacingright = true;
     bool jump = false;
     public Animator animator;
@@ -120,6 +121,15 @@ public class PlayerMovement : MonoBehaviour
     {
         playerhp.currentHealth -= damage;
         healthBar.SetHealth(playerhp.currentHealth);
+    }
+    public void knockback(float forceX, float forceY)
+    {
+        if (knockbackright == false)
+        {
+            forceX = -forceX;
+        }
+        Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.AddForce(new Vector2(forceX, forceY));
     }
     public void ChangeAnimationState(string NewState) 
     {
