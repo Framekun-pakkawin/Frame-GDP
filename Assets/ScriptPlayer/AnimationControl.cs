@@ -6,7 +6,7 @@ public class AnimationControl : MonoBehaviour
 {
     private string CurrentState;
     public Animator animator;
-    public PlayerMovement player;
+    PlayerMovement player;
     public bool isplayer2 = false;
 
     float attackDelay = 0.3f;
@@ -23,6 +23,7 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_DAMAGELEFT = "Damage_back";
     string PLAYER_JUMPRIGHT = "Jump_forward_c1";
     string PLAYER_JUMPLEFT = "Jump_backward_c1";
+    string PlAYER_HELPED = "HelpingC1";
 
     ////////////////////////////////
 
@@ -38,11 +39,13 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_DAMAGELEFT2 = "Damage_back";
     string PLAYER_JUMPRIGHT2 = "Jump_forward_c2";
     string PLAYER_JUMPLEFT2 = "Jump_backward_c2";
+    string PlAYER_HELPED2 = "HelpingC2";
 
     ////////////////////////////////
 
     void Start()
     {
+        player = gameObject.GetComponent<PlayerMovement>();
         //ใส่anim ผู้ชาย// 2 = ผู้ชาย
         if (isplayer2 == true)
         {
@@ -56,6 +59,7 @@ public class AnimationControl : MonoBehaviour
             PLAYER_DAMAGELEFT = PLAYER_DAMAGELEFT2;
             PLAYER_JUMPRIGHT = PLAYER_JUMPRIGHT2;
             PLAYER_JUMPLEFT = PLAYER_JUMPLEFT2;
+            PlAYER_HELPED = PlAYER_HELPED2;
         }
 
         ////////////////////////////////
@@ -73,13 +77,20 @@ public class AnimationControl : MonoBehaviour
             {
                 if (!player.isAttacking)
                 {
-                    if (player.isMoving)
+                    if (!player.isHelped)
                     {
-                        ChangeAnimationState(PLAYER_RUNRIGHT);
+                        if (player.isMoving)
+                        {
+                            ChangeAnimationState(PLAYER_RUNRIGHT);
+                        }
+                        else if (!player.isMoving)
+                        {
+                            ChangeAnimationState(PLAYER_IDEALRIGHT);
+                        }
                     }
-                    else if (!player.isMoving)
+                    else
                     {
-                        ChangeAnimationState(PLAYER_IDEALRIGHT);
+                        ChangeAnimationState(PlAYER_HELPED);
                     }
                 }
                 else 

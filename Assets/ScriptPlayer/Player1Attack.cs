@@ -8,7 +8,7 @@ public class Player1Attack : MonoBehaviour
     public PlayerMovement playermove;
     void Update()
     {
-        if (Input.GetButtonDown("Attack1"))
+        if (Input.GetButtonDown("Attack1") && playermove.isAttacking == false)
         {
             playermove.isAttacking = true;
         }
