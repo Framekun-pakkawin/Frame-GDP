@@ -6,57 +6,24 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public CharacterSwitch characterswitch;
-    float horizontalmove = 0.0f;
+    public float horizontalmove = 0.0f;
     public float runspeed = 3.0f;
     public HealthBar healthBar;
     public PlayerHp playerhp;
     public bool isplayer2 = false;
     public bool knockbackright = false;
-    bool isFacingright = true;
-    bool jump = false;
-    public Animator animator;
-    private string CurrentState;
+
+    [HideInInspector]
+    public bool isFacingright = true;
+    public bool jump = false;
+    public bool isMoving = false;
+    public bool isAttacking = false;
+    public bool isGround = true;
 
 
-    //ใส่anim ตัวผู้หญิง//
-
-    string PLAYER_IDEALRIGHT = "Ideal";
-    string PLAYER_IDEALLEFT = "Idealback";
-    string PLAYER_RUNRIGHT = "Run_Forward";
-    string PLAYER_RUNLEFT = "Run_backWard";
-    string PLAYER_ATTACK = "Attack1";
-    string PLAYER_DAMAGERIGHT = "Damage_front";
-    string PLAYER_DAMAGELEFT = "Damage_back";
-
-    ////////////////////////////////
-    
-    //ใส่anim ตัวผู้ชาย//
-
-    string PLAYER_IDEALRIGHT2 = "Ideal";
-    string PLAYER_IDEALLEFT2 = "Ideal_Back";
-    string PLAYER_RUNRIGHT2 = "Runforward";
-    string PLAYER_RUNLEFT2 = "RunBackward";
-    string PLAYER_ATTACK2 = "Attack";
-    string PLAYER_DAMAGERIGHT2 = "Damage";
-    string PLAYER_DAMAGELEFT2 = "Damage_back";
-
-    ////////////////////////////////
-    
     void Start()
     {
-        //ใส่anim ผู้ชาย// 2 = ผู้ชาย
-        if (isplayer2 == true)
-        {
-            PLAYER_IDEALRIGHT = PLAYER_IDEALRIGHT2;
-            PLAYER_IDEALLEFT = PLAYER_IDEALLEFT2;
-            PLAYER_RUNRIGHT = PLAYER_RUNRIGHT2;
-            PLAYER_RUNLEFT = PLAYER_RUNLEFT2;
-            PLAYER_ATTACK = PLAYER_ATTACK2;
-            PLAYER_DAMAGERIGHT = PLAYER_DAMAGERIGHT2;
-            PLAYER_DAMAGELEFT = PLAYER_DAMAGELEFT2;
-        }
 
-        ////////////////////////////////
     }
 
     void Update()
@@ -81,41 +48,27 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
-        if (horizontalmove > 0)
-        {
-            ChangeAnimationState(PLAYER_RUNRIGHT);
-            isFacingright = true;
-            animator.SetBool("isFacingRight", true);
-        }
-        else if (horizontalmove < 0)
-        {
-            ChangeAnimationState(PLAYER_RUNLEFT);
-            isFacingright = false;
-            animator.SetBool("isFacingRight", false);
-        }
-        else 
-        {
-            if (isFacingright == true)
-            {
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == false)
-                {
-                    ChangeAnimationState(PLAYER_IDEALRIGHT);
-                }
-            }
-            else
-            {
-                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == false)
-                {
-                    ChangeAnimationState(PLAYER_IDEALLEFT);
-                }
-            }
-        }
+        
     }
 
     void FixedUpdate()
     {
         controller.Move(horizontalmove * Time.deltaTime,false,jump);
         jump = false;
+        if (horizontalmove > 0)
+        {
+            isMoving = true;
+            isFacingright = true;
+        }
+        else if (horizontalmove < 0)
+        {
+            isMoving = true;
+            isFacingright = false;
+        }
+        else
+        {
+            isMoving = false;
+        }
     }
     public void TakeDamage(float damage)
     {
@@ -130,14 +83,5 @@ public class PlayerMovement : MonoBehaviour
         }
         Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2(forceX, forceY));
-    }
-    public void ChangeAnimationState(string NewState) 
-    {
-        if (CurrentState != NewState)
-        {
-            animator.Play(NewState);
-
-            CurrentState = NewState;
-        }
     }
 }

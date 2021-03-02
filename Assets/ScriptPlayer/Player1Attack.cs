@@ -10,7 +10,7 @@ public class Player1Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Attack1"))
         {
-            playermove.ChangeAnimationState("Attack1");
+            playermove.isAttacking = true;
         }
     }
     public void Active_hitBox()

@@ -27,7 +27,7 @@ public class PlayerHp : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            SceneManager.LoadScene(scenename);
+            //SceneManager.LoadScene(scenename);
         }
     }
     void FixedUpdate()

@@ -12,7 +12,7 @@ public class Player2Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Attack2"))
         {
-            playermove.ChangeAnimationState("Attack");
+            playermove.isAttacking = true;
             Shoot();
         }
     }

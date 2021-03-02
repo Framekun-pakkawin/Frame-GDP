@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
+	PlayerMovement player;
+	bool wasGrounded;
 	[SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
@@ -42,12 +44,20 @@ public class CharacterController2D : MonoBehaviour
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
 	}
+    private void Start()
+    {
+		player = gameObject.GetComponent<PlayerMovement>();
+	}
+    private void Update()
+    {
 
-	private void FixedUpdate()
+	}
+
+    private void FixedUpdate()
 	{
-		bool wasGrounded = m_Grounded;
+		wasGrounded = m_Grounded;
 		m_Grounded = false;
-
+		player.isGround = wasGrounded;
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
