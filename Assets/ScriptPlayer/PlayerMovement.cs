@@ -6,19 +6,24 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public CharacterSwitch characterswitch;
-    public float horizontalmove = 0.0f;
+    float horizontalmove = 0.0f;
     public float runspeed = 3.0f;
     public HealthBar healthBar;
     public PlayerHp playerhp;
     public bool isplayer2 = false;
     public bool knockbackright = false;
 
-    [HideInInspector]
-    public bool isFacingright = true;
-    public bool jump = false;
-    public bool isMoving = false;
-    public bool isAttacking = false;
-    public bool isGround = true;
+
+    int framecountdown = 30;
+
+    [HideInInspector] public bool isFacingright = true;
+    [HideInInspector] public bool jump = false;
+    [HideInInspector] public bool isMoving = false;
+    [HideInInspector] public bool isAttacking = false;
+    [HideInInspector] public bool isGround = true;
+    [HideInInspector] public bool isHelped = false;
+
+    
 
 
     void Start()
@@ -68,6 +73,19 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             isMoving = false;
+        }
+        if (isAttacking == true && framecountdown > 0)
+        {
+            framecountdown -= 1;
+            if (framecountdown == 0)
+            {
+                framecountdown = 30;
+                isAttacking = false;
+            }
+        }
+        if (isAttacking == false)
+        {
+            framecountdown = 30;
         }
     }
     public void TakeDamage(float damage)

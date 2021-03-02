@@ -14,6 +14,7 @@ public class slashhitbox : MonoBehaviour
             EnemyStatus enemytoattack = hitInfo.GetComponent<EnemyStatus>();
             enemytoattack.TakeDamage(slashdamage);
             enemytoattack.knockback(knockbackX, knockbackY);
+            gameObject.SetActive(false);
         }
     }
 

@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1Attack : MonoBehaviour
+public class P2helpP1 : MonoBehaviour
 {
     public GameObject HitBox;
     public PlayerMovement playermove;
+    public CharacterSwitch switchplayer;
     void Update()
     {
-        if (Input.GetButtonDown("Attack1"))
+        if (switchplayer.IsControling == true)
         {
-            playermove.isAttacking = true;
+            if (Input.GetButtonDown("Attack2"))
+            {
+                playermove.isHelped = true;
+            }
         }
     }
     public void Active_hitBox()
@@ -21,9 +25,5 @@ public class Player1Attack : MonoBehaviour
     public void Deactive_hitBox()
     {
         HitBox.SetActive(false);
-    }
-    public void Deattacking()
-    {
-        playermove.isAttacking = false;
     }
 }

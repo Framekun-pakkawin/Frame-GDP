@@ -2513,7 +2513,7 @@ GameObject:
   - component: {fileID: 159792781}
   - component: {fileID: 159792780}
   - component: {fileID: 159792779}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: fireSpirit (1)
   m_TagString: Spirit
   m_Icon: {fileID: 0}
@@ -2720,7 +2720,7 @@ GameObject:
   - component: {fileID: 192547910}
   - component: {fileID: 192547912}
   - component: {fileID: 192547911}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: beanblue
   m_TagString: Demon
   m_Icon: {fileID: 0}
@@ -3632,7 +3632,7 @@ GameObject:
   - component: {fileID: 339365848}
   - component: {fileID: 339365850}
   - component: {fileID: 339365849}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4067,6 +4067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431491903}
   - component: {fileID: 431491902}
+  - component: {fileID: 431491905}
   - component: {fileID: 431491901}
   - component: {fileID: 431491904}
   - component: {fileID: 431491900}
@@ -4185,7 +4186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 431491900}
   characterswitch: {fileID: 431491902}
-  horizontalmove: 0
   runspeed: 50
   healthBar: {fileID: 1650528969}
   playerhp: {fileID: 1650528971}
@@ -4196,6 +4196,7 @@ MonoBehaviour:
   isMoving: 0
   isAttacking: 0
   isGround: 1
+  isHelped: 0
 --- !u!114 &431491902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4244,6 +4245,21 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2241605972437509092, guid: af036d2f7fa325c4e89235334bb5c24d,
     type: 3}
   playermove: {fileID: 431491901}
+--- !u!114 &431491905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431491896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be3cad36e1343c42a0cb0dc4bea28b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2034294777}
+  player: {fileID: 431491901}
+  isplayer2: 1
 --- !u!1 &432197832
 GameObject:
   m_ObjectHideFlags: 0
@@ -6397,7 +6413,7 @@ GameObject:
   - component: {fileID: 757555432}
   - component: {fileID: 757555430}
   - component: {fileID: 757555431}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6852,7 +6868,7 @@ GameObject:
   - component: {fileID: 841267084}
   - component: {fileID: 841267083}
   - component: {fileID: 841267082}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: beanblue (1)
   m_TagString: Demon
   m_Icon: {fileID: 0}
@@ -8146,7 +8162,7 @@ GameObject:
   - component: {fileID: 1088456245}
   - component: {fileID: 1088456243}
   - component: {fileID: 1088456244}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: fireSpirit
   m_TagString: Spirit
   m_Icon: {fileID: 0}
@@ -8465,7 +8481,7 @@ GameObject:
   - component: {fileID: 1144569221}
   - component: {fileID: 1144569219}
   - component: {fileID: 1144569220}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8706,7 +8722,7 @@ GameObject:
   - component: {fileID: 1218557914}
   - component: {fileID: 1218557913}
   - component: {fileID: 1218557912}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: beanblue (3)
   m_TagString: Demon
   m_Icon: {fileID: 0}
@@ -14717,7 +14733,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1868419526}
   characterswitch: {fileID: 1868419528}
-  horizontalmove: 0
   runspeed: 50
   healthBar: {fileID: 489839734}
   playerhp: {fileID: 489839736}
@@ -14728,6 +14743,7 @@ MonoBehaviour:
   isMoving: 0
   isAttacking: 0
   isGround: 1
+  isHelped: 0
 --- !u!114 &1868419528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14853,7 +14869,7 @@ GameObject:
   - component: {fileID: 1902501047}
   - component: {fileID: 1902501046}
   - component: {fileID: 1902501045}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: fireSpirit (2)
   m_TagString: Spirit
   m_Icon: {fileID: 0}
@@ -15082,7 +15098,7 @@ GameObject:
   - component: {fileID: 1907574005}
   - component: {fileID: 1907574003}
   - component: {fileID: 1907574004}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15157,7 +15173,7 @@ GameObject:
   - component: {fileID: 1927027323}
   - component: {fileID: 1927027322}
   - component: {fileID: 1927027321}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: beanblue (2)
   m_TagString: Demon
   m_Icon: {fileID: 0}
