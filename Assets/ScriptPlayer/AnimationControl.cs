@@ -23,7 +23,7 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_DAMAGELEFT = "Damage_back";
     string PLAYER_JUMPRIGHT = "Jump_forward_c1";
     string PLAYER_JUMPLEFT = "Jump_backward_c1";
-    string PlAYER_HELPED = "HelpingC1";
+
 
     ////////////////////////////////
 
@@ -39,7 +39,7 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_DAMAGELEFT2 = "Damage_back";
     string PLAYER_JUMPRIGHT2 = "Jump_forward_c2";
     string PLAYER_JUMPLEFT2 = "Jump_backward_c2";
-    string PlAYER_HELPED2 = "HelpingC2";
+
 
     ////////////////////////////////
 
@@ -59,7 +59,6 @@ public class AnimationControl : MonoBehaviour
             PLAYER_DAMAGELEFT = PLAYER_DAMAGELEFT2;
             PLAYER_JUMPRIGHT = PLAYER_JUMPRIGHT2;
             PLAYER_JUMPLEFT = PLAYER_JUMPLEFT2;
-            PlAYER_HELPED = PlAYER_HELPED2;
         }
 
         ////////////////////////////////
@@ -77,23 +76,16 @@ public class AnimationControl : MonoBehaviour
             {
                 if (!player.isAttacking)
                 {
-                    if (!player.isHelped)
+                    if (player.isMoving)
                     {
-                        if (player.isMoving)
-                        {
-                            ChangeAnimationState(PLAYER_RUNRIGHT);
-                        }
-                        else if (!player.isMoving)
-                        {
-                            ChangeAnimationState(PLAYER_IDEALRIGHT);
-                        }
+                        ChangeAnimationState(PLAYER_RUNRIGHT);
                     }
-                    else
+                    else if (!player.isMoving)
                     {
-                        ChangeAnimationState(PlAYER_HELPED);
+                        ChangeAnimationState(PLAYER_IDEALRIGHT);
                     }
                 }
-                else 
+                else
                 {
                     ChangeAnimationState(PLAYER_ATTACKRIGHT);
                 }

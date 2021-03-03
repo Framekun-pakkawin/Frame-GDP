@@ -11,6 +11,7 @@ public class SwitchCenter : MonoBehaviour
     public Transform savespot;
     public bool isplayer1 = true;
     public bool Switching = false;
+    public GameObject switchfx;
     KeyCode player1key = KeyCode.E;
     KeyCode player2key = KeyCode.Mouse1;
     void Start()
@@ -45,6 +46,7 @@ public class SwitchCenter : MonoBehaviour
         CharacterSwitch playerincode = playerin.GetComponent<CharacterSwitch>();
         CharacterSwitch playeroutcode = playerout.GetComponent<CharacterSwitch>();
         Transform currplayer = playerout.gameObject.transform;
+        Instantiate(switchfx, currplayer.position, switchfx.transform.rotation);
         playerin.transform.position = new Vector3(currplayer.position.x, currplayer.position.y, currplayer.position.z);
         playeroutcode.IsControling = false;
         playerout.transform.position = new Vector3(savespot.position.x, savespot.position.y, savespot.position.z);

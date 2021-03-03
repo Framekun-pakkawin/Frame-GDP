@@ -6,6 +6,7 @@ public class Player2Attack : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bulletPrefab;
+
     public PlayerMovement playermove;
     
     void Update()

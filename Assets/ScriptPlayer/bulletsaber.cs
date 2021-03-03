@@ -19,18 +19,20 @@ public class bulletsaber : MonoBehaviour
     }
     void Update()
     {
-        if (countdown > 0)
-        {
-            countdown -= 1;
-        }
-        else
+        if(countdown <= 0)
         {
             Destroy(gameObject);
         }
         if (Mathf.Abs(starttrans.position.x - gameObject.transform.position.x) >= distance)
         {
-            Debug.Log("Destory");
             Destroy(gameObject);
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (countdown > 0)
+        {
+            countdown -= 1;
         }
     }
 

@@ -5,8 +5,8 @@ using UnityEngine;
 public class slashhitbox : MonoBehaviour
 {
     public float slashdamage = 10.0f;
-    float knockbackX = 750.0f;
-    float knockbackY = 300.0f;
+    public float knockbackX = 750.0f;
+    public float knockbackY = 300.0f;
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Demon"))
