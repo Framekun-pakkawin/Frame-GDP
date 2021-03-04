@@ -2558,6 +2558,7 @@ MonoBehaviour:
   savespot: {fileID: 1943997086}
   isplayer1: 1
   Switching: 0
+  switchfx: {fileID: 0}
 --- !u!4 &116908556
 Transform:
   m_ObjectHideFlags: 0
@@ -2653,7 +2654,6 @@ MonoBehaviour:
   target: {fileID: 1868419522}
   speed: 1000
   nextWaypointDistance: 3
-  enemy: {fileID: 159792786}
 --- !u!114 &159792783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8295,7 +8295,6 @@ MonoBehaviour:
   target: {fileID: 1868419522}
   speed: 1000
   nextWaypointDistance: 3
-  enemy: {fileID: 1088456240}
 --- !u!114 &1088456242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10033,6 +10032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slashdamage: 10
+  knockbackX: 750
+  knockbackY: 300
 --- !u!1 &1434815777
 GameObject:
   m_ObjectHideFlags: 0
@@ -15104,7 +15105,6 @@ MonoBehaviour:
   target: {fileID: 1868419522}
   speed: 1000
   nextWaypointDistance: 3
-  enemy: {fileID: 1902501052}
 --- !u!114 &1902501049
 MonoBehaviour:
   m_ObjectHideFlags: 0
