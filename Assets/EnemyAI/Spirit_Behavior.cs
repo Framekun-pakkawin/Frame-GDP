@@ -8,7 +8,8 @@ public class Spirit_Behavior : MonoBehaviour
     public Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
-    public Transform enemy;
+    EnemyStatus enemystat;
+    Transform enemy;
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = true;
@@ -17,6 +18,8 @@ public class Spirit_Behavior : MonoBehaviour
     Transform starttranform;
     void Start()
     {
+        enemystat = gameObject.GetComponent<EnemyStatus>();
+        enemy = gameObject.transform;
         starttranform = gameObject.transform;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -24,11 +27,24 @@ public class Spirit_Behavior : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, 1f);
         
     }
+    void Update()
+    {
+        if (gameObject.transform.position.x >= target.position.x)
+        {
+            enemystat.knockbackright = true;
+        }
+        else
+        {
+            enemystat.knockbackright = false;
+        }
+    }
 
     void UpdatePath()
     {
-        if (seeker.IsDone()) 
+        if (seeker.IsDone())
+        {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
+        }
     }
 
     void OnPathComplete(Path p)
