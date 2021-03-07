@@ -119,10 +119,10 @@ AnimatorStateMachine:
     m_Position: {x: 270, y: 500, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6526755327325525682}
-    m_Position: {x: 305, y: 565, z: 0}
+    m_Position: {x: 270, y: 600, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5100218928117455025}
-    m_Position: {x: 340, y: 630, z: 0}
+    m_Position: {x: 270, y: 550, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -218,7 +218,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jump_forward_c1
+  m_Name: Jumpfall_forward_c1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -344,7 +344,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jump_backward_c1
+  m_Name: Jumpfall_backward_c1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

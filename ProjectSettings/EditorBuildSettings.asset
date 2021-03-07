@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 7bd274091faab674480143ed6723c820
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Example1.unity
     guid: c67a5f1318295e64a9cd3138602ffcee
+  - enabled: 1
+    path: Assets/Scenes/Potae.unity
+    guid: 3a32bef4be16bfd4695fed0c7f7102cb
   m_configObjects: {}

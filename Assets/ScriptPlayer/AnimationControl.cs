@@ -21,8 +21,10 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_ATTACKLEFT = "Attack1";
     string PLAYER_DAMAGERIGHT = "Damage_front";
     string PLAYER_DAMAGELEFT = "Damage_back";
-    string PLAYER_JUMPRIGHT = "Jump_forward_c1";
-    string PLAYER_JUMPLEFT = "Jump_backward_c1";
+    string PLAYER_JUMPRISERIGHT = "Jumprising_forward_c1";
+    string PLAYER_JUMPRISELEFT = "Jumprising_backward_c1";
+    string PLAYER_JUMPFALLRIGHT = "Jumpfall_forward_c1";
+    string PLAYER_JUMPFALLLEFT = "Jumpfall_backward_c1";
 
 
     ////////////////////////////////
@@ -37,6 +39,8 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_ATTACKLEFT2 = "Attack_Back";
     string PLAYER_DAMAGERIGHT2 = "Damage";
     string PLAYER_DAMAGELEFT2 = "Damage_back";
+    string PLAYER_JUMPRISERIGHT2 = "Jump_forward_c2";
+    string PLAYER_JUMPRISELEFT2 = "Jump_backward_c2";
     string PLAYER_JUMPRIGHT2 = "Jump_forward_c2";
     string PLAYER_JUMPLEFT2 = "Jump_backward_c2";
 
@@ -57,8 +61,10 @@ public class AnimationControl : MonoBehaviour
             PLAYER_ATTACKLEFT = PLAYER_ATTACKLEFT2;
             PLAYER_DAMAGERIGHT = PLAYER_DAMAGERIGHT2;
             PLAYER_DAMAGELEFT = PLAYER_DAMAGELEFT2;
-            PLAYER_JUMPRIGHT = PLAYER_JUMPRIGHT2;
-            PLAYER_JUMPLEFT = PLAYER_JUMPLEFT2;
+            PLAYER_JUMPRISERIGHT = PLAYER_JUMPRISERIGHT2;
+            PLAYER_JUMPRISELEFT = PLAYER_JUMPRISELEFT2;
+            PLAYER_JUMPFALLRIGHT = PLAYER_JUMPRIGHT2;
+            PLAYER_JUMPFALLLEFT = PLAYER_JUMPLEFT2;
         }
 
         ////////////////////////////////
@@ -70,7 +76,7 @@ public class AnimationControl : MonoBehaviour
         {
             if (!player.isGround)
             {
-                ChangeAnimationState(PLAYER_JUMPRIGHT);
+                ChangeAnimationState(PLAYER_JUMPFALLRIGHT);
             }
             else if (player.isGround)
             {
@@ -95,7 +101,7 @@ public class AnimationControl : MonoBehaviour
         {
             if (!player.isGround)
             {
-                ChangeAnimationState(PLAYER_JUMPLEFT);
+                ChangeAnimationState(PLAYER_JUMPFALLLEFT);
             }
             else if (player.isGround)
             {

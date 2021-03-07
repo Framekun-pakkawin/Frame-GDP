@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - Demon
   - Spirit
+  - Player1sprite
+  - Player1spritefound
+  - Player2sprite
+  - Player2spritefound
   layers:
   - Default
   - TransparentFX

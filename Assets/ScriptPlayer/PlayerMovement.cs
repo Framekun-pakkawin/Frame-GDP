@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isplayer2 = false;
     public bool knockbackright = false;
 
+    public int iframesetting = 30;
+    int iframe = 0;
 
     int framecountdown = 30;
 
@@ -21,9 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool isMoving = false;
     [HideInInspector] public bool isAttacking = false;
     [HideInInspector] public bool isGround = true;
-    [HideInInspector] public bool isHelped = false;
-
-    
+    [HideInInspector] public bool isFalling = false;
+    [HideInInspector] public bool isDamaged = false;
 
 
     void Start()
@@ -33,6 +34,26 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!isGround)
+        {
+            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+            if (rb.velocity.y < 0)
+            {
+                isFalling = true;
+            }
+            else
+            {
+                isFalling = false;
+            }
+        }
+        if (iframe > 0)
+        {
+            isDamaged = true;
+        }
+        if (iframe == 0)
+        {
+            isDamaged = false;
+        }
         if (characterswitch.IsControling == true)
         {
             if (isplayer2 == false)
@@ -87,11 +108,16 @@ public class PlayerMovement : MonoBehaviour
         {
             framecountdown = 30;
         }
+        if (iframe > 0)
+        {
+            iframe -= 1;
+        }
     }
     public void TakeDamage(float damage)
     {
         playerhp.currentHealth -= damage;
         healthBar.SetHealth(playerhp.currentHealth);
+        iframe = iframesetting;
     }
     public void knockback(float forceX, float forceY)
     {
@@ -101,5 +127,6 @@ public class PlayerMovement : MonoBehaviour
         }
         Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2(forceX, forceY));
+        iframe = iframesetting;
     }
 }
