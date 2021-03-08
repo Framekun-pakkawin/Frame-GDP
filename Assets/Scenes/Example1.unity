@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4265,12 +4265,16 @@ MonoBehaviour:
   playerhp: {fileID: 1650528971}
   isplayer2: 1
   knockbackright: 1
+  iframesetting: 30
+  iframe: 0
   isFacingright: 1
   jump: 0
   isMoving: 0
   isAttacking: 0
   isGround: 1
-  isHelped: 0
+  isFalling: 0
+  isDamaged: 0
+  isDamagedanim: 0
 --- !u!114 &431491902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11284,7 +11288,7 @@ PrefabInstance:
     - target: {fileID: -7928028110218321403, guid: 69b6536897ff4694792e5bc052832934,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.02017045
+      value: 0.020172358
       objectReference: {fileID: 0}
     - target: {fileID: -7928028110218321403, guid: 69b6536897ff4694792e5bc052832934,
         type: 3}
@@ -14924,12 +14928,16 @@ MonoBehaviour:
   playerhp: {fileID: 489839736}
   isplayer2: 0
   knockbackright: 1
+  iframesetting: 30
+  iframe: 0
   isFacingright: 1
   jump: 0
   isMoving: 0
   isAttacking: 0
   isGround: 1
-  isHelped: 0
+  isFalling: 0
+  isDamaged: 0
+  isDamagedanim: 0
 --- !u!114 &1868419528
 MonoBehaviour:
   m_ObjectHideFlags: 0
