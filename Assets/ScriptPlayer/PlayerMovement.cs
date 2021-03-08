@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public bool knockbackright = false;
 
     public int iframesetting = 30;
-    int iframe = 0;
+    [HideInInspector]public int iframe = 0;
 
     int framecountdown = 30;
 
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool isGround = true;
     [HideInInspector] public bool isFalling = false;
     [HideInInspector] public bool isDamaged = false;
-
+    [HideInInspector] public bool isDamagedanim = false;
 
     void Start()
     {
@@ -115,18 +115,25 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        playerhp.currentHealth -= damage;
-        healthBar.SetHealth(playerhp.currentHealth);
-        iframe = iframesetting;
+        if (!isDamaged)
+        {
+            playerhp.currentHealth -= damage;
+            healthBar.SetHealth(playerhp.currentHealth);
+            iframe = iframesetting;
+        }
     }
     public void knockback(float forceX, float forceY)
     {
-        if (knockbackright == false)
+        if (!isDamaged)
         {
-            forceX = -forceX;
+            if (knockbackright == false)
+            {
+                forceX = -forceX;
+            }
+            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+            rb.AddForce(new Vector2(forceX, forceY));
+            iframe = iframesetting;
+            isDamagedanim = true;
         }
-        Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(forceX, forceY));
-        iframe = iframesetting;
     }
 }

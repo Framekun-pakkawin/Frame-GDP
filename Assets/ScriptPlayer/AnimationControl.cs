@@ -41,8 +41,8 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_DAMAGELEFT2 = "Damage_back";
     string PLAYER_JUMPRISERIGHT2 = "Jump_forward_c2";
     string PLAYER_JUMPRISELEFT2 = "Jump_backward_c2";
-    string PLAYER_JUMPRIGHT2 = "Jump_forward_c2";
-    string PLAYER_JUMPLEFT2 = "Jump_backward_c2";
+    string PLAYER_JUMPFALLRIGHT2 = "Jump_forward_c2";
+    string PLAYER_JUMPFALLLEFT2 = "Jump_backward_c2";
 
 
     ////////////////////////////////
@@ -63,8 +63,8 @@ public class AnimationControl : MonoBehaviour
             PLAYER_DAMAGELEFT = PLAYER_DAMAGELEFT2;
             PLAYER_JUMPRISERIGHT = PLAYER_JUMPRISERIGHT2;
             PLAYER_JUMPRISELEFT = PLAYER_JUMPRISELEFT2;
-            PLAYER_JUMPFALLRIGHT = PLAYER_JUMPRIGHT2;
-            PLAYER_JUMPFALLLEFT = PLAYER_JUMPLEFT2;
+            PLAYER_JUMPFALLRIGHT = PLAYER_JUMPFALLRIGHT2;
+            PLAYER_JUMPFALLLEFT = PLAYER_JUMPFALLLEFT2;
         }
 
         ////////////////////////////////
@@ -74,51 +74,80 @@ public class AnimationControl : MonoBehaviour
     {
         if (player.isFacingright)
         {
-            if (!player.isGround)
+            if (player.isDamagedanim)
             {
-                ChangeAnimationState(PLAYER_JUMPFALLRIGHT);
+                ChangeAnimationState(PLAYER_DAMAGERIGHT);
             }
-            else if (player.isGround)
+            else
             {
-                if (!player.isAttacking)
+                if (!player.isGround)
                 {
-                    if (player.isMoving)
+                    if (!player.isFalling)
                     {
-                        ChangeAnimationState(PLAYER_RUNRIGHT);
+                        ChangeAnimationState(PLAYER_JUMPRISERIGHT);
                     }
-                    else if (!player.isMoving)
+                    else
                     {
-                        ChangeAnimationState(PLAYER_IDEALRIGHT);
+                        ChangeAnimationState(PLAYER_JUMPFALLRIGHT);
                     }
                 }
-                else
+                else if (player.isGround)
                 {
-                    ChangeAnimationState(PLAYER_ATTACKRIGHT);
+                    if (!player.isAttacking)
+                    {
+                        if (player.isMoving)
+                        {
+                            ChangeAnimationState(PLAYER_RUNRIGHT);
+                            
+                        }
+                        else if (!player.isMoving)
+                        {
+                            ChangeAnimationState(PLAYER_IDEALRIGHT);
+                        }
+                    }
+                    else
+                    {
+                        ChangeAnimationState(PLAYER_ATTACKRIGHT);
+                    }
                 }
             }
         }
         if (!player.isFacingright)
         {
-            if (!player.isGround)
+            if (player.isDamagedanim)
             {
-                ChangeAnimationState(PLAYER_JUMPFALLLEFT);
+                ChangeAnimationState(PLAYER_DAMAGELEFT);
             }
-            else if (player.isGround)
+            else
             {
-                if (!player.isAttacking)
+                if (!player.isGround)
                 {
-                    if (player.isMoving)
+                    if (!player.isFalling)
                     {
-                        ChangeAnimationState(PLAYER_RUNLEFT);
+                        ChangeAnimationState(PLAYER_JUMPRISELEFT);
                     }
-                    else if (!player.isMoving)
+                    else
                     {
-                        ChangeAnimationState(PLAYER_IDEALLEFT);
+                        ChangeAnimationState(PLAYER_JUMPFALLLEFT);
                     }
                 }
-                else
+                else if (player.isGround)
                 {
-                    ChangeAnimationState(PLAYER_ATTACKLEFT);
+                    if (!player.isAttacking)
+                    {
+                        if (player.isMoving)
+                        {
+                            ChangeAnimationState(PLAYER_RUNLEFT);
+                        }
+                        else if (!player.isMoving)
+                        {
+                            ChangeAnimationState(PLAYER_IDEALLEFT);
+                        }
+                    }
+                    else
+                    {
+                        ChangeAnimationState(PLAYER_ATTACKLEFT);
+                    }
                 }
             }
         }

@@ -4,59 +4,50 @@ using UnityEngine;
 
 public class IFrameAnim : MonoBehaviour
 {
-    SpriteRenderer []sprite = new SpriteRenderer[50];
-    string tagtofind = "Player1sprite";
-    string tagtochange = "Player1spritefound";
+    public Material playermat;
     public PlayerMovement player;
-    public bool isplayer2 = false;
-    private GameObject gm;
+
+    public int delayframe = 5;
+    public float iframedelay = 0.5f;
+
+    bool iframe = false;
+    float appear = 1.0f;
+    float disappear = 0.0f;
+    float halfappear = 0.5f;
+    float curralpha = 1.0f;
+
 
     void Start()
     {
-        if (isplayer2 == true)
-        {
-            tagtofind = "Player2sprite";
-            tagtochange = "Player2spritefound";
-        }
-        for (int i=0; i<sprite.Length;i++)
-        {
-            sprite[i] = null;
-        }
-        for (int i = 0; i < sprite.Length; i++)
-        {
-            gm = GameObject.FindGameObjectWithTag(tagtofind);
-            if (gm != null)
-            {
-                sprite[i] = gm.GetComponent<SpriteRenderer>();
-                gm.tag = tagtochange;
-                gm = null;
-            }
-        }
+        
     }
 
     void Update()
     {
         if (player.isDamaged == true)
         {
-            for (int i = 0; i < sprite.Length; i++)
-            {
-                if (sprite[i] != null)
-                {
-                    SpriteRenderer currsprite = sprite[i];
-                    sprite[i].material.color = new Color(currsprite.color.r, currsprite.color.g, currsprite.color.b, 0.5f);
-                }
-            }
+            StartCoroutine(Iframeanim());
         }
         else 
         {
-            for (int i = 0; i < sprite.Length; i++)
-            {
-                if (sprite[i] != null)
-                {
-                    SpriteRenderer currsprite = sprite[i];
-                    sprite[i].color = new Color(currsprite.color.r, currsprite.color.g, currsprite.color.b, 1.0f);
-                }
-            }
+            SetMaterialAlpha(appear);
         }
+    }
+    IEnumerator Iframeanim()
+    {
+        if (!iframe)
+        {
+            iframe = true;
+            SetMaterialAlpha(halfappear);
+            yield return new WaitForSeconds(iframedelay);
+            SetMaterialAlpha(appear);
+            yield return new WaitForSeconds(iframedelay);
+            iframe = false;
+        }
+    }
+    void SetMaterialAlpha(float a)
+    {
+        Color currcolor = playermat.color;
+        playermat.color = new Color(currcolor.r, currcolor.g, currcolor.b, a);
     }
 }

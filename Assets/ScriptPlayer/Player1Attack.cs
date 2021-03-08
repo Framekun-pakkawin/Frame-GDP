@@ -26,4 +26,8 @@ public class Player1Attack : MonoBehaviour
     {
         playermove.isAttacking = false;
     }
+    public void Dedamaged()
+    {
+        playermove.isDamagedanim = false;
+    }
 }
