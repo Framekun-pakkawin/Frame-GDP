@@ -38,7 +38,7 @@ public class IFrameAnim : MonoBehaviour
         if (!iframe)
         {
             iframe = true;
-            SetMaterialAlpha(halfappear);
+            SetMaterialAlpha(disappear);
             yield return new WaitForSeconds(iframedelay);
             SetMaterialAlpha(appear);
             yield return new WaitForSeconds(iframedelay);

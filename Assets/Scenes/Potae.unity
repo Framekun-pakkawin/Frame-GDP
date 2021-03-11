@@ -2967,7 +2967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &192547906
 Transform:
   m_ObjectHideFlags: 0
@@ -4577,7 +4577,7 @@ MonoBehaviour:
   playerhp: {fileID: 1650528971}
   isplayer2: 1
   knockbackright: 1
-  iframesetting: 50
+  iframesetting: 200
   iframe: 0
   isFacingright: 1
   jump: 0
@@ -8238,7 +8238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &965584281
 Transform:
   m_ObjectHideFlags: 0
@@ -11355,7 +11355,7 @@ MonoBehaviour:
   playermat: {fileID: 2100000, guid: 3fb0e0fd1bbc6284a96c70f71a8acabb, type: 2}
   player: {fileID: 1868419527}
   delayframe: 10
-  iframedelay: 0.3
+  iframedelay: 0.2
 --- !u!1 &1552558318
 GameObject:
   m_ObjectHideFlags: 0
