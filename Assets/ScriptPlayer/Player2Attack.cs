@@ -7,8 +7,7 @@ public class Player2Attack : MonoBehaviour
     public Transform firepoint1;
     public Transform firepoint2;
     public Transform firepoint3;
-    public Transform firepoint4;
-    public Transform firepoint5;
+
     Transform [] allfirepoint;
     public GameObject bulletPrefab;
     public GameObject gate;
@@ -18,13 +17,12 @@ public class Player2Attack : MonoBehaviour
     
     void Update()
     {
-        Transform[] allfirepoint = { firepoint1, firepoint2, firepoint3, firepoint4, firepoint5 };
+        Transform[] allfirepoint = { firepoint1, firepoint2, firepoint3};
         if (playermove.isDamagedanim == false)
         {
             if (Input.GetButtonDown("Attack2") && !isCooldown)
             {
-                int x = Random.Range(0,5);
-                print(x);
+                int x = Random.Range(0,3);
                 playermove.isAttacking = true;
                 Shoot(allfirepoint[x]);
                 gate.SetActive(true);

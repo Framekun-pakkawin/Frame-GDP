@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
+    string scenename;
     private void Start()
     {
+        scenename = SceneManager.GetActiveScene().name;
         gameObject.SetActive(false);
     }
 
@@ -14,7 +16,7 @@ public class DeathMenu : MonoBehaviour
 
     public void RestartGame()
     {
-
+        SceneManager.LoadScene(scenename);
     }
 
     public void QuitToMain()

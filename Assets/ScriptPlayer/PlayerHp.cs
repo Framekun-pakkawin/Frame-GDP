@@ -9,10 +9,10 @@ public class PlayerHp : MonoBehaviour
     public float currentHealth;
     public HealthBar healthBar;
     public CharacterSwitch characterswitch;
-    string scenename;
+    public GameObject player;
+    public GameObject Deathmenu;
     void Start()
     {
-        scenename = SceneManager.GetActiveScene().name;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -27,7 +27,9 @@ public class PlayerHp : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            //SceneManager.LoadScene(scenename);
+            characterswitch.IsControling = false;
+            player.SetActive(false);
+            Deathmenu.SetActive(true);
         }
     }
     void FixedUpdate()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    static public int currentcheckpoint = 1;
     public CharacterController2D controller;
     public CharacterSwitch characterswitch;
     float horizontalmove = 0.0f;
@@ -13,8 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isplayer2 = false;
     public bool knockbackright = false;
 
-    public int iframesetting = 30;
-    [HideInInspector]public int iframe = 0;
+    public float iframetime = 2.5f;
 
     int framecountdown = 30;
 
@@ -46,14 +46,14 @@ public class PlayerMovement : MonoBehaviour
                 isFalling = false;
             }
         }
-        if (iframe > 0)
+        /*if (iframe > 0)
         {
             isDamaged = true;
         }
         if (iframe == 0)
         {
             isDamaged = false;
-        }
+        }*/
         if (characterswitch.IsControling == true)
         {
             if (isplayer2 == false)
@@ -107,10 +107,10 @@ public class PlayerMovement : MonoBehaviour
         {
             framecountdown = 30;
         }
-        if (iframe > 0)
+        /*if (iframe > 0)
         {
             iframe -= 1;
-        }
+        }*/
     }
     public void TakeDamage(float damage)
     {
@@ -118,7 +118,8 @@ public class PlayerMovement : MonoBehaviour
         {
             playerhp.currentHealth -= damage;
             healthBar.SetHealth(playerhp.currentHealth);
-            iframe = iframesetting;
+            StartCoroutine(IframeCountdown());
+            //iframe = iframesetting;
         }
     }
     public void knockback(float forceX, float forceY)
@@ -131,8 +132,15 @@ public class PlayerMovement : MonoBehaviour
             }
             Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
             rb.AddForce(new Vector2(forceX, forceY));
-            iframe = iframesetting;
+            StartCoroutine(IframeCountdown());
+            //iframe = iframesetting;
             isDamagedanim = true;
         }
+    }
+    IEnumerator IframeCountdown()
+    {
+        isDamaged = true;
+        yield return new WaitForSeconds(iframetime);
+        isDamaged = false;
     }
 }
