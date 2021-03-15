@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             if (isplayer2 == false)
             {
                 horizontalmove = Input.GetAxisRaw("Horizontal") * runspeed;
-                if (Input.GetButtonDown("Jump"))
+                if (Input.GetButtonDown("Jump") && !isAttacking)
                 {
                     jump = true;
                 }
@@ -72,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
                     jump = true;
                 }
             }
-            
         }
         
     }

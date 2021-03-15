@@ -7,7 +7,6 @@ public class IFrameAnim : MonoBehaviour
     public Material playermat;
     public PlayerMovement player;
 
-    public int delayframe = 5;
     public float iframedelay = 0.5f;
 
     bool iframe = false;

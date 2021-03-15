@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class EnemyStatus : MonoBehaviour
 {
-    public float Enemyhp = 20.0f;
+    public float EnemyMaxHp = 20.0f;
+    [HideInInspector] public float Enemyhp = 20.0f;
     public bool knockbackright = true;
     Rigidbody2D rb;
     float knowbackX = 500.0f;
     float knowbackY = 200.0f;
     void Start()
     {
+        Enemyhp = EnemyMaxHp;
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 

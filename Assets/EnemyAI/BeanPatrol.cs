@@ -12,9 +12,10 @@ public class BeanPatrol : MonoBehaviour
     public Rigidbody2D beanRigid;
     public Transform target;
 
+    public float patroldistance = 5.0f;
     //public Transform startSpot;
-    public float minX;
-    public float maxX;
+    private float minX;
+    private float maxX;
     private float minY;
     //public float maxY;
     //Vector3 startPatrolPosition;
@@ -25,8 +26,10 @@ public class BeanPatrol : MonoBehaviour
     void Start()
     {
         waitTime = 0f;
-        //minY = transform.position.y;
+        minY = gameObject.transform.position.y;
         //startPatrolPosition = gameObject.transform.position;
+        minX = gameObject.transform.position.x - 5;
+        maxX = gameObject.transform.position.x + 5;
         moveSpot.position = new Vector2(minX, transform.position.y);
     }
 
