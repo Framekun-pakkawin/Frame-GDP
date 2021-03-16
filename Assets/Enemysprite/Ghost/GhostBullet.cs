@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bulletsaber : MonoBehaviour
+public class GhostBullet : MonoBehaviour
 {
-    public float speed = 20.0f;
-    public float bulletdamage = 5.0f;
-    public float distance = 50.0f;
-    public float countdown = 1.0f;
+    public float bulletdamage = 100.0f;
+    public float speed = 10.0f;
+    public float countdown = 0.8f;
     bool isDestorying = false;
     Rigidbody2D rb;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed;
+        rb.velocity = -transform.right * speed;
     }
+
     void Update()
     {
         StartCoroutine(Destorying());
@@ -22,10 +22,10 @@ public class bulletsaber : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.gameObject.CompareTag("Spirit") == true)
+        if (hitInfo.gameObject.CompareTag("Player") == true)
         {
-            EnemyStatus enemy = hitInfo.GetComponent<EnemyStatus>();
-            enemy.TakeDamage(bulletdamage);
+            PlayerMovement player = hitInfo.GetComponent<PlayerMovement>();
+            player.TakeDamage(bulletdamage);
             Destroy(gameObject);
         }
     }

@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: d2bd3ed88b2fea54ab685595d1f04598
+guid: ea8d58827cc9dc4459d7c47a819b0a2a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1505173992785135288
+    second: Insect_fireBall_spritesheet_0
+  - first:
+      213: -5789259091716935356
+    second: Insect_fireBall_spritesheet_1
+  - first:
+      213: 1802795733077370358
+    second: Insect_fireBall_spritesheet_2
+  - first:
+      213: 891691715754303861
+    second: Insect_fireBall_spritesheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,10 +52,10 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 5
+  alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -157,7 +169,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Insect_fireBall_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1670
+        height: 3294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b64d1d85c373e410800000000000000
+      internalID: 1505173992785135288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_fireBall_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 0
+        width: 1670
+        height: 3294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441f285678b68afa0800000000000000
+      internalID: -5789259091716935356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_fireBall_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3340
+        y: 0
+        width: 1670
+        height: 3294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5aaa8ea21d40910800000000000000
+      internalID: 1802795733077370358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_fireBall_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 5010
+        y: 0
+        width: 1670
+        height: 3294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571a1be14ecef5c00800000000000000
+      internalID: 891691715754303861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
