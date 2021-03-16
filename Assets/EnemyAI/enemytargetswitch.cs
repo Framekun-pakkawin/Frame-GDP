@@ -7,7 +7,7 @@ public class enemytargetswitch : MonoBehaviour
     public SwitchCenter switchcenter;
     public Transform player1;
     public Transform player2;
-    public bool isBean = false;
+    public string EnemyName = "xxx";
     BeanPatrol bean;
     Spirit_Behavior spirit;
     void Start()
@@ -20,24 +20,32 @@ public class enemytargetswitch : MonoBehaviour
     {
         if (switchcenter.isplayer1 == true)
         {
-            if (isBean == true)
+            if (EnemyName == "Bean")
             {
                 bean.target = player1;
             }
-            else 
+            else if (EnemyName == "Spirit")
             {
                 spirit.target = player1;
+            }
+            else if (EnemyName == "Spikey")
+            { 
+                
             }
         }
         else
         {
-            if (isBean == true)
+            if (EnemyName == "Bean")
             {
                 bean.target = player2;
             }
-            else
+            else if (EnemyName == "Spirit")
             {
                 spirit.target = player2;
+            }
+            else if (EnemyName == "Spikey")
+            {
+
             }
         }
     }
