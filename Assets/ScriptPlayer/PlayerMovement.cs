@@ -122,6 +122,22 @@ public class PlayerMovement : MonoBehaviour
             //iframe = iframesetting;
         }
     }
+    public void knockbackwithdamage(float damage,float forceX, float forceY)
+    {
+        if (!isDamaged)
+        {
+            if (knockbackright == false)
+            {
+                forceX = -forceX;
+            }
+            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+            rb.AddForce(new Vector2(forceX, forceY));
+            playerhp.currentHealth -= damage;
+            healthBar.SetHealth(playerhp.currentHealth);
+            StartCoroutine(IframeCountdown());
+            isDamagedanim = true;
+        }
+    }
     public void knockback(float forceX, float forceY)
     {
         if (!isDamaged)
@@ -133,7 +149,6 @@ public class PlayerMovement : MonoBehaviour
             Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
             rb.AddForce(new Vector2(forceX, forceY));
             StartCoroutine(IframeCountdown());
-            //iframe = iframesetting;
             isDamagedanim = true;
         }
     }

@@ -25,7 +25,6 @@ public class Beanattack : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Player") && ishitting == false)
         {
             PlayerMovement player = hitInfo.gameObject.GetComponent<PlayerMovement>();
-            player.TakeDamage(enemydamage);
             if (gameObject.transform.position.x >= hitInfo.gameObject.transform.position.x)
             {
                 player.knockbackright = false;
@@ -37,7 +36,7 @@ public class Beanattack : MonoBehaviour
                 enemyStatus.knockbackright = false;
             }
             enemyStatus.knockback(knowbackX, knowbackY);
-            player.knockback(knowbackX/2, knowbackY/2);
+            player.knockbackwithdamage(enemydamage, knowbackX/2, knowbackY/2);
             ishitting = true;
         }
     }

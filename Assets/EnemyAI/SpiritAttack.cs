@@ -21,7 +21,6 @@ public class SpiritAttack : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Player"))
         {
             PlayerMovement player = hitInfo.gameObject.GetComponent<PlayerMovement>();
-            player.TakeDamage(enemydamage);
             if (gameObject.transform.position.x >= hitInfo.gameObject.transform.position.x)
             {
                 player.knockbackright = false;
@@ -30,7 +29,7 @@ public class SpiritAttack : MonoBehaviour
             {
                 player.knockbackright = true;
             }
-            player.knockback(knockbackX, knockbackY);
+            player.knockbackwithdamage(enemydamage,knockbackX, knockbackY);
         }
     }
 

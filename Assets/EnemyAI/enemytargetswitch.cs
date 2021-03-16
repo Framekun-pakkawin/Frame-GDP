@@ -8,12 +8,17 @@ public class enemytargetswitch : MonoBehaviour
     public Transform player1;
     public Transform player2;
     public string EnemyName = "xxx";
+
     BeanPatrol bean;
     Spirit_Behavior spirit;
+    SpikeyBehavior spike;
+    Bombbehavior bomb;
     void Start()
     {
         bean = gameObject.GetComponent<BeanPatrol>();
         spirit = gameObject.GetComponent<Spirit_Behavior>();
+        spike = gameObject.GetComponent<SpikeyBehavior>();
+        bomb = gameObject.GetComponent<Bombbehavior>();
     }
 
     void Update()
@@ -29,8 +34,18 @@ public class enemytargetswitch : MonoBehaviour
                 spirit.target = player1;
             }
             else if (EnemyName == "Spikey")
-            { 
-                
+            {
+                if (spike.target != null)
+                {
+                    spike.target = player1;
+                }
+            }
+            else if (EnemyName == "Bomb")
+            {
+                if (bomb.target != null)
+                {
+                    bomb.target = player1;
+                }
             }
         }
         else
@@ -45,7 +60,17 @@ public class enemytargetswitch : MonoBehaviour
             }
             else if (EnemyName == "Spikey")
             {
-
+                if (spike.target != null)
+                {
+                    spike.target = player2;
+                }
+            }
+            else if (EnemyName == "Bomb")
+            {
+                if (bomb.target != null)
+                {
+                    bomb.target = player2;
+                }
             }
         }
     }

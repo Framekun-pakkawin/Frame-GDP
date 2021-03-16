@@ -8,8 +8,6 @@ public class EnemyStatus : MonoBehaviour
     [HideInInspector] public float Enemyhp = 20.0f;
     public bool knockbackright = true;
     Rigidbody2D rb;
-    float knowbackX = 500.0f;
-    float knowbackY = 200.0f;
     void Start()
     {
         Enemyhp = EnemyMaxHp;
