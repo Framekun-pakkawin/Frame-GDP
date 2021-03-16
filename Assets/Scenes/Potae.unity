@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3397,126 +3397,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19.125538, y: 2.0940695}
   m_EdgeRadius: 0
-<<<<<<< HEAD
 --- !u!212 &144651921
-=======
---- !u!50 &192547908
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192547905}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0.5
-  m_AngularDrag: 0.05
-  m_GravityScale: 3
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &192547909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192547905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f83635270c071be4ea2c2f8ec8012d20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  startWaitTime: 3
-  moveSpot: {fileID: 965584281}
-  beanRigid: {fileID: 192547908}
-  target: {fileID: 1868419522}
-  patroldistance: 5
-  sightBehavior: {fileID: 339365850}
---- !u!114 &192547910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192547905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyMaxHp: 30
-  Enemyhp: 30
-  knockbackright: 1
---- !u!114 &192547911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192547905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8dfb5337b4b2d04f9f1cd089f6693a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchcenter: {fileID: 116908555}
-  player1: {fileID: 1868419522}
-  player2: {fileID: 431491903}
-  EnemyName: Bean
---- !u!114 &192547912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192547905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9037a842da30c549927c660a716cea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemydamage: 100
---- !u!1 &195139610
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 195139611}
-  - component: {fileID: 195139612}
-  m_Layer: 0
-  m_Name: map_material_0 (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &195139611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195139610}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.899994, y: 3.06, z: 0}
-  m_LocalScale: {x: 3.7195103, y: 0.49273688, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1002073083}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &195139612
->>>>>>> 96c6bcd98dc958308dd9ef703b53b94e3c8dd92f
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12864,7 +12745,7 @@ MonoBehaviour:
   switchcenter: {fileID: 116908555}
   player1: {fileID: 1868419522}
   player2: {fileID: 431491903}
-  EnemyName: Spirit
+  isBean: 0
 --- !u!114 &1088456245
 MonoBehaviour:
   m_ObjectHideFlags: 0
