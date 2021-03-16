@@ -9,7 +9,6 @@ public class DeathMenu : MonoBehaviour
     private void Start()
     {
         scenename = SceneManager.GetActiveScene().name;
-        gameObject.SetActive(false);
     }
 
     public string mainMenuLevel1;
