@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Potae.unity
     guid: 3a32bef4be16bfd4695fed0c7f7102cb
+  - enabled: 1
+    path: Assets/Scenes/ThankEngineProof.unity
+    guid: df6e3d5b0be415246a840fd23bf25241
   m_configObjects: {}

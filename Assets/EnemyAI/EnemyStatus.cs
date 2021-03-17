@@ -7,6 +7,8 @@ public class EnemyStatus : MonoBehaviour
     public float EnemyMaxHp = 20.0f;
     [HideInInspector] public float Enemyhp = 20.0f;
     public bool knockbackright = true;
+    public bool isknockbackable = true;
+    public float enemyhp = 20.0f;
     Rigidbody2D rb;
     void Start()
     {
@@ -16,7 +18,7 @@ public class EnemyStatus : MonoBehaviour
 
     void Update()
     {
-        
+        enemyhp = Enemyhp;
     }
     public void TakeDamage(float Damage)
     {
@@ -28,10 +30,13 @@ public class EnemyStatus : MonoBehaviour
     }
     public void knockback(float forceX, float forceY)
     {
-        if (knockbackright == false)
+        if (isknockbackable)
         {
-            forceX = -forceX;
+            if (knockbackright == false)
+            {
+                forceX = -forceX;
+            }
+            rb.AddForce(new Vector2(forceX, forceY));
         }
-        rb.AddForce(new Vector2(forceX, forceY));
     }
 }

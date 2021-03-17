@@ -7,6 +7,7 @@ public class Enemyhpbar : MonoBehaviour
     public GameObject enemy;
     EnemyStatus enemystat;
     public Transform hpfill;
+    public float offsetX = 0.0f;
     public float offsetY = 5.0f;
     float SizeX;
     public float enmyhp;
@@ -21,7 +22,7 @@ public class Enemyhpbar : MonoBehaviour
         hpfill.localScale = new Vector3(SizeX*enemystat.Enemyhp/enemystat.EnemyMaxHp,
                                         hpfill.localScale.y, hpfill.localScale.z);
         enmyhp = enemystat.Enemyhp;
-        gameObject.transform.position = new Vector3(enemy.transform.position.x, 
+        gameObject.transform.position = new Vector3(enemy.transform.position.x + offsetX, 
                                                     enemy.transform.position.y - offsetY, enemy.transform.position.z);
         if (enemystat.Enemyhp == 0)
         {

@@ -1,27 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ZoomCam : MonoBehaviour
 {
     public bool ZoomActive = false;
-    public float Zoomspeed = 0.0325f; 
-    public Vector3 []Target;
-    public Camera Cam;
+    public float sizetozoom = 6.0f;
+    public float normalsize = 5.0f;
+    CinemachineVirtualCamera virtualcam;
     void Start()
     {
-        Cam = Camera.main;
+        virtualcam = GetComponent<CinemachineVirtualCamera>();
     }
-    public void LateUpdate()
+    void Update()
     {
-        if (ZoomActive)
-        {
-            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, 3, Zoomspeed);
-        }
-        else
-        {
-            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, 5, Zoomspeed);
-        }
+        
+    }
+    public void Zoom(float size)
+    {
+        virtualcam.m_Lens.OrthographicSize = size;
     }
 
 }

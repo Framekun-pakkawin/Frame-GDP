@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    static public int currentcheckpoint = 1;
+    static public int currentcheckpoint = 0;
     public CharacterController2D controller;
     public CharacterSwitch characterswitch;
     float horizontalmove = 0.0f;
