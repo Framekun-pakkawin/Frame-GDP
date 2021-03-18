@@ -34,10 +34,14 @@ public class Bombbehavior : MonoBehaviour
         if (MovingRight)
         {
             rb.velocity = transform.right * movespeed;
+            Transform currtrans = gameObject.transform;
+            transform.localScale = new Vector3(-Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
         else
         {
             rb.velocity = -transform.right * movespeed;
+            Transform currtrans = gameObject.transform;
+            transform.localScale = new Vector3(Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
         if (Mathf.Abs(startpositionX - gameObject.transform.position.x) >= Patroldistance)
         {
