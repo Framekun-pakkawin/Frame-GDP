@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SpikeyBehavior : MonoBehaviour
 {
-    [HideInInspector] public Transform target = null;
+    public Transform target = null;
+    public Spikeyattack spikeyattack;
     public GameObject spikeprefab;
-    public float timedelay = 2.0f;
+    public float timedelay = 4.0f;
     bool isAttacking = false;
     void Start()
     {
@@ -18,20 +19,15 @@ public class SpikeyBehavior : MonoBehaviour
     {
         if (target != null)
         {
-            Attacking();
+            StartCoroutine(AttackingDelay());
         }
-    }
-    void Attacking()
-    {
-        //playanim attack
-        StartCoroutine(AttackingDelay());
     }
     IEnumerator AttackingDelay()
     {
         if (!isAttacking)
         {
             isAttacking = true;
-            Instantiate(spikeprefab, new Vector3(target.position.x,gameObject.transform.position.y,target.position.z),target.rotation);
+            spikeyattack.PlayAttackAnim();
             yield return new WaitForSeconds(timedelay);
             isAttacking = false;
         }

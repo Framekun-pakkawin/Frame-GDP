@@ -14,7 +14,22 @@ public class BombAttack : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
-            Attack();
+            PlayerMovement playermove = hitInfo.gameObject.GetComponent<PlayerMovement>();
+            if (!playermove.isDamaged)
+            {
+                Attack();
+            }
+        }
+    }
+    private void OnCollisionStay2D(Collision2D hitInfo)
+    {
+        if (hitInfo.gameObject.CompareTag("Player"))
+        {
+            PlayerMovement playermove = hitInfo.gameObject.GetComponent<PlayerMovement>();
+            if (!playermove.isDamaged)
+            {
+                Attack();
+            }
         }
     }
 

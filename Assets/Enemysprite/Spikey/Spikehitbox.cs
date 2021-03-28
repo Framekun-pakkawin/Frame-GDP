@@ -17,7 +17,6 @@ public class Spikehitbox : MonoBehaviour
         {
             PlayerMovement playercode = hitInfo.GetComponent<PlayerMovement>();
             playercode.TakeDamage(damage);
-            Destroy(gameObject);
         }
     }
     IEnumerator Disappear()

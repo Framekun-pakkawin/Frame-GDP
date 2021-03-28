@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class destorycloneobj : MonoBehaviour
 {
-    public int countdown = 120;
+    public float countdown = 1.0f;
+    bool isDestorying = false;
     void Start()
     {
-        
+
     }
     void Update()
     {
-        if (countdown <= 0)
+        StartCoroutine(DestoryCountdown());
+    }
+    IEnumerator DestoryCountdown()
+    {
+        if (!isDestorying)
         {
+            isDestorying = true;
+            yield return new WaitForSeconds(countdown);
+            isDestorying = false;
             Destroy(gameObject);
         }
-    }
-    private void FixedUpdate()
-    {
-        if (countdown > 0)
-        {
-            countdown -= 1;
-        }
-    }
-    public void DestoryGameObj()
-    {
-        Destroy(gameObject);
     }
     
 }

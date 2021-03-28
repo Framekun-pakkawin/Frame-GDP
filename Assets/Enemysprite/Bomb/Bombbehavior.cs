@@ -57,10 +57,14 @@ public class Bombbehavior : MonoBehaviour
         if (target.position.x > gameObject.transform.position.x)
         {
             rb.velocity = transform.right * movespeed;
+            Transform currtrans = gameObject.transform;
+            transform.localScale = new Vector3(-Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
         else if (target.position.x < gameObject.transform.position.x)
         {
             rb.velocity = -transform.right * movespeed;
+            Transform currtrans = gameObject.transform;
+            transform.localScale = new Vector3(Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
     }
     

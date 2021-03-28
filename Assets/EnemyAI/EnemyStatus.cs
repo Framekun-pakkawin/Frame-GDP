@@ -9,6 +9,7 @@ public class EnemyStatus : MonoBehaviour
     public bool knockbackright = true;
     public bool isknockbackable = true;
     public float enemyhp = 20.0f;
+    public GameObject slashfx;
     Rigidbody2D rb;
     void Start()
     {
@@ -23,6 +24,10 @@ public class EnemyStatus : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         Enemyhp -= Damage;
+        if (gameObject.CompareTag("Demon"))
+        {
+            Instantiate(slashfx,gameObject.transform.position,gameObject.transform.rotation);
+        }
         if (Enemyhp <= 0)
         {
             gameObject.SetActive(false);
