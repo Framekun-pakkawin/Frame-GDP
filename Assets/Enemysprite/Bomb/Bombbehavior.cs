@@ -7,7 +7,9 @@ public class Bombbehavior : MonoBehaviour
     public Transform target = null;
     public float movespeed = 5.0f;
     public float turndelay = 0.7f;
+    public BombAttack bombattack;
     bool MovingRight = false;
+    bool isKaboom = false;
     float startpositionX;
     Rigidbody2D rb;
     public float Patroldistance = 10.0f;
@@ -20,13 +22,16 @@ public class Bombbehavior : MonoBehaviour
 
     void Update()
     {
-        if (target != null)
+        if (!isKaboom)
         {
-            Chasing();
-        }
-        else 
-        {
-            Patrol();
+            if (target != null)
+            {
+                Chasing();
+            }
+            else
+            {
+                Patrol();
+            }
         }
     }
     void Patrol()
@@ -67,5 +72,29 @@ public class Bombbehavior : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
     }
-    
+    private void OnCollisionEnter2D(Collision2D hitInfo)
+    {
+        if (hitInfo.gameObject.CompareTag("Player"))
+        {
+            PlayerMovement playermove = hitInfo.gameObject.GetComponent<PlayerMovement>();
+            if (!playermove.isDamaged)
+            {
+                bombattack.AttackAnim();
+                isKaboom = true;
+            }
+        }
+    }
+    private void OnCollisionStay2D(Collision2D hitInfo)
+    {
+        if (hitInfo.gameObject.CompareTag("Player"))
+        {
+            PlayerMovement playermove = hitInfo.gameObject.GetComponent<PlayerMovement>();
+            if (!playermove.isDamaged)
+            {
+                bombattack.AttackAnim();
+                isKaboom = true;
+            }
+        }
+    }
+
 }

@@ -14,6 +14,10 @@ public class destorycloneobj : MonoBehaviour
     {
         StartCoroutine(DestoryCountdown());
     }
+    public void DestoryGameObj()
+    {
+        Destroy(gameObject);
+    }
     IEnumerator DestoryCountdown()
     {
         if (!isDestorying)

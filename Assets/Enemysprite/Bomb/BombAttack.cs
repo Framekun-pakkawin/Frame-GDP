@@ -5,35 +5,17 @@ using UnityEngine;
 public class BombAttack : MonoBehaviour
 {
     public GameObject Kaboom;
-    EnemyStatus enemystat;
+    public EnemyStatus enemystat;
+    Animator anim;
     void Start()
     {
-        enemystat = gameObject.GetComponent<EnemyStatus>();
+        anim = gameObject.GetComponent<Animator>();
     }
-    private void OnCollisionEnter2D(Collision2D hitInfo)
+    public void AttackAnim()
     {
-        if (hitInfo.gameObject.CompareTag("Player"))
-        {
-            PlayerMovement playermove = hitInfo.gameObject.GetComponent<PlayerMovement>();
-            if (!playermove.isDamaged)
-            {
-                Attack();
-            }
-        }
+        anim.Play("BombAttack");
     }
-    private void OnCollisionStay2D(Collision2D hitInfo)
-    {
-        if (hitInfo.gameObject.CompareTag("Player"))
-        {
-            PlayerMovement playermove = hitInfo.gameObject.GetComponent<PlayerMovement>();
-            if (!playermove.isDamaged)
-            {
-                Attack();
-            }
-        }
-    }
-
-    void Attack()
+    public void Attack()
     {
         Instantiate(Kaboom, gameObject.transform.position, gameObject.transform.rotation);
         enemystat.Enemyhp = 0;

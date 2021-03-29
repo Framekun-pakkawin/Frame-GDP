@@ -33,8 +33,11 @@ public class KaboomHitbox : MonoBehaviour
                 player.knockbackright = true;
             }
             player.knockbackwithdamage(kabooomdamage,knockbackX,knockbackY);
-            Destroy(gameObject);
         }
+    }
+    public void DestroyGameObj()
+    {
+        Destroy(gameObject);
     }
     IEnumerator Destorying()
     {

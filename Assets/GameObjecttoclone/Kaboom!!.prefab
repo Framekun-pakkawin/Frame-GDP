@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2490464928966663474}
   - component: {fileID: 2490464928966663473}
   - component: {fileID: 2490464928966663472}
+  - component: {fileID: 7454293032254490446}
   m_Layer: 0
   m_Name: Kaboom!!
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2490464928966663475}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.75, y: -2.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -62,9 +63,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kabooomdamage: 300
-  countdown: 0.3
+  countdown: 0.6
   knockbackX: 3000
   knockbackY: 800
+--- !u!95 &7454293032254490446
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490464928966663475}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2faf0a881aa5f744b60ef0e297ca183, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2490464929138551613
 GameObject:
   m_ObjectHideFlags: 0

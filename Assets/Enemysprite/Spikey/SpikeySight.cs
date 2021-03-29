@@ -12,6 +12,13 @@ public class SpikeySight : MonoBehaviour
             spikey.target = hitInfo.transform;
         }
     }
+    private void OnTriggerStay2D(Collider2D hitInfo)
+    {
+        if (hitInfo.gameObject.CompareTag("Player"))
+        {
+            spikey.target = hitInfo.transform;
+        }
+    }
     private void OnTriggerExit2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Player"))

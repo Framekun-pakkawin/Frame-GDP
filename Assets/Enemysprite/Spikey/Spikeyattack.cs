@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Spikeyattack : MonoBehaviour
 {
-    public bool foundplayer = false;
     public GameObject Spikey;
     public GameObject spikeprefab;
-    public float timedelay = 4.0f;
+    public float attackdelay = 4.0f;
     bool isAttacking = false;
     SpikeyBehavior spikeybehave;
     Animator anim;
@@ -31,7 +30,7 @@ public class Spikeyattack : MonoBehaviour
             isAttacking = true;
             Instantiate(spikeprefab, new Vector3(spikeybehave.target.position.x, Spikey.transform.position.y,
                                                     spikeybehave.target.position.z), spikeybehave.target.rotation);
-            yield return new WaitForSeconds(timedelay);
+            yield return new WaitForSeconds(attackdelay);
             isAttacking = false;
         }
     }

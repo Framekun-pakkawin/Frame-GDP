@@ -20,6 +20,10 @@ public class EnemyStatus : MonoBehaviour
     void Update()
     {
         enemyhp = Enemyhp;
+        if (Enemyhp <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
     public void TakeDamage(float Damage)
     {
