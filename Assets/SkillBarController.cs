@@ -9,7 +9,7 @@ public class SkillBarController : MonoBehaviour
     bool isCooldown;
     void Update()
     {
-        if(Input.GetKey(KeyCode.Alpha1))
+        if(Input.GetKey(KeyCode.J))
         {
             isCooldown = true;
         }
