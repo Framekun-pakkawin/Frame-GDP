@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeanPatrol : MonoBehaviour
+public class Insertbehavior : MonoBehaviour
 {
-    public float speed;
+    public float basespeed;
+    public float delayspeed;
+    float speed;
     private float waitTime;
     public float startWaitTime;
 
+    [HideInInspector]public float distanceforplayer = 3.5f;
+
     public Transform moveSpot;
     public Rigidbody2D beanRigid;
-    public Transform target;
+
+    public bool isAttacking = false; 
 
     public float patroldistance = 5.0f;
     //public Transform startSpot;
@@ -25,6 +30,7 @@ public class BeanPatrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speed = basespeed;
         waitTime = 0f;
         minY = gameObject.transform.position.y;
         //startPatrolPosition = gameObject.transform.position;
@@ -35,6 +41,14 @@ public class BeanPatrol : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isAttacking == true)
+        {
+            speed = delayspeed;
+        }
+        else
+        {
+            speed = basespeed;
+        }
         Transform currentSpot = moveSpot;
         moveSpot.position = new Vector3(currentSpot.position.x, transform.position.y, currentSpot.position.z);
         //moveSpot.position = new Vector3(moveSpot.position.x, minY, moveSpot.position.z);
@@ -82,16 +96,33 @@ public class BeanPatrol : MonoBehaviour
     {
         Vector3 targetPosition = sightBehavior.targetPlayerToChase.transform.position;
         Vector3 currentPosition = gameObject.transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        
+        //transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        //beanRigid.AddForce(new Vector2(speed,0));
+
 
         if (targetPosition.x < currentPosition.x)
         {
+            if (Mathf.Abs(currentPosition.x - targetPosition.x) > distanceforplayer)
+            {
+                beanRigid.velocity = -transform.right * speed;
+            }
+            else
+            {
+                beanRigid.velocity = transform.right * 0;
+            }
             Transform currtrans = gameObject.transform;
             transform.localScale = new Vector3(Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
         else if (targetPosition.x > currentPosition.x)
         {
+            if (Mathf.Abs(currentPosition.x - targetPosition.x) > distanceforplayer)
+            {
+                beanRigid.velocity = transform.right * speed;
+            }
+            else
+            {
+                beanRigid.velocity = transform.right * 0;
+            }
             Transform currtrans = gameObject.transform;
             transform.localScale = new Vector3(-Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }

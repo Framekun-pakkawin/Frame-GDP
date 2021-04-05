@@ -6,7 +6,12 @@ public class BossAttack : MonoBehaviour
 {
     public GameObject handhitbox;
     public GameObject beamhitbox;
+    public BossBehavior boss;
 
+    public void EndofAwake()
+    {
+        boss.isAwakening = true;
+    }
     public void ActiveHandhitbox()
     {
         handhitbox.SetActive(true);

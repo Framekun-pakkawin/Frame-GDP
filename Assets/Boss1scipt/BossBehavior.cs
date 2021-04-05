@@ -8,6 +8,7 @@ public class BossBehavior : MonoBehaviour
     public Animator anim;
     public Transform target1 = null;
     public Transform target2 = null;
+    public float awakedelay = 3.0f;
     public float auradelay = 0.8f;
     public float beamdelay = 3.0f;
     public float handdelay = 0.8f;
@@ -15,9 +16,14 @@ public class BossBehavior : MonoBehaviour
     public GameObject Aurawarningred;
     public GameObject Aurawarningblue;
 
+    public bool isAwakening = false;
     bool isAttacking = false;
+    bool Awaken = false;
+    bool isDead = false;
 
     string IDEAL = "Idel";
+    string AWAKE = "Awaken";
+    string DEAD = "Dead";
     string HANDATTACK = "Attack";
     string BEAMATTACK = "Final_Attack";
 
@@ -28,17 +34,34 @@ public class BossBehavior : MonoBehaviour
 
     void Update()
     {
-        if (target1 != null && target2 == null)
+        if (!isDead)
         {
-            Playerfar();
-        }
-        else if (target1 != null && target2 != null)
-        {
-            Playerclose();
-        }
-        else
-        {
-            Idle();
+            if (target1 != null && target2 == null)
+            {
+                if (!isAwakening)
+                {
+                    StartCoroutine(PlayerAwakeAnim());
+                }
+                else
+                {
+                    Playerfar();
+                }
+            }
+            else if (target1 != null && target2 != null)
+            {
+                if (!isAwakening)
+                {
+                    StartCoroutine(PlayerAwakeAnim());
+                }
+                else
+                {
+                    Playerclose();
+                }
+            }
+            else
+            {
+                Idle();
+            }
         }
     }
     void Playerfar()
@@ -82,6 +105,21 @@ public class BossBehavior : MonoBehaviour
             yield return new WaitForSeconds(grabattack);
             isAttacking = false;
         }
+    }
+    IEnumerator PlayerAwakeAnim()
+    {
+        if (!Awaken)
+        {
+            Awaken = true;
+            ChangeAnimationState(AWAKE);
+            yield return new WaitForSeconds(awakedelay);
+            isAwakening = true;
+        }
+    }
+    public void DeadAnimPlay()
+    {
+        isDead = true;
+        ChangeAnimationState(DEAD);
     }
     public void ChangeAnimationState(string NewState)
     {

@@ -7,6 +7,7 @@ public class BossStatus : MonoBehaviour
     public EnemyStatus demonhurtbox;
     public EnemyStatus spirithurtbox;
     public GameObject wall;
+    BossBehavior boss;
 
     public float EnemyMaxHpSpirit = 200.0f;
     [HideInInspector]public float EnemyhpSpirit = 200.0f;
@@ -15,6 +16,7 @@ public class BossStatus : MonoBehaviour
 
     void Start()
     {
+        boss = gameObject.GetComponent<BossBehavior>();
         spirithurtbox.EnemyMaxHp = EnemyMaxHpSpirit;
         spirithurtbox.Enemyhp = EnemyMaxHpSpirit;
         demonhurtbox.EnemyMaxHp = EnemyMaxHpDemon;
@@ -23,12 +25,22 @@ public class BossStatus : MonoBehaviour
 
     void Update()
     {
-        EnemyhpSpirit = spirithurtbox.Enemyhp;
-        EnemyhpDemon = demonhurtbox.Enemyhp;
+        if (!boss.isAwakening)
+        {
+            spirithurtbox.EnemyMaxHp = EnemyMaxHpSpirit;
+            spirithurtbox.Enemyhp = EnemyMaxHpSpirit;
+            demonhurtbox.EnemyMaxHp = EnemyMaxHpDemon;
+            demonhurtbox.Enemyhp = EnemyMaxHpDemon;
+        }
+        else
+        {
+            EnemyhpSpirit = spirithurtbox.Enemyhp;
+            EnemyhpDemon = demonhurtbox.Enemyhp;
+        }
         if (EnemyhpDemon == 0 && EnemyhpSpirit == 0)
         {
             wall.SetActive(false);
-            gameObject.SetActive(false);
+            boss.DeadAnimPlay();
         }
     }
     
