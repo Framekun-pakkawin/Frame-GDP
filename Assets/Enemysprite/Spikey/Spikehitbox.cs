@@ -16,7 +16,7 @@ public class Spikehitbox : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Player"))
         {
             PlayerMovement playercode = hitInfo.GetComponent<PlayerMovement>();
-            playercode.TakeDamage(damage);
+            playercode.knockbackwithdamage(damage,0,0);
         }
     }
     IEnumerator Disappear()

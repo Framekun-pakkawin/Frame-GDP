@@ -5,25 +5,12 @@ using UnityEngine.UI;
 public class SkillBarController : MonoBehaviour
 {
     public Image imageCooldown;
-    public float cooldown = 5;
-    bool isCooldown;
+    public float cooldown = 3;
+    [HideInInspector]public float cooldowntime = 0.0f;
+    public summmonhelper player;
     void Update()
     {
-        if(Input.GetKey(KeyCode.J))
-        {
-            isCooldown = true;
-        }
-
-        if(isCooldown)
-        {
-            imageCooldown.fillAmount += 1 / cooldown * Time.deltaTime;
-
-            if(imageCooldown.fillAmount == 1)
-            {
-                imageCooldown.fillAmount = 0;
-                isCooldown = false;
-            }
-        }
-
+        cooldowntime = player.Cooldowntime;
+        imageCooldown.fillAmount = cooldowntime;
     }
 }

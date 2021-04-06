@@ -6,7 +6,8 @@ public class summmonhelper : MonoBehaviour
 {
     public GameObject Standtosummon;
     public float helpingcooldown = 1.0f;
-    bool isCooldown = false;
+    public float Cooldowntime = 0.0f;
+    [HideInInspector] public bool isCooldown = false;
     AnimationControl animControl;
     CharacterSwitch switchplayer;
     private void Start()
@@ -37,11 +38,26 @@ public class summmonhelper : MonoBehaviour
                 }
             }
         }
+        if (isCooldown)
+        {
+            Cooldowntime += 1 / helpingcooldown * Time.deltaTime;
+            if (Cooldowntime == 1)
+            {
+                Cooldowntime = 0;
+            }
+        }
+        else
+        {
+            Cooldowntime = 0;
+        }
     }
     IEnumerator Cooldown()
     {
-        isCooldown = true;
-        yield return new WaitForSeconds(helpingcooldown);
-        isCooldown = false;
+        if (!isCooldown)
+        {
+            isCooldown = true;
+            yield return new WaitForSeconds(helpingcooldown);
+            isCooldown = false;
+        }
     }
 }
