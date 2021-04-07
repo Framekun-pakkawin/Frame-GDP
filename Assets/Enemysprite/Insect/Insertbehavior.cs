@@ -18,22 +18,17 @@ public class Insertbehavior : MonoBehaviour
     public bool isAttacking = false; 
 
     public float patroldistance = 5.0f;
-    //public Transform startSpot;
     private float minX;
     private float maxX;
     private float minY;
-    //public float maxY;
-    //Vector3 startPatrolPosition;
 
     public BeanSight sightBehavior;
 
-    // Start is called before the first frame update
     void Start()
     {
         speed = basespeed;
         waitTime = 0f;
         minY = gameObject.transform.position.y;
-        //startPatrolPosition = gameObject.transform.position;
         minX = gameObject.transform.position.x - 5;
         maxX = gameObject.transform.position.x + 5;
         moveSpot.position = new Vector2(minX, transform.position.y);
@@ -96,8 +91,6 @@ public class Insertbehavior : MonoBehaviour
     {
         Vector3 targetPosition = sightBehavior.targetPlayerToChase.transform.position;
         Vector3 currentPosition = gameObject.transform.position;
-        //transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        //beanRigid.AddForce(new Vector2(speed,0));
 
 
         if (targetPosition.x < currentPosition.x)

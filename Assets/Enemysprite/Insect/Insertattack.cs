@@ -25,7 +25,7 @@ public class Insertattack : MonoBehaviour
             }
         }
     }
-    void Attack()
+    public void Attack()
     {
         StartCoroutine(Attackdelay());
     }

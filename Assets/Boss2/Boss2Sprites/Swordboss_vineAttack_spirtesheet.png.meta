@@ -14,6 +14,12 @@ TextureImporter:
   - first:
       213: 1576236432147651125
     second: Swordboss_vineAttack_spirtesheet_3
+  - first:
+      213: 141587836491609395
+    second: Swordboss_vineAttack_spirtesheet_4
+  - first:
+      213: 8341796921580926318
+    second: Swordboss_vineAttack_spirtesheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -178,8 +184,8 @@ TextureImporter:
         y: 0
         width: 1670
         height: 3294
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,8 +205,8 @@ TextureImporter:
         y: 0
         width: 1670
         height: 3294
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,8 +226,8 @@ TextureImporter:
         y: 0
         width: 1670
         height: 3294
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,8 +247,8 @@ TextureImporter:
         y: 0
         width: 1670
         height: 3294
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
