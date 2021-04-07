@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -22,7 +23,10 @@ public class TutorialManager : MonoBehaviour
         {
             popUps[popUpIndex].SetActive(false);
             popUpIndex++;
-            popUps[popUpIndex].SetActive(true);
+            if (popUps[popUpIndex] != null)
+            {
+                popUps[popUpIndex].SetActive(true);
+            }
             StartCoroutine(pressDelay());
         }
     }
@@ -69,6 +73,13 @@ public class TutorialManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 changeIndex();
+            }
+        }
+        else if (popUpIndex == 6)
+        {
+            if (!isDelay)
+            {
+                SceneManager.LoadScene("Potae");
             }
         }
 

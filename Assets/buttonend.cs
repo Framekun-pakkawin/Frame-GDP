@@ -5,11 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class buttonend : MonoBehaviour
 {
+    public bool inTutorial = false;
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(3);
+            if (inTutorial)
+            {
+                SceneManager.LoadScene("Potae");
+            }
+            else
+            {
+                SceneManager.LoadScene(3);
+            }
         }
     }
 }
