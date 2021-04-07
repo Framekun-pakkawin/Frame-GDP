@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Potae.unity
     guid: 3a32bef4be16bfd4695fed0c7f7102cb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Map2.unity
     guid: a82c8214a3558874c9f76a6c980e73bc
   - enabled: 1

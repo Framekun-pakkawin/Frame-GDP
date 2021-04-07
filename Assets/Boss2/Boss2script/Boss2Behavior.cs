@@ -6,13 +6,11 @@ public class Boss2Behavior : MonoBehaviour
 {
     [HideInInspector] public bool isDemon = false;
     public Animator anim;
-    public GameObject vine;
-    public GameObject wave;
     public Transform target = null;
     public GameObject Aurawarningred;
     public GameObject Aurawarningblue;
     public float Delay = 3.0f;
-    bool isAttacking = false;
+    public bool isAttacking = false;
     bool CurrAtkBlue = false;
     string CurrentState = "xxx";
     string IDEAL = "boss2Idel";
@@ -67,15 +65,21 @@ public class Boss2Behavior : MonoBehaviour
     }
     IEnumerator BlueAttacking()
     {
-        isAttacking = true;
-        ChangeAnimationState(BlueAtk);
-        yield return new WaitForSeconds(Delay);
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            ChangeAnimationState(BlueAtk);
+            yield return new WaitForSeconds(Delay);
+        }
     }
     IEnumerator RedAttacking()
     {
-        isAttacking = true;
-        ChangeAnimationState(BluetoRed);
-        yield return new WaitForSeconds(Delay);
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            ChangeAnimationState(BluetoRed);
+            yield return new WaitForSeconds(Delay);
+        }
     }
     public void PlayAnimFallingDown()
     {
@@ -89,6 +93,10 @@ public class Boss2Behavior : MonoBehaviour
     {
         ChangeAnimationState(RisingUp);
     }
+    public void PlayAnimIdeal()
+    {
+        ChangeAnimationState(IDEAL);
+    }
     public void falseisAttacking()
     {
         isAttacking = false;
@@ -96,6 +104,17 @@ public class Boss2Behavior : MonoBehaviour
     public void Changinghitbox()
     { 
         
+    }
+    public void TypeChange()
+    {
+        if (isDemon)
+        {
+            isDemon = false;
+        }
+        else
+        {
+            isDemon = true;
+        }
     }
     public void ChangeAnimationState(string NewState)
     {
