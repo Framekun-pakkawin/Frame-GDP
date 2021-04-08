@@ -6,12 +6,18 @@ public class Boss2Behavior : MonoBehaviour
 {
     [HideInInspector] public bool isDemon = false;
     public Animator anim;
+    public BoxCollider2D bluehurtbox;
+    public BoxCollider2D redhurtbox;
     public Transform target = null;
     public GameObject Aurawarningred;
     public GameObject Aurawarningblue;
+    public float WaitingDelay = 1.0f;
+    public float WarningDelay = 1.0f;
     public float Delay = 3.0f;
     public bool isAttacking = false;
     bool CurrAtkBlue = false;
+    bool Waitplayredtoblueanim = false;
+    bool finishingdelay = false;
     string CurrentState = "xxx";
     string IDEAL = "boss2Idel";
     string BluetoRed = "boss2bluetored";
@@ -62,12 +68,23 @@ public class Boss2Behavior : MonoBehaviour
                 CurrAtkBlue = true;
             }
         }
+        if (Waitplayredtoblueanim)
+        {
+            if (finishingdelay)
+            {
+                ChangeAnimationState(RedtoBlue);
+                Waitplayredtoblueanim = false;
+                finishingdelay = false;
+            }
+        }
     }
     IEnumerator BlueAttacking()
     {
         if (!isAttacking)
         {
             isAttacking = true;
+            Instantiate(Aurawarningblue,gameObject.transform.position,gameObject.transform.rotation);
+            yield return new WaitForSeconds(WarningDelay);
             ChangeAnimationState(BlueAtk);
             yield return new WaitForSeconds(Delay);
         }
@@ -77,8 +94,19 @@ public class Boss2Behavior : MonoBehaviour
         if (!isAttacking)
         {
             isAttacking = true;
+            yield return new WaitForSeconds(WaitingDelay);
+            Instantiate(Aurawarningred, gameObject.transform.position, gameObject.transform.rotation);
+            yield return new WaitForSeconds(WarningDelay);
             ChangeAnimationState(BluetoRed);
             yield return new WaitForSeconds(Delay);
+        }
+    }
+    IEnumerator WaitDelayanim()
+    {
+        if (!finishingdelay)
+        {
+            yield return new WaitForSeconds(WaitingDelay);
+            finishingdelay = true;
         }
     }
     public void PlayAnimFallingDown()
@@ -87,7 +115,8 @@ public class Boss2Behavior : MonoBehaviour
     }
     public void PlayAnimRedtoBlue()
     {
-        ChangeAnimationState(RedtoBlue);
+        Waitplayredtoblueanim = true;
+        StartCoroutine(WaitDelayanim());
     }
     public void PlayAnimRisingUp()
     {
@@ -102,8 +131,17 @@ public class Boss2Behavior : MonoBehaviour
         isAttacking = false;
     }
     public void Changinghitbox()
-    { 
-        
+    {
+        if (bluehurtbox.enabled)
+        {
+            bluehurtbox.enabled = false;
+            redhurtbox.enabled = true;
+        }
+        else
+        {
+            redhurtbox.enabled = false;
+            bluehurtbox.enabled = true;
+        }
     }
     public void TypeChange()
     {

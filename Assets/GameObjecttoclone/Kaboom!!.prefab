@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d8a4519a8a6944bbad248d87ed4a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kabooomdamage: 300
+  kabooomdamage: 700
   countdown: 0.6
   knockbackX: 3000
   knockbackY: 800
@@ -153,7 +153,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1609500585
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_Sprite: {fileID: 5942369551769368206, guid: 7a69ad52d97708a4588c4ca373cfe549,
     type: 3}

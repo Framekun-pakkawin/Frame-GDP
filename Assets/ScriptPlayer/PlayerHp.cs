@@ -36,11 +36,11 @@ public class PlayerHp : MonoBehaviour
     {
         if (characterswitch.IsControling == true)
         {
-            TakeDamage(1);
+            TakeDamage(2);
         }
         else if (characterswitch.IsControling == false)
         {
-            TakeDamage(-2);
+            TakeDamage(-3);
         }
     }
     void TakeDamage(int damage)

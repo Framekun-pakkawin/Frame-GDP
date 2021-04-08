@@ -28,8 +28,7 @@ public class Spikeyattack : MonoBehaviour
         if (!isAttacking)
         {
             isAttacking = true;
-            Instantiate(spikeprefab, new Vector3(spikeybehave.target.position.x, Spikey.transform.position.y,
-                                                    spikeybehave.target.position.z), spikeybehave.target.rotation);
+            Instantiate(spikeprefab, new Vector3(spikeybehave.target.position.x, Spikey.transform.position.y,spikeybehave.target.position.z), spikeybehave.target.rotation);
             yield return new WaitForSeconds(attackdelay);
             isAttacking = false;
         }

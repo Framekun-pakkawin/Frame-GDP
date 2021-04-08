@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Boss2Sign : MonoBehaviour
+public class toThankScene : MonoBehaviour
 {
-    public Boss2Behavior boss2;
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
-            boss2.target = hitInfo.gameObject.transform;
+            SceneManager.LoadScene(4);
         }
     }
 }
