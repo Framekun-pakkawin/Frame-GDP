@@ -11,13 +11,14 @@ public class PlayerHp : MonoBehaviour
     public CharacterSwitch characterswitch;
     public GameObject player;
     public GameObject Deathmenu;
+    bool immortal = false;
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    
+
     void Update()
     {
         if (currentHealth >= maxHealth)
@@ -30,6 +31,14 @@ public class PlayerHp : MonoBehaviour
             characterswitch.IsControling = false;
             player.SetActive(false);
             Deathmenu.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            immortal = true;
+        }
+        if (immortal)
+        {
+            currentHealth = maxHealth;
         }
     }
     void FixedUpdate()

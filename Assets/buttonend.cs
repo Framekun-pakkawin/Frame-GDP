@@ -16,6 +16,7 @@ public class buttonend : MonoBehaviour
             }
             else
             {
+                PlayerMovement.currentcheckpoint = 0;
                 SceneManager.LoadScene(3);
             }
         }
