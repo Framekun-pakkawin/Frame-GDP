@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool isFalling = false;
     [HideInInspector] public bool isDamaged = false;
     [HideInInspector] public bool isDamagedanim = false;
+    [HideInInspector] public bool ChargeAttacking = false;
 
     void Start()
     {

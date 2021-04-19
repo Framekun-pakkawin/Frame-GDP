@@ -7,14 +7,16 @@ public class Player2Attack : MonoBehaviour
     public Transform firepoint1;
     public Transform firepoint2;
     public Transform firepoint3;
-
     Transform [] allfirepoint;
     public GameObject bulletPrefab;
     public GameObject gate;
     public float shootingcooldown = 0.2f;
     public PlayerMovement playermove;
     bool isCooldown = false;
-    
+
+    [HideInInspector]public float charge = 0.0f;
+    public float maxcharge = 3.0f;
+    public bool isClick = false;
     void Update()
     {
         Transform[] allfirepoint = { firepoint1, firepoint2, firepoint3};
@@ -28,6 +30,31 @@ public class Player2Attack : MonoBehaviour
                 gate.SetActive(true);
                 StartCoroutine(ShootingCooldown());
             }
+        }
+        if (Input.GetButtonDown("Attack2"))
+        {
+            isClick = true;
+        }
+        if (Input.GetButtonUp("Attack2"))
+        {
+            isClick = false;
+        }
+        if (isClick)
+        {
+            charge += 1 / maxcharge * Time.deltaTime;
+            if (charge >= 1)
+            {
+                charge = 1;
+            }
+        }
+        else if (!isClick && charge >= 1)
+        {
+            playermove.ChargeAttacking = true;
+            charge = 0.0f;
+        }
+        else
+        {
+            charge = 0.0f;
         }
     }
     IEnumerator ShootingCooldown()

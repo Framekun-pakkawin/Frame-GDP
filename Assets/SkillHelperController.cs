@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class SkillBarController : MonoBehaviour
+public class SkillHelperController : MonoBehaviour
 {
     public Image imageCooldown;
     public float cooldown = 3;

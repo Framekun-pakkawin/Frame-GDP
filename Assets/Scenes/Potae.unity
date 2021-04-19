@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11455,6 +11455,7 @@ MonoBehaviour:
   isFalling: 0
   isDamaged: 0
   isDamagedanim: 0
+  ChargeAttacking: 0
 --- !u!114 &431491902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11509,6 +11510,9 @@ MonoBehaviour:
   gate: {fileID: 1200179779}
   shootingcooldown: 0.2
   playermove: {fileID: 431491901}
+  charge: 0
+  maxcharge: 3
+  isClick: 0
 --- !u!114 &431491905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12555,6 +12559,8 @@ MonoBehaviour:
   switchcenter: {fileID: 116908555}
   skillhelper1: {fileID: 1653027182}
   skillhelper2: {fileID: 1593769619}
+  skillcharge1: {fileID: 0}
+  skillcharge2: {fileID: 0}
 --- !u!1 &496647497
 GameObject:
   m_ObjectHideFlags: 0
@@ -30136,18 +30142,18 @@ MonoBehaviour:
   - Dialog: ' Why are you there?!'
     faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
     fontsize: 20
-    textcolor: {r: 0, g: 0, b: 0, a: 0}
-    timeitdisappear: 3
+    textcolor: {r: 1, g: 0, b: 0, a: 0}
+    timeitdisappear: 5
   - Dialog: What going on
     faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
     fontsize: 30
-    textcolor: {r: 0, g: 0, b: 0, a: 0}
-    timeitdisappear: 3
+    textcolor: {r: 0, g: 1, b: 0, a: 0}
+    timeitdisappear: 1
   - Dialog: KOKOKOKO
     faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
     fontsize: 50
-    textcolor: {r: 0, g: 0, b: 0, a: 0}
-    timeitdisappear: 3
+    textcolor: {r: 0, g: 0, b: 1, a: 0}
+    timeitdisappear: 5
   Dialogbox: {fileID: 2076580059}
   BackgroudDialogbox: {fileID: 440125015}
   playerIcon: {fileID: 994491862}
@@ -34211,7 +34217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitBox: {fileID: 1431955346}
+  ChargeHitBox: {fileID: 0}
   playermove: {fileID: 1868419527}
+  charge: 0
+  maxcharge: 3
 --- !u!114 &1538222265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43092,6 +43101,7 @@ MonoBehaviour:
   isFalling: 0
   isDamaged: 0
   isDamagedanim: 0
+  ChargeAttacking: 0
 --- !u!114 &1868419528
 MonoBehaviour:
   m_ObjectHideFlags: 0

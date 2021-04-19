@@ -24,7 +24,7 @@ public class Enemyhpbar : MonoBehaviour
         enmyhp = enemystat.Enemyhp;
         gameObject.transform.position = new Vector3(enemy.transform.position.x + offsetX, 
                                                     enemy.transform.position.y - offsetY, enemy.transform.position.z);
-        if (enemystat.Enemyhp == 0)
+        if (enemystat.Enemyhp <= 0)
         {
             gameObject.SetActive(false);
         }

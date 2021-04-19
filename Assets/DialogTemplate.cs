@@ -69,7 +69,7 @@ public class DialogTemplate : MonoBehaviour
         dialogboxtext.text = dialogs[textindex].Dialog;
         dialogboxtext.fontSize = dialogs[textindex].fontsize;
         imageface.sprite = dialogs[textindex].faceSprite;
-        yield return new WaitForSeconds(timeitdisappear);
+        yield return new WaitForSeconds(dialogs[textindex].timeitdisappear);
         textindex++;
         curralpha = 0;
         Finishdisplay = true;
