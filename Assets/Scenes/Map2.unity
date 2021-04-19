@@ -23567,6 +23567,8 @@ MonoBehaviour:
   controller: {fileID: 713315787}
   characterswitch: {fileID: 713315783}
   runspeed: 50
+  slowrunspeed: 20
+  normalrunspeed: 50
   healthBar: {fileID: 338861220}
   playerhp: {fileID: 338861216}
   isplayer2: 1
@@ -66301,6 +66303,8 @@ MonoBehaviour:
   controller: {fileID: 1932268606}
   characterswitch: {fileID: 1932268603}
   runspeed: 50
+  slowrunspeed: 20
+  normalrunspeed: 50
   healthBar: {fileID: 177005641}
   playerhp: {fileID: 177005637}
   isplayer2: 0

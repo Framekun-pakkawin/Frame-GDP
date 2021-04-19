@@ -8,6 +8,9 @@ public class chargeballhitbox : MonoBehaviour
     public float distance = 50.0f;
     public float countdown = 1.0f;
     bool isDestorying = false;
+    bool ishiting = false;
+    EnemyStatus enemy;
+    Transform enemyposition;
     Animator anim;
     Rigidbody2D rb;
     void Start()
@@ -19,16 +22,26 @@ public class chargeballhitbox : MonoBehaviour
     void Update()
     {
         StartCoroutine(Destorying());
+        if (ishiting)
+        {
+            gameObject.transform.position = enemyposition.position;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Spirit") == true)
         {
-            EnemyStatus enemy = hitInfo.GetComponent<EnemyStatus>();
+            enemyposition = hitInfo.transform;
+            enemy = hitInfo.GetComponent<EnemyStatus>();
             anim.SetBool("isHiting",true);
             rb.velocity = transform.right * 0;
+            ishiting = true;
         }
+    }
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
     IEnumerator Destorying()
     {

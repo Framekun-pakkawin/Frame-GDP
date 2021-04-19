@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public CharacterSwitch characterswitch;
     float horizontalmove = 0.0f;
-    public float runspeed = 3.0f;
+    [HideInInspector]public float runspeed = 3.0f;
+    public float slowrunspeed = 3.0f;
+    public float normalrunspeed = 3.0f;
     public HealthBar healthBar;
     public PlayerHp playerhp;
     public bool isplayer2 = false;
@@ -47,14 +49,6 @@ public class PlayerMovement : MonoBehaviour
                 isFalling = false;
             }
         }
-        /*if (iframe > 0)
-        {
-            isDamaged = true;
-        }
-        if (iframe == 0)
-        {
-            isDamaged = false;
-        }*/
         if (characterswitch.IsControling == true)
         {
             if (isplayer2 == false)
@@ -73,6 +67,14 @@ public class PlayerMovement : MonoBehaviour
                     jump = true;
                 }
             }
+        }
+        if (ChargeAttacking)
+        {
+            runspeed = slowrunspeed;
+        }
+        else
+        {
+            runspeed = normalrunspeed;
         }
         
     }
