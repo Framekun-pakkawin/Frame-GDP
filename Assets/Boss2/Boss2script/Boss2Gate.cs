@@ -8,6 +8,7 @@ public class Boss2Gate : MonoBehaviour
     public GameObject boss2;
     public GameObject wall1;
     public GameObject wall2;
+    public GameObject boss2hpbar;
     public float zoomsize = 0.0f;
     bool Actived = false;
     void Start()
@@ -21,6 +22,7 @@ public class Boss2Gate : MonoBehaviour
         {
             wall1.SetActive(false);
             wall2.SetActive(false);
+            boss2hpbar.SetActive(false);
         }
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
@@ -29,6 +31,7 @@ public class Boss2Gate : MonoBehaviour
         {
             wall1.SetActive(true);
             wall2.SetActive(true);
+            boss2hpbar.SetActive(true);
             zoomcam.Zoom(zoomsize);
             Actived = true;
         }

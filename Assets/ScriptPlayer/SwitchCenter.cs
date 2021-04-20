@@ -14,30 +14,37 @@ public class SwitchCenter : MonoBehaviour
     public GameObject switchfx;
     KeyCode player1key = KeyCode.E;
     KeyCode player2key = KeyCode.Mouse1;
+    bool isDelay = false;
+    public float timedelay = 1.0f;
     void Start()
     {
         
     }
     void Update()
     {
-        if (player1code.IsControling == true)
+        if (!isDelay)
         {
-            if (Input.GetKeyDown(player1key))
+            if (player1code.IsControling == true)
             {
-                Switching = true;
-                player1code.IsControling = false;
-                Switch(player2object, player1object);
-                isplayer1 = false;
+                if (Input.GetKeyDown(player1key))
+                {
+                    Switching = true;
+                    player1code.IsControling = false;
+                    Switch(player2object, player1object);
+                    isplayer1 = false;
+                    StartCoroutine(SwitchDelay());
+                }
             }
-        }
-        else if (player2code.IsControling == true)
-        {
-            if (Input.GetKeyDown(player2key))
+            else if (player2code.IsControling == true)
             {
-                Switching = true;
-                player2code.IsControling = false;
-                Switch(player1object, player2object);
-                isplayer1 = true;
+                if (Input.GetKeyDown(player2key))
+                {
+                    Switching = true;
+                    player2code.IsControling = false;
+                    Switch(player1object, player2object);
+                    isplayer1 = true;
+                    StartCoroutine(SwitchDelay());
+                }
             }
         }
     }
@@ -51,5 +58,14 @@ public class SwitchCenter : MonoBehaviour
         playeroutcode.IsControling = false;
         playerout.transform.position = new Vector3(savespot.position.x, savespot.position.y, savespot.position.z);
         playerincode.IsControling = true;
+    }
+    IEnumerator SwitchDelay()
+    {
+        if (!isDelay)
+        {
+            isDelay = true;
+            yield return new WaitForSeconds(timedelay);
+            isDelay = false;
+        }
     }
 }
