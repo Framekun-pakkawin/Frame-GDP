@@ -34,7 +34,14 @@ public class PlayerHp : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            immortal = true;
+            if (!immortal)
+            {
+                immortal = true;
+            }
+            else
+            {
+                immortal = false;
+            }
         }
         if (immortal)
         {

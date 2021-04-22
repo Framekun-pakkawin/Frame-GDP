@@ -152,7 +152,7 @@ RectTransform:
   m_Children:
   - {fileID: 1211625410}
   m_Father: {fileID: 627114304}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -658,7 +658,7 @@ RectTransform:
   m_Children:
   - {fileID: 739377674}
   m_Father: {fileID: 627114304}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -768,7 +768,7 @@ RectTransform:
   - {fileID: 809638119}
   - {fileID: 1743381852}
   m_Father: {fileID: 627114304}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -790,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &128793825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ RectTransform:
   - {fileID: 2144447450}
   - {fileID: 1977986448}
   m_Father: {fileID: 627114304}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2426,7 +2426,7 @@ RectTransform:
   m_Children:
   - {fileID: 1640058310}
   m_Father: {fileID: 627114304}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2565,12 +2565,12 @@ RectTransform:
   - {fileID: 2022986861}
   - {fileID: 1753866899}
   - {fileID: 1164272788}
+  - {fileID: 128793825}
   - {fileID: 111509996}
   - {fileID: 2096874106}
   - {fileID: 5793881}
   - {fileID: 95172014}
   - {fileID: 608421632}
-  - {fileID: 128793825}
   - {fileID: 1288348981}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -7001,8 +7001,8 @@ MonoBehaviour:
   controller: {fileID: 1087699502}
   characterswitch: {fileID: 1087699499}
   runspeed: 50
-  slowrunspeed: 3
-  normalrunspeed: 3
+  slowrunspeed: 20
+  normalrunspeed: 50
   healthBar: {fileID: 2022986858}
   playerhp: {fileID: 2022986859}
   isplayer2: 0
@@ -7283,8 +7283,8 @@ MonoBehaviour:
   controller: {fileID: 1135808754}
   characterswitch: {fileID: 1135808753}
   runspeed: 50
-  slowrunspeed: 3
-  normalrunspeed: 3
+  slowrunspeed: 20
+  normalrunspeed: 50
   healthBar: {fileID: 1753866902}
   playerhp: {fileID: 1753866898}
   isplayer2: 1
@@ -12628,7 +12628,7 @@ RectTransform:
   - {fileID: 1044519622}
   - {fileID: 1318990180}
   m_Father: {fileID: 627114304}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
