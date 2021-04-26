@@ -19,6 +19,8 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_RUNLEFT = "Run_backWard";
     string PLAYER_ATTACKRIGHT = "Attack1";
     string PLAYER_ATTACKLEFT = "Attack1";
+    string PLAYER_AIRATTACKRIGHT = "spin_attack";
+    string PLAYER_AIRATTACKLEFT = "spin_attack";
     string PLAYER_CHARGEATTACKRIGHT = "Charge_attack";
     string PLAYER_CHARGEATTACKLEFT = "Charge_attack";
     string PLAYER_DAMAGERIGHT = "Damage_front";
@@ -39,6 +41,8 @@ public class AnimationControl : MonoBehaviour
     string PLAYER_RUNLEFT2 = "RunBackward";
     string PLAYER_ATTACKRIGHT2 = "Attack";
     string PLAYER_ATTACKLEFT2 = "Attack_Back";
+    string PLAYER_AIRATTACKRIGHT2 = "Attack";
+    string PLAYER_AIRATTACKLEFT2 = "Attack_Back";
     string PLAYER_CHARGEATTACKRIGHT2 = "Charge02_attack";
     string PLAYER_CHARGEATTACKLEFT2 = "Charge02_attack_back";
     string PLAYER_DAMAGERIGHT2 = "Damage";
@@ -63,6 +67,8 @@ public class AnimationControl : MonoBehaviour
             PLAYER_RUNLEFT = PLAYER_RUNLEFT2;
             PLAYER_ATTACKRIGHT = PLAYER_ATTACKRIGHT2;
             PLAYER_ATTACKLEFT = PLAYER_ATTACKLEFT2;
+            PLAYER_AIRATTACKRIGHT = PLAYER_AIRATTACKRIGHT2;
+            PLAYER_AIRATTACKLEFT = PLAYER_AIRATTACKLEFT2;
             PLAYER_CHARGEATTACKRIGHT = PLAYER_CHARGEATTACKRIGHT2;
             PLAYER_CHARGEATTACKLEFT = PLAYER_CHARGEATTACKLEFT2;
             PLAYER_DAMAGERIGHT = PLAYER_DAMAGERIGHT2;
@@ -90,14 +96,22 @@ public class AnimationControl : MonoBehaviour
                 {
                     if (!player.isGround)
                     {
-                        if (!player.isFalling)
+                        if (!player.isAttacking)
                         {
-                            ChangeAnimationState(PLAYER_JUMPRISERIGHT);
+                            if (!player.isFalling)
+                            {
+                                ChangeAnimationState(PLAYER_JUMPRISERIGHT);
+                            }
+                            else
+                            {
+                                ChangeAnimationState(PLAYER_JUMPFALLRIGHT);
+                            }
                         }
                         else
                         {
-                            ChangeAnimationState(PLAYER_JUMPFALLRIGHT);
+                            ChangeAnimationState(PLAYER_AIRATTACKRIGHT);
                         }
+                        
                     }
                     else if (player.isGround)
                     {
@@ -137,13 +151,20 @@ public class AnimationControl : MonoBehaviour
                 {
                     if (!player.isGround)
                     {
-                        if (!player.isFalling)
+                        if (!player.isAttacking)
                         {
-                            ChangeAnimationState(PLAYER_JUMPRISELEFT);
+                            if (!player.isFalling)
+                            {
+                                ChangeAnimationState(PLAYER_JUMPRISELEFT);
+                            }
+                            else
+                            {
+                                ChangeAnimationState(PLAYER_JUMPFALLLEFT);
+                            }
                         }
                         else
                         {
-                            ChangeAnimationState(PLAYER_JUMPFALLLEFT);
+                            ChangeAnimationState(PLAYER_AIRATTACKLEFT);
                         }
                     }
                     else if (player.isGround)

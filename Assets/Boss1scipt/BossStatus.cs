@@ -7,6 +7,8 @@ public class BossStatus : MonoBehaviour
     public EnemyStatus demonhurtbox;
     public EnemyStatus spirithurtbox;
     public GameObject wall;
+    public GameObject Hp1;
+    public GameObject Hp2;
     BossBehavior boss;
 
     public float EnemyMaxHpSpirit = 200.0f;
@@ -37,9 +39,11 @@ public class BossStatus : MonoBehaviour
             EnemyhpSpirit = spirithurtbox.Enemyhp;
             EnemyhpDemon = demonhurtbox.Enemyhp;
         }
-        if (EnemyhpDemon == 0 && EnemyhpSpirit == 0)
+        if (EnemyhpDemon <= 0 && EnemyhpSpirit <= 0)
         {
             wall.SetActive(false);
+            Hp1.SetActive(false);
+            Hp2.SetActive(false);
             boss.DeadAnimPlay();
         }
     }

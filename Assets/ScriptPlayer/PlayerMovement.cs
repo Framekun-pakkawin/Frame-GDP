@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
             framecountdown -= 1;
             if (framecountdown == 0)
             {
-                framecountdown = 30;
+                framecountdown = 50;
                 isAttacking = false;
             }
         }
@@ -110,10 +110,6 @@ public class PlayerMovement : MonoBehaviour
         {
             framecountdown = 30;
         }
-        /*if (iframe > 0)
-        {
-            iframe -= 1;
-        }*/
     }
     public void TakeDamage(float damage)
     {
@@ -122,7 +118,6 @@ public class PlayerMovement : MonoBehaviour
             playerhp.currentHealth -= damage;
             healthBar.SetHealth(playerhp.currentHealth);
             StartCoroutine(IframeCountdown());
-            //iframe = iframesetting;
         }
     }
     public void knockbackwithdamage(float damage,float forceX, float forceY)
