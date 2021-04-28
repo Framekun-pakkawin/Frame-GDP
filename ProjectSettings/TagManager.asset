@@ -54,6 +54,9 @@ TagManager:
   - name: Ground
     uniqueID: 1153546685
     locked: 0
+  - name: Bosspower
+    uniqueID: 873059805
+    locked: 0
   - name: Boss
     uniqueID: 1530062223
     locked: 0
