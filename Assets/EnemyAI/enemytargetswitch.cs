@@ -13,12 +13,14 @@ public class enemytargetswitch : MonoBehaviour
     Spirit_Behavior spirit;
     SpikeyBehavior spike;
     Bombbehavior bomb;
+    NewFirespiritsBehavior firespirit;
     void Start()
     {
         bean = gameObject.GetComponent<BeanPatrol>();
         spirit = gameObject.GetComponent<Spirit_Behavior>();
         spike = gameObject.GetComponent<SpikeyBehavior>();
         bomb = gameObject.GetComponent<Bombbehavior>();
+        firespirit = gameObject.GetComponent<NewFirespiritsBehavior>();
     }
 
     void Update()
@@ -32,6 +34,13 @@ public class enemytargetswitch : MonoBehaviour
             else if (EnemyName == "Spirit")
             {
                 spirit.target = player1;
+            }
+            else if (EnemyName == "FireSpirit")
+            {
+                if (firespirit.target != null)
+                {
+                    firespirit.target = player1;
+                }
             }
             else if (EnemyName == "Spikey")
             {
@@ -57,6 +66,13 @@ public class enemytargetswitch : MonoBehaviour
             else if (EnemyName == "Spirit")
             {
                 spirit.target = player2;
+            }
+            else if (EnemyName == "FireSpirit")
+            {
+                if (firespirit.target != null)
+                {
+                    firespirit.target = player2;
+                }
             }
             else if (EnemyName == "Spikey")
             {

@@ -7,6 +7,7 @@ public class Checkpointchecker : MonoBehaviour
     public GameObject player;
     public GameObject checkpoint0;
     public GameObject checkpoint1;
+    public GameObject checkpoint2;
     public GameObject checkpoint3;
     void Start()
     {
@@ -17,6 +18,10 @@ public class Checkpointchecker : MonoBehaviour
         else if (PlayerMovement.currentcheckpoint == 1)
         {
             player.transform.position = checkpoint1.transform.position;
+        }
+        else if (PlayerMovement.currentcheckpoint == 2)
+        {
+            player.transform.position = checkpoint2.transform.position;
         }
         else if (PlayerMovement.currentcheckpoint == 3)
         {
