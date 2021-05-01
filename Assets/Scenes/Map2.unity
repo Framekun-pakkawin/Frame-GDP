@@ -23858,6 +23858,7 @@ MonoBehaviour:
   jump: 0
   isMoving: 0
   isAttacking: 0
+  isAirAttacking: 0
   isGround: 1
   isFalling: 0
   isDamaged: 0
@@ -66814,6 +66815,7 @@ MonoBehaviour:
   jump: 0
   isMoving: 0
   isAttacking: 0
+  isAirAttacking: 0
   isGround: 1
   isFalling: 0
   isDamaged: 0
@@ -70604,9 +70606,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.30591774, y: 0.10165596}
+  m_Offset: {x: -0.19365168, y: 0.4577875}
   serializedVersion: 2
-  m_Radius: 2.4354496
+  m_Radius: 2.5605416
 --- !u!1 &2044874253
 GameObject:
   m_ObjectHideFlags: 0

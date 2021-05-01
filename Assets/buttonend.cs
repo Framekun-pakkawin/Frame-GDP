@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class buttonend : MonoBehaviour
 {
     public bool inTutorial = false;
+    
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
+            EnemyStatus.Alreadydead.Clear();
             if (inTutorial)
             {
                 SceneManager.LoadScene("Potae");

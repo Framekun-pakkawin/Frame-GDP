@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool jump = false;
     [HideInInspector] public bool isMoving = false;
     [HideInInspector] public bool isAttacking = false;
+    [HideInInspector] public bool isAirAttacking = false;
     [HideInInspector] public bool isGround = true;
     [HideInInspector] public bool isFalling = false;
     [HideInInspector] public bool isDamaged = false;
@@ -106,9 +107,13 @@ public class PlayerMovement : MonoBehaviour
                 isAttacking = false;
             }
         }
-        if (isAttacking == false)
+        else if(isAttacking == false)
         {
-            framecountdown = 30;
+            framecountdown = 50;
+        }
+        if (isGround)
+        {
+            isAirAttacking = false;
         }
     }
     public void TakeDamage(float damage)

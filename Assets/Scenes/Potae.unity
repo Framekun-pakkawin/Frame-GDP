@@ -187,6 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -1517,11 +1519,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70229732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.030000687, z: 0}
+  m_LocalPosition: {x: 0, y: -0.029999971, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105070434}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &70229734
 MonoBehaviour:
@@ -1551,9 +1553,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.30591774, y: 0.10165596}
+  m_Offset: {x: -0.17573738, y: 0.46932983}
   serializedVersion: 2
-  m_Radius: 2.4354496
+  m_Radius: 2.5196705
 --- !u!1 &70961022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,6 +2384,7 @@ MonoBehaviour:
   jump: 0
   isMoving: 0
   isAttacking: 0
+  isAirAttacking: 0
   isGround: 1
   isFalling: 0
   isDamaged: 0
@@ -2426,7 +2429,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 844399602}
-  - {fileID: 1643607487}
   - {fileID: 70229733}
   - {fileID: 527313661}
   - {fileID: 1053103861}
@@ -2434,7 +2436,7 @@ Transform:
   - {fileID: 1529237918}
   - {fileID: 1441924971}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109640869
 GameObject:
@@ -2770,7 +2772,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &118164237
 GameObject:
@@ -2838,6 +2840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -3264,6 +3268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -4049,6 +4055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -4393,6 +4401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -4693,6 +4703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -5272,7 +5284,7 @@ Transform:
   - {fileID: 1111713708}
   - {fileID: 535442925}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243219225
 GameObject:
@@ -5575,7 +5587,7 @@ Transform:
   - {fileID: 1856516521}
   - {fileID: 1587227836}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &262677380
 GameObject:
@@ -5643,6 +5655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -5970,6 +5984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -6669,6 +6685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 15
   Enemyhp: 20
   knockbackright: 1
@@ -6912,7 +6930,7 @@ Transform:
   m_Children:
   - {fileID: 853118212}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &303558983
 BoxCollider2D:
@@ -7870,6 +7888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -8224,7 +8244,7 @@ RectTransform:
   - {fileID: 1223316479}
   - {fileID: 1607911957}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8279,7 +8299,7 @@ Transform:
   - {fileID: 933305455}
   - {fileID: 613177630}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &351627524
 GameObject:
@@ -8441,6 +8461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -10921,7 +10943,7 @@ Transform:
   - {fileID: 1993659200}
   - {fileID: 262677381}
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &396178953
 GameObject:
@@ -11389,7 +11411,7 @@ Transform:
   - {fileID: 1832628360}
   - {fileID: 844764224}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419027877
 GameObject:
@@ -12863,6 +12885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -13157,7 +13181,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105070434}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529485677
 GameObject:
@@ -13306,6 +13330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 15
   Enemyhp: 20
   knockbackright: 1
@@ -15268,6 +15294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: firespirit1 (14)
+  isPermenent: 1
   EnemyMaxHp: 20
   Enemyhp: 20
   knockbackright: 1
@@ -15326,7 +15354,7 @@ Transform:
   - {fileID: 1222635780}
   - {fileID: 840364589}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &568878522
 GameObject:
@@ -15823,7 +15851,7 @@ Transform:
   - {fileID: 1947196899}
   - {fileID: 566205721}
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &583422238
 GameObject:
@@ -15973,6 +16001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -16151,6 +16181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: bluebean1
+  isPermenent: 1
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -16370,6 +16402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -16499,7 +16533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105070434}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &614185297
 CircleCollider2D:
@@ -17634,6 +17668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -18181,7 +18217,7 @@ Transform:
   - {fileID: 1259093805}
   - {fileID: 10512876}
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692032798
 GameObject:
@@ -18424,7 +18460,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701620252}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 040a81faf830e604b89ae9c890ce70a1, type: 3}
@@ -18642,6 +18678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 30
   Enemyhp: 20
   knockbackright: 1
@@ -19382,6 +19420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 15
   Enemyhp: 20
   knockbackright: 1
@@ -20240,7 +20280,7 @@ Transform:
   - {fileID: 1538409679}
   - {fileID: 26971294}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &801225576
 MonoBehaviour:
@@ -20516,7 +20556,7 @@ Transform:
   m_Children:
   - {fileID: 1876829717}
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &814668839
 GameObject:
@@ -21240,6 +21280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -21523,6 +21565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 15
   Enemyhp: 20
   knockbackright: 1
@@ -21841,7 +21885,7 @@ Transform:
   - {fileID: 654411255}
   - {fileID: 1098855503}
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &861648608
 GameObject:
@@ -21909,6 +21953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 15
   Enemyhp: 20
   knockbackright: 1
@@ -22091,7 +22137,7 @@ Transform:
   - {fileID: 122237138}
   - {fileID: 1949764552}
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &869964307
 GameObject:
@@ -22278,7 +22324,7 @@ Transform:
   - {fileID: 999277576}
   - {fileID: 704589074}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &882264514
 GameObject:
@@ -22507,7 +22553,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899036006
 GameObject:
@@ -22791,7 +22837,7 @@ Transform:
   - {fileID: 1102653863}
   - {fileID: 1254663940}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &910799034
 GameObject:
@@ -23467,7 +23513,7 @@ Transform:
   m_Children:
   - {fileID: 796672699}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &948074609
 GameObject:
@@ -23911,6 +23957,7 @@ MonoBehaviour:
   jump: 0
   isMoving: 0
   isAttacking: 0
+  isAirAttacking: 0
   isGround: 1
   isFalling: 0
   isDamaged: 0
@@ -23963,7 +24010,7 @@ Transform:
   - {fileID: 366210995}
   - {fileID: 1882485584}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &962459262
 GameObject:
@@ -24157,7 +24204,7 @@ Transform:
   - {fileID: 2009047038}
   - {fileID: 1601825241}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994491862
 GameObject:
@@ -24849,7 +24896,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105070434}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1060099219
 GameObject:
@@ -25038,7 +25085,7 @@ Transform:
   - {fileID: 1650683684}
   - {fileID: 1472412773}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1067802733
 GameObject:
@@ -25835,6 +25882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -26015,7 +26064,7 @@ Transform:
   - {fileID: 1551506968}
   - {fileID: 2140533841}
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1111713707
 GameObject:
@@ -26749,7 +26798,7 @@ Transform:
   - {fileID: 40525168}
   - {fileID: 272620072}
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173546186
 GameObject:
@@ -26936,7 +26985,7 @@ Transform:
   - {fileID: 952807997}
   - {fileID: 861648609}
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179967465
 GameObject:
@@ -27051,7 +27100,7 @@ Transform:
   - {fileID: 1879654889}
   - {fileID: 188448926}
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185519020
 GameObject:
@@ -27271,7 +27320,7 @@ Transform:
   - {fileID: 403578172}
   - {fileID: 291639128}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197822296
 GameObject:
@@ -27420,6 +27469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 15
   Enemyhp: 20
   knockbackright: 1
@@ -28963,6 +29014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 60
   Enemyhp: 20
   knockbackright: 1
@@ -29332,7 +29385,7 @@ Transform:
   - {fileID: 315770480}
   - {fileID: 1949115342}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272615547
 GameObject:
@@ -29413,6 +29466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -29535,7 +29590,7 @@ Transform:
   - {fileID: 1402924360}
   - {fileID: 1834130433}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1278880331
 MonoBehaviour:
@@ -30125,6 +30180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -30365,7 +30422,7 @@ Transform:
   - {fileID: 2058693642}
   - {fileID: 189914956}
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319214050
 GameObject:
@@ -30547,6 +30604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -31255,7 +31314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1364540711
 GameObject:
@@ -31574,7 +31633,7 @@ Transform:
   - {fileID: 1115343564}
   - {fileID: 1771915132}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1374105391
 GameObject:
@@ -32278,7 +32337,7 @@ Transform:
   - {fileID: 2104882987}
   - {fileID: 1204941114}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1413191145
 GameObject:
@@ -32310,7 +32369,7 @@ Transform:
   - {fileID: 705769065}
   - {fileID: 118164238}
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1414830373
 GameObject:
@@ -32928,7 +32987,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105070434}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450727954
 GameObject:
@@ -33449,7 +33508,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1472412772
 GameObject:
@@ -33530,6 +33589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -34252,7 +34313,7 @@ Transform:
   - {fileID: 2013490362}
   - {fileID: 1324717127}
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512820990
 GameObject:
@@ -34324,6 +34385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 20
   Enemyhp: 20
   knockbackright: 1
@@ -34373,7 +34436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1520945730
 BoxCollider2D:
@@ -34505,6 +34568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -34902,7 +34967,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105070434}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1529682935
 GameObject:
@@ -34935,7 +35000,7 @@ Transform:
   - {fileID: 70961023}
   - {fileID: 355388820}
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1532722838
 GameObject:
@@ -35230,7 +35295,7 @@ Transform:
   - {fileID: 1558240473}
   - {fileID: 333909801}
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1537256066
 GameObject:
@@ -35538,7 +35603,7 @@ Transform:
   - {fileID: 1937813546}
   - {fileID: 605629221}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551506967
 GameObject:
@@ -36020,6 +36085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 15
   Enemyhp: 20
   knockbackright: 1
@@ -36451,6 +36518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -37088,7 +37157,7 @@ Transform:
   - {fileID: 1666562268}
   - {fileID: 668853887}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1610224653
 GameObject:
@@ -37380,7 +37449,7 @@ Transform:
   m_Children:
   - {fileID: 1943997086}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1632668367
 GameObject:
@@ -37597,7 +37666,7 @@ Transform:
   - {fileID: 1374155574}
   - {fileID: 1525301367}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1637391876
 GameObject:
@@ -37677,69 +37746,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637391876}
   m_CullTransparentMesh: 0
---- !u!1 &1643607486
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1643607487}
-  - component: {fileID: 1643607489}
-  - component: {fileID: 1643607488}
-  m_Layer: 10
-  m_Name: airspinatkhitbox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1643607487
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643607486}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -463.74005, y: -20.589987, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 105070434}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1643607488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643607486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b78f865a901b14a8cf37dc4fbba0ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slashdamage: 10
-  knockbackX: 750
-  knockbackY: 300
---- !u!58 &1643607489
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643607486}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.30591774, y: 0.10165596}
-  serializedVersion: 2
-  m_Radius: 2.4354496
 --- !u!1 &1646553170
 GameObject:
   m_ObjectHideFlags: 0
@@ -38301,7 +38307,7 @@ Transform:
   - {fileID: 1812017273}
   - {fileID: 518521896}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1654274209
 GameObject:
@@ -39310,7 +39316,7 @@ Transform:
   - {fileID: 522842719}
   - {fileID: 133821688}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718459523
 GameObject:
@@ -39717,7 +39723,7 @@ Transform:
   - {fileID: 1932648321}
   - {fileID: 1272615548}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759188436
 GameObject:
@@ -42153,6 +42159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -42875,7 +42883,7 @@ Transform:
   - {fileID: 2062062537}
   - {fileID: 1572322549}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1806587005
 GameObject:
@@ -43062,7 +43070,7 @@ Transform:
   - {fileID: 1139896818}
   - {fileID: 2010202584}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1812017272
 GameObject:
@@ -43320,7 +43328,7 @@ Transform:
   - {fileID: 1253770634}
   - {fileID: 1308004318}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823279095
 GameObject:
@@ -43509,6 +43517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -43611,7 +43621,7 @@ Transform:
   - {fileID: 772746607}
   - {fileID: 744822589}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826322840
 GameObject:
@@ -44111,7 +44121,7 @@ Transform:
   - {fileID: 370920360}
   - {fileID: 587683946}
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843684606
 GameObject:
@@ -44169,7 +44179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1843684609
 MonoBehaviour:
@@ -45609,6 +45619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -45747,6 +45759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 25
   Enemyhp: 20
   knockbackright: 1
@@ -46962,6 +46976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -47764,7 +47780,7 @@ Transform:
   - {fileID: 739024554}
   - {fileID: 168863745}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2054774695
 GameObject:
@@ -48971,6 +48987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 20
   Enemyhp: 20
   knockbackright: 1
@@ -49161,7 +49179,7 @@ Transform:
   - {fileID: 198845198}
   - {fileID: 1824451748}
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140533840
 GameObject:
@@ -49242,6 +49260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
+  isPermenent: 0
   EnemyMaxHp: 40
   Enemyhp: 30
   knockbackright: 1
@@ -49395,3 +49415,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &7120884971499396678
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7120884970241649062, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 252885483aa0ea04893574e891d9656d, type: 3}

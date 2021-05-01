@@ -96,7 +96,7 @@ public class AnimationControl : MonoBehaviour
                 {
                     if (!player.isGround)
                     {
-                        if (!player.isAttacking)
+                        if (!player.isAirAttacking)
                         {
                             if (!player.isFalling)
                             {
@@ -151,7 +151,7 @@ public class AnimationControl : MonoBehaviour
                 {
                     if (!player.isGround)
                     {
-                        if (!player.isAttacking)
+                        if (!player.isAirAttacking)
                         {
                             if (!player.isFalling)
                             {

@@ -16,9 +16,13 @@ public class Player1Attack : MonoBehaviour
         {
             AirHitBox.SetActive(false);
         }
-        if (Input.GetButtonDown("Attack1") && playermove.isAttacking == false)
+        if (Input.GetButtonDown("Attack1") && playermove.isAttacking == false && playermove.isGround)
         {
             playermove.isAttacking = true;
+        }
+        else if (Input.GetButtonDown("Attack1") && playermove.isAirAttacking == false && !playermove.isGround)
+        {
+            playermove.isAirAttacking = true;
         }
         if (Input.GetButton("Attack1"))
         {
@@ -65,6 +69,10 @@ public class Player1Attack : MonoBehaviour
     public void Dechargeattacking()
     {
         playermove.ChargeAttacking = false;
+    }
+    public void Deairattacking()
+    {
+        playermove.isAirAttacking = false;
     }
     public void Deattacking()
     {

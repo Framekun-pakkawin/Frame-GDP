@@ -6080,7 +6080,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.33333334
+  - time: 0.31666666
     functionName: Deactive_airhitBox
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -6088,7 +6088,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.33333334
-    functionName: Deattacking
+    functionName: Deairattacking
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

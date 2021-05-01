@@ -5167,6 +5167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPermenent: 0
   EnemyMaxHp: 30
   Enemyhp: 20
   knockbackright: 1
@@ -9230,6 +9231,7 @@ MonoBehaviour:
   jump: 0
   isMoving: 0
   isAttacking: 0
+  isAirAttacking: 0
   isGround: 1
   isFalling: 0
   isDamaged: 0
@@ -9703,6 +9705,7 @@ MonoBehaviour:
   jump: 0
   isMoving: 0
   isAttacking: 0
+  isAirAttacking: 0
   isGround: 1
   isFalling: 0
   isDamaged: 0
@@ -11158,6 +11161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPermenent: 0
   EnemyMaxHp: 10
   Enemyhp: 20
   knockbackright: 1
@@ -11277,6 +11281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPermenent: 0
   EnemyMaxHp: 20
   Enemyhp: 20
   knockbackright: 1
@@ -12175,12 +12180,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPermenent: 1
   EnemyMaxHp: 30
   Enemyhp: 30
   knockbackright: 1
   isknockbackable: 1
   enemyhp: 20
-  slashfx: {fileID: 0}
+  slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
 --- !u!114 &1021327546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14168,6 +14174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPermenent: 0
   EnemyMaxHp: 50
   Enemyhp: 20
   knockbackright: 1
@@ -16437,7 +16444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1506476228
 Transform:
   m_ObjectHideFlags: 0
@@ -16662,6 +16669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPermenent: 0
   EnemyMaxHp: 20
   Enemyhp: 20
   knockbackright: 1
@@ -18923,7 +18931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1880159989
 Transform:
   m_ObjectHideFlags: 0
