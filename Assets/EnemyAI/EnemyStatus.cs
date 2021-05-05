@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyStatus : MonoBehaviour
 {
+    public static List<string> Alreadydead = new List<string>();
+    public string KeyName = "";
+    public bool isPermenent = false;
     public float EnemyMaxHp = 20.0f;
     [HideInInspector] public float Enemyhp = 20.0f;
     public bool knockbackright = true;
@@ -15,15 +18,16 @@ public class EnemyStatus : MonoBehaviour
     {
         Enemyhp = EnemyMaxHp;
         rb = gameObject.GetComponent<Rigidbody2D>();
+        if (Alreadydead.Contains(KeyName))
+        {
+            Enemyhp = 0;
+            gameObject.SetActive(false);
+        }
     }
 
     void Update()
     {
         enemyhp = Enemyhp;
-        if (Enemyhp <= 0)
-        {
-            gameObject.SetActive(false);
-        }
     }
     public void TakeDamage(float Damage)
     {
@@ -34,6 +38,10 @@ public class EnemyStatus : MonoBehaviour
         }
         if (Enemyhp <= 0)
         {
+            if (isPermenent)
+            {
+                Alreadydead.Add(KeyName);
+            }
             gameObject.SetActive(false);
         }
     }

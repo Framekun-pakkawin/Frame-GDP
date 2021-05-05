@@ -6,14 +6,23 @@ public class Player1Attack : MonoBehaviour
 {
     public GameObject HitBox;
     public GameObject ChargeHitBox;
+    public GameObject AirHitBox;
     public PlayerMovement playermove;
     [HideInInspector]public float charge = 0.0f;
     public float maxcharge = 3.0f;
     void Update()
     {
-        if (Input.GetButtonDown("Attack1") && playermove.isAttacking == false)
+        if (playermove.isGround)
+        {
+            AirHitBox.SetActive(false);
+        }
+        if (Input.GetButtonDown("Attack1") && playermove.isAttacking == false && playermove.isGround)
         {
             playermove.isAttacking = true;
+        }
+        else if (Input.GetButtonDown("Attack1") && playermove.isAirAttacking == false && !playermove.isGround)
+        {
+            playermove.isAirAttacking = true;
         }
         if (Input.GetButton("Attack1"))
         {
@@ -33,6 +42,14 @@ public class Player1Attack : MonoBehaviour
             charge = 0.0f;
         }
     }
+    public void Active_airhitBox()
+    {
+        AirHitBox.SetActive(true);
+    }
+    public void Deactive_airhitBox()
+    {
+        AirHitBox.SetActive(false);
+    }
     public void Active_chargehitBox()
     {
         ChargeHitBox.SetActive(true);
@@ -45,7 +62,6 @@ public class Player1Attack : MonoBehaviour
     {
         HitBox.SetActive(true);
     }
-
     public void Deactive_hitBox()
     {
         HitBox.SetActive(false);
@@ -53,6 +69,10 @@ public class Player1Attack : MonoBehaviour
     public void Dechargeattacking()
     {
         playermove.ChargeAttacking = false;
+    }
+    public void Deairattacking()
+    {
+        playermove.isAirAttacking = false;
     }
     public void Deattacking()
     {

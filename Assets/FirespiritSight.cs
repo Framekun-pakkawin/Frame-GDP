@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkpointtrigger : MonoBehaviour
+public class FirespiritSight : MonoBehaviour
 {
-    public int numberofcheckpoint = 1;
+    public NewFirespiritsBehavior firespirits;
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
-            PlayerMovement.currentcheckpoint = numberofcheckpoint;
+            firespirits.target = hitInfo.transform;
         }
     }
 }

@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool jump = false;
     [HideInInspector] public bool isMoving = false;
     [HideInInspector] public bool isAttacking = false;
+    [HideInInspector] public bool isAirAttacking = false;
     [HideInInspector] public bool isGround = true;
     [HideInInspector] public bool isFalling = false;
     [HideInInspector] public bool isDamaged = false;
@@ -102,18 +103,18 @@ public class PlayerMovement : MonoBehaviour
             framecountdown -= 1;
             if (framecountdown == 0)
             {
-                framecountdown = 30;
+                framecountdown = 50;
                 isAttacking = false;
             }
         }
-        if (isAttacking == false)
+        else if(isAttacking == false)
         {
-            framecountdown = 30;
+            framecountdown = 50;
         }
-        /*if (iframe > 0)
+        if (isGround)
         {
-            iframe -= 1;
-        }*/
+            isAirAttacking = false;
+        }
     }
     public void TakeDamage(float damage)
     {
@@ -122,7 +123,6 @@ public class PlayerMovement : MonoBehaviour
             playerhp.currentHealth -= damage;
             healthBar.SetHealth(playerhp.currentHealth);
             StartCoroutine(IframeCountdown());
-            //iframe = iframesetting;
         }
     }
     public void knockbackwithdamage(float damage,float forceX, float forceY)

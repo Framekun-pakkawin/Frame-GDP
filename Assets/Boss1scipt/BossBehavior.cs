@@ -66,7 +66,10 @@ public class BossBehavior : MonoBehaviour
     }
     void Playerfar()
     {
-        StartCoroutine(Attacking(1));
+        if (!isAttacking)
+        {
+            StartCoroutine(Attacking(1));
+        }
     }
     void Idle()
     {
@@ -74,8 +77,11 @@ public class BossBehavior : MonoBehaviour
     }
     void Playerclose()
     {
-        int x = Random.Range(0, 2);
-        StartCoroutine(Attacking(x));
+        if (!isAttacking)
+        {
+            int x = Random.Range(0, 2);
+            StartCoroutine(Attacking(x));
+        }
     }
     IEnumerator Attacking(int form)//0=red 1=blue
     {
