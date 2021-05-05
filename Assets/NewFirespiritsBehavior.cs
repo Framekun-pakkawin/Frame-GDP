@@ -6,14 +6,20 @@ public class NewFirespiritsBehavior : MonoBehaviour
 {
     public Transform target;
     public float speed = 20.0f;
+    public float patrolspeed = 8.0f;
     public float delay = 1.0f;
     public float patroldistance = 5.0f;
+    public float Waittime = 1.0f;
+    bool onMovingright = false;
+    bool isPatroling = false;
     bool isDelaying = false;
     bool isFacingRight = false;
+    float startpatrolposX;
     Rigidbody2D rigid;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        startpatrolposX = (float)gameObject.transform.position.x;
     }
 
 
@@ -30,8 +36,31 @@ public class NewFirespiritsBehavior : MonoBehaviour
         }
     }
     void Patrol()
-    { 
-        
+    {
+        if (!isPatroling)
+        {
+            if (onMovingright)
+            {
+                rigid.velocity = transform.right * patrolspeed;
+                if (Mathf.Abs(startpatrolposX - gameObject.transform.position.x) >= patroldistance)
+                {
+
+                    startpatrolposX = gameObject.transform.position.x;
+                    onMovingright = false;
+                    StartCoroutine(DelayPatrol());
+                }
+            }
+            else
+            {
+                rigid.velocity = -transform.right * patrolspeed;
+                if (Mathf.Abs(startpatrolposX - gameObject.transform.position.x) >= patroldistance)
+                {
+                    startpatrolposX = gameObject.transform.position.x;
+                    onMovingright = true;
+                    StartCoroutine(DelayPatrol());
+                }
+            }
+        }
     }
     void Chasing()
     {
@@ -49,6 +78,13 @@ public class NewFirespiritsBehavior : MonoBehaviour
         {
             StartCoroutine(Attacking());
         }
+    }
+    IEnumerator DelayPatrol()
+    {
+        isPatroling = true;
+        rigid.velocity = transform.right * 0;
+        yield return new WaitForSeconds(Waittime);
+        isPatroling = false;
     }
     IEnumerator Attacking()
     {
