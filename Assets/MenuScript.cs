@@ -12,6 +12,10 @@ public class MenuScript : MonoBehaviour
     public GameObject Control;
     public GameObject Audio;
     bool isControl = true;
+
+    public Animator pauseAnim;
+
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -26,6 +30,11 @@ public class MenuScript : MonoBehaviour
                 Pause.SetActive(true);
                 Time.timeScale = 0f;
             }
+        }
+
+        if(isPause == true)
+        {
+            pauseAnim.Play("PauseAnim");
         }
     }
     public void Go_Tutorial()
