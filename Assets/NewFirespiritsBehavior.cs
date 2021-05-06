@@ -44,8 +44,9 @@ public class NewFirespiritsBehavior : MonoBehaviour
                 rigid.velocity = transform.right * patrolspeed;
                 if (Mathf.Abs(startpatrolposX - gameObject.transform.position.x) >= patroldistance)
                 {
-
                     startpatrolposX = gameObject.transform.position.x;
+                    Transform currtrans = gameObject.transform;
+                    transform.localScale = new Vector3(Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
                     onMovingright = false;
                     StartCoroutine(DelayPatrol());
                 }
@@ -56,6 +57,8 @@ public class NewFirespiritsBehavior : MonoBehaviour
                 if (Mathf.Abs(startpatrolposX - gameObject.transform.position.x) >= patroldistance)
                 {
                     startpatrolposX = gameObject.transform.position.x;
+                    Transform currtrans = gameObject.transform;
+                    transform.localScale = new Vector3(-Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
                     onMovingright = true;
                     StartCoroutine(DelayPatrol());
                 }

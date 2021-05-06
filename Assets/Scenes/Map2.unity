@@ -47283,6 +47283,7 @@ MonoBehaviour:
   Option: {fileID: 0}
   Control: {fileID: 0}
   Audio: {fileID: 0}
+  pauseAnim: {fileID: 0}
 --- !u!114 &1381232319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70435,7 +70436,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -4009543116061874931, guid: 067336fed248a874b97cd31394cc6db3,
+  m_Sprite: {fileID: 3294683606218595662, guid: 9bd0fa990b2876e48a0ef25234edb7e4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
