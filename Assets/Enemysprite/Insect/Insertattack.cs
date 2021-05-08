@@ -8,6 +8,7 @@ public class Insertattack : MonoBehaviour
     public float attackdelay = 4.0f;
     public GameObject fireball;
     public Insertbehavior Insert;
+    public Animator anim;
     bool Attacking = false;
     void Start()
     {
@@ -29,13 +30,17 @@ public class Insertattack : MonoBehaviour
     {
         StartCoroutine(Attackdelay());
     }
+    public void Fireballing()
+    {
+        fireball.SetActive(true);
+    }
     IEnumerator Attackdelay()
     {
         if (!Attacking)
         {
             Attacking = true;
             Insert.isAttacking = true;
-            fireball.SetActive(true);
+            anim.Play("Insectatk");
             yield return new WaitForSeconds(attacktime);
             fireball.SetActive(false);
             Insert.isAttacking = false;
