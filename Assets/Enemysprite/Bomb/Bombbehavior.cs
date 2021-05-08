@@ -38,13 +38,14 @@ public class Bombbehavior : MonoBehaviour
     {
         if (MovingRight)
         {
-            rb.velocity = transform.right * movespeed;
+            rb.velocity = new Vector3(movespeed, rb.velocity.y, 0.0f);
+            //rb.velocity = transform.right * movespeed;
             Transform currtrans = gameObject.transform;
             transform.localScale = new Vector3(-Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
         else
         {
-            rb.velocity = -transform.right * movespeed;
+            rb.velocity = new Vector3(-movespeed, rb.velocity.y, 0.0f);
             Transform currtrans = gameObject.transform;
             transform.localScale = new Vector3(Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
@@ -61,13 +62,13 @@ public class Bombbehavior : MonoBehaviour
     {
         if (target.position.x > gameObject.transform.position.x)
         {
-            rb.velocity = transform.right * movespeed;
+            rb.velocity = new Vector3(movespeed, rb.velocity.y, 0.0f);
             Transform currtrans = gameObject.transform;
             transform.localScale = new Vector3(-Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }
         else if (target.position.x < gameObject.transform.position.x)
         {
-            rb.velocity = -transform.right * movespeed;
+            rb.velocity = new Vector3(-movespeed, rb.velocity.y, 0.0f);
             Transform currtrans = gameObject.transform;
             transform.localScale = new Vector3(Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
         }

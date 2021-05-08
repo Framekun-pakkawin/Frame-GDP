@@ -8,7 +8,7 @@ public class NewFirespiritsBehavior : MonoBehaviour
     public float speed = 20.0f;
     public float patrolspeed = 8.0f;
     public float delay = 1.0f;
-    public float patroldistance = 5.0f;
+    public float patroldistance = 10.0f;
     public float Waittime = 1.0f;
     bool onMovingright = false;
     bool isPatroling = false;
@@ -69,12 +69,14 @@ public class NewFirespiritsBehavior : MonoBehaviour
     {
         if (isFacingRight && (gameObject.transform.position.x > target.position.x))
         {
-            gameObject.transform.Rotate(0f, 180f, 0f);
+            Transform currtrans = gameObject.transform;
+            transform.localScale = new Vector3(Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
             isFacingRight = false;
         }
         else if (!isFacingRight && (gameObject.transform.position.x < target.position.x))
         {
-            gameObject.transform.Rotate(0f, 180f, 0f);
+            Transform currtrans = gameObject.transform;
+            transform.localScale = new Vector3(-Mathf.Abs(currtrans.localScale.x), currtrans.localScale.y, currtrans.localScale.z);
             isFacingRight = true;
         }
         if (!isDelaying)
