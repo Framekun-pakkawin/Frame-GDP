@@ -7,6 +7,13 @@ public class Boss3Attack : MonoBehaviour
     public GameObject Attack1Hitbox;
     public GameObject Attack2Hitbox;
     public GameObject boss3Object;
+    public GameObject bullettosummon;
+    public GameObject bullettopcheck;
+    public GameObject balltosummon;
+    public GameObject ballpoint;
+    public int amoungtosummon = 10;
+    public float Delayfromeachsword = 0.5f;
+    int alreadysummon = 0;
     float wrapdistance = 2.0f;
     Boss3Behavior boss3;
     void Start()
@@ -48,10 +55,19 @@ public class Boss3Attack : MonoBehaviour
     }
     public void RainSword()
     {
-
+        StartCoroutine(SwordSummon());
+    }
+    IEnumerator SwordSummon()
+    {
+        for(int i=0;i<amoungtosummon;i++)
+        {
+            int x = Random.Range(0, 11)-5;//0-10==>> [-5,5]
+            Instantiate(bullettosummon, new Vector3(boss3.maintarget.transform.position.x + x, bullettopcheck.transform.position.y, 0), bullettosummon.transform.rotation);
+            yield return new WaitForSeconds(Delayfromeachsword);
+        }
     }
     public void BallSummoning()
     {
-
+        Instantiate(balltosummon,ballpoint.transform.position,ballpoint.transform.rotation);
     }
 }

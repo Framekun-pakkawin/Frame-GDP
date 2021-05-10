@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class KeyItem : MonoBehaviour
 {
-    public KeyDoor doortoopen;
+    public static List<string> Alreadycollect = new List<string>();
+    public string KeyName = "";
     bool isActived = false;
-    private void OnTriggerEnter2D(Collider2D hitInfo)
+    void Start()
+    {
+        if (Alreadycollect.Contains(KeyName))
+        {
+            gameObject.SetActive(false);
+        }
+    }
+        private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         if (hitInfo.gameObject.CompareTag("Player") && !isActived)
         {
-            doortoopen.key++;
+            KeyDoor.key++;
+            Alreadycollect.Add(KeyName);
             isActived = true;
             gameObject.SetActive(false);
 

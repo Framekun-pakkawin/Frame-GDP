@@ -24,7 +24,14 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.volume = s.volume;
+            if (s.isMusic)
+            {
+                s.source.volume = s.volume* musicvolume;
+            }
+            else
+            {
+                s.source.volume = s.volume* fxvolume;
+            }
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
@@ -32,6 +39,20 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         Play("maintheme");
+    }
+    void Update()
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.isMusic)
+            {
+                s.source.volume = s.volume * musicvolume;
+            }
+            else
+            {
+                s.source.volume = s.volume * fxvolume;
+            }
+        }
     }
 
     public void Play(string name)
@@ -41,6 +62,16 @@ public class AudioManager : MonoBehaviour
             if (s.name == name)
             {
                 s.source.Play();
+            }
+        }
+    }
+    public void Stop(string name)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.name == name)
+            {
+                s.source.Stop();
             }
         }
     }
