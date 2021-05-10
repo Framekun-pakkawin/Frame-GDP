@@ -48296,7 +48296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KeyName: 
   isPermenent: 0
-  EnemyMaxHp: 20
+  EnemyMaxHp: 700
   Enemyhp: 20
   knockbackright: 1
   isknockbackable: 1

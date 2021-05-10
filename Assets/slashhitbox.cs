@@ -16,6 +16,13 @@ public class slashhitbox : MonoBehaviour
             enemytoattack.knockback(knockbackX, knockbackY);
             gameObject.SetActive(false);
         }
+        if (hitInfo.gameObject.CompareTag("DoubleType"))
+        {
+            EnemyStatus enemytoattack = hitInfo.GetComponent<EnemyStatus>();
+            enemytoattack.TakeDamage(slashdamage);
+            enemytoattack.knockback(knockbackX, knockbackY);
+            gameObject.SetActive(false);
+        }
     }
 
 }

@@ -9,7 +9,7 @@ public class toThankScene : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("ThankEngineProof");
         }
     }
 }

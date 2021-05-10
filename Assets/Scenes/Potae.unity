@@ -21217,9 +21217,9 @@ MonoBehaviour:
   wall: {fileID: 1737927978}
   Hp1: {fileID: 1223316478}
   Hp2: {fileID: 1607911956}
-  EnemyMaxHpSpirit: 200
+  EnemyMaxHpSpirit: 300
   EnemyhpSpirit: 200
-  EnemyMaxHpDemon: 200
+  EnemyMaxHpDemon: 300
   EnemyhpDemon: 200
 --- !u!114 &801225578
 MonoBehaviour:

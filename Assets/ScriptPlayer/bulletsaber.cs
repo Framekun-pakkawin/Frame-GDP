@@ -28,6 +28,12 @@ public class bulletsaber : MonoBehaviour
             enemy.TakeDamage(bulletdamage);
             Destroy(gameObject);
         }
+        if (hitInfo.gameObject.CompareTag("DoubleType") == true)
+        {
+            EnemyStatus enemy = hitInfo.GetComponent<EnemyStatus>();
+            enemy.TakeDamage(bulletdamage);
+            Destroy(gameObject);
+        }
     }
     IEnumerator Destorying()
     {
