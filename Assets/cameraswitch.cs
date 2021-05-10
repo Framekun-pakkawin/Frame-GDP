@@ -15,7 +15,7 @@ public class cameraswitch : MonoBehaviour
         
     }
 
-    void Update()
+    public void SwitchCam()
     {
         if (switchcenter.isplayer1 == true)
         {

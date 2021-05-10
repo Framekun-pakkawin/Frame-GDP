@@ -5,16 +5,18 @@ using UnityEngine;
 public class Boss3Behavior : MonoBehaviour
 {
     public Animator anim;
-    public Transform target1 = null;
-    public Transform target2 = null;
+    [HideInInspector] public Transform maintarget = null;
+    [HideInInspector] public Transform target1 = null;
+    [HideInInspector] public Transform target2 = null;
     public float WaitingDelay = 1.0f;
     public float WarningDelay = 1.0f;
     public float Delay = 3.0f;
     public bool isAttacking = false;
     public bool isWaiting = false;
-    [HideInInspector]public bool Foundplayer = false;
-    int []formatkrate = new int[100];
-    int closeatk, middleatk, faratk1,faratk2;
+    EnemyStatus status;
+    int[] formatkrate = new int[100];
+    int closeatk, middleatk, faratk1, faratk2;
+    bool once = false;
     string CurrentState = "xxx";
     string IDEAL = "Idel";
     string ATTACK1 = "Attack01";
@@ -25,11 +27,12 @@ public class Boss3Behavior : MonoBehaviour
     void Start()
     {
         formatkrate = new int[100];
+        status = GetComponent<EnemyStatus>();
     }
 
     void Update()
     {
-        if (!Foundplayer)
+        if (maintarget == null)
         {
             Ideal();
         }
@@ -40,14 +43,31 @@ public class Boss3Behavior : MonoBehaviour
     }
     void Ideal()
     {
-        ChargeRandomrate();
+
+    }
+    void ChangeFacing()
+    {
+        if (maintarget != null)
+        {
+            if (gameObject.transform.position.x >= maintarget.position.x)
+            {
+                status.knockbackright = true;
+                gameObject.transform.localScale = new Vector3(Mathf.Abs(gameObject.transform.localScale.x), gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+            }
+            else
+            {
+                status.knockbackright = false;
+                gameObject.transform.localScale = new Vector3(-Mathf.Abs(gameObject.transform.localScale.x), gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+            }
+
+        }
     }
     void ChargeRandomrate()
     {
         if (target1 != null)
         {
-            closeatk = 55;
-            middleatk = 25;
+            closeatk = 50;
+            middleatk = 30;
             faratk1 = 10;
             faratk2 = 10;
         }
@@ -65,7 +85,7 @@ public class Boss3Behavior : MonoBehaviour
             faratk1 = 50;
             faratk2 = 50;
         }
-        for (int i=0;i<100;i++)
+        for (int i = 0; i < 100; i++)
         {
             if (i < closeatk)
             {
@@ -87,30 +107,51 @@ public class Boss3Behavior : MonoBehaviour
     }
     void Attack()
     {
+        ChangeFacing();
+        ChargeRandomrate();
         if (!isAttacking && !isWaiting)
         {
+            isAttacking = true;
             int x = Random.Range(0, 100);//0-99
             //attack
             Attackform(formatkrate[x]);
         }
+        else if (!isAttacking && isWaiting)
+        {
+            ChangeAnimationState(IDEAL);
+        }
     }
     void Attackform(int form)
     {
+        //ChangeAnimationState(ATTACK1);
         if (form == 1)
-        { 
-            
+        {
+            ChangeAnimationState(ATTACK1);
         }
         else if (form == 2)
         {
-
+            ChangeAnimationState(ATTACK2);
         }
         else if (form == 3)
         {
-
+            ChangeAnimationState(ATTACK3);
         }
         else if (form == 4)
         {
-
+            ChangeAnimationState(ATTACK4);
+        }
+    }
+    public void StartDelay()
+    {
+        StartCoroutine(Waiting());
+    }
+    public IEnumerator Waiting()
+    {
+        if (!isWaiting)
+        {
+            isWaiting = true;
+            yield return new WaitForSeconds(WaitingDelay);
+            isWaiting = false;
         }
     }
     public void ChangeAnimationState(string NewState)

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SwitchCenter : MonoBehaviour
 {
+    public UnityEvent onSwitchCharacter;
     public CharacterSwitch player1code;
     public GameObject player1object;
     public CharacterSwitch player2code;
@@ -30,8 +32,8 @@ public class SwitchCenter : MonoBehaviour
                 {
                     Switching = true;
                     player1code.IsControling = false;
-                    Switch(player2object, player1object);
                     isplayer1 = false;
+                    Switch(player2object, player1object);
                     StartCoroutine(SwitchDelay());
                 }
             }
@@ -41,8 +43,8 @@ public class SwitchCenter : MonoBehaviour
                 {
                     Switching = true;
                     player2code.IsControling = false;
-                    Switch(player1object, player2object);
                     isplayer1 = true;
+                    Switch(player1object, player2object);
                     StartCoroutine(SwitchDelay());
                 }
             }
@@ -58,6 +60,7 @@ public class SwitchCenter : MonoBehaviour
         playeroutcode.IsControling = false;
         playerout.transform.position = new Vector3(savespot.position.x, savespot.position.y, savespot.position.z);
         playerincode.IsControling = true;
+        onSwitchCharacter?.Invoke();
     }
     IEnumerator SwitchDelay()
     {
