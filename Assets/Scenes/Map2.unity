@@ -6920,6 +6920,123 @@ Transform:
   m_Father: {fileID: 1775781740}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &177864943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 177864946}
+  - component: {fileID: 177864945}
+  - component: {fileID: 177864944}
+  m_Layer: 0
+  m_Name: DialogTrigger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &177864944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177864943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7847b6aaf6b7d47b27a2471b57d5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - Dialog: So, what your memory has come back.
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0, b: 0, a: 0}
+    timeitdisappear: 3
+  - Dialog: "Ummmm\u2026I remember that I created some Organization to fight with
+      the monster."
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 30
+    textcolor: {r: 0, g: 0.14117648, b: 1, a: 0}
+    timeitdisappear: 3
+  - Dialog: " You mean \u201CHoly Saint Guild\u201D..."
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 50
+    textcolor: {r: 1, g: 0, b: 0.010215759, a: 0}
+    timeitdisappear: 3
+  - Dialog: "Yeah\u2026"
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 30
+    textcolor: {r: 0, g: 0, b: 1, a: 0}
+    timeitdisappear: 3
+  - Dialog: "Well\u2026  looks like you are my senior "
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 50
+    textcolor: {r: 1, g: 0, b: 0.009897232, a: 0}
+    timeitdisappear: 5
+  - Dialog: That is my honor to be a guide for a newbie like you.
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 30
+    textcolor: {r: 0.10008526, g: 0, b: 1, a: 0}
+    timeitdisappear: 5
+  - Dialog: Oh please!!! I never accept ghosts as a senior!!
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0.08789876, b: 0, a: 0}
+    timeitdisappear: 10
+  - Dialog: That makes you look cuter.
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 50
+    textcolor: {r: 0, g: 0.057691336, b: 1, a: 0}
+    timeitdisappear: 5
+  Dialogbox: {fileID: 0}
+  BackgroudDialogbox: {fileID: 0}
+  playerIcon: {fileID: 0}
+  timeitdisappear: 3
+  fadedtime: 3
+--- !u!61 &177864945
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177864943}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.14563417}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 11.485438}
+  m_EdgeRadius: 0
+--- !u!4 &177864946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177864943}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.9, y: 1.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 111
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &181540918
 GameObject:
   m_ObjectHideFlags: 0
@@ -35699,6 +35816,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &877722593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 877722596}
+  - component: {fileID: 877722595}
+  - component: {fileID: 877722594}
+  m_Layer: 0
+  m_Name: DialogTrigger1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &877722594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877722593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7847b6aaf6b7d47b27a2471b57d5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - Dialog: I glad to see you here.
+    faceSprite: {fileID: 0}
+    fontsize: 30
+    textcolor: {r: 1, g: 1, b: 1, a: 0}
+    timeitdisappear: 3
+  - Dialog: ' that sound again...'
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0, b: 0.009897232, a: 0}
+    timeitdisappear: 3
+  - Dialog: Long time to see Weiss.
+    faceSprite: {fileID: 0}
+    fontsize: 50
+    textcolor: {r: 1, g: 1, b: 1, a: 0}
+    timeitdisappear: 3
+  - Dialog: "Ah\u2026 Why do you give me another chance\u2026 Eve\u2026?"
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 30
+    textcolor: {r: 0, g: 0, b: 1, a: 0}
+    timeitdisappear: 3
+  - Dialog: (Eve, the hero who ends the Eden war!?)
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 50
+    textcolor: {r: 1, g: 0, b: 0.009897232, a: 0}
+    timeitdisappear: 5
+  Dialogbox: {fileID: 0}
+  BackgroudDialogbox: {fileID: 0}
+  playerIcon: {fileID: 0}
+  timeitdisappear: 3
+  fadedtime: 3
+--- !u!61 &877722595
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877722593}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.14563417}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 11.485438}
+  m_EdgeRadius: 0
+--- !u!4 &877722596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877722593}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -161.2, y: -21.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 112
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &877964096
 GameObject:
   m_ObjectHideFlags: 0

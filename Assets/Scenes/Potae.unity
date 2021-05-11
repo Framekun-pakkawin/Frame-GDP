@@ -5714,6 +5714,112 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &270308116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270308119}
+  - component: {fileID: 270308118}
+  - component: {fileID: 270308117}
+  m_Layer: 0
+  m_Name: DialogTrigger1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &270308117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270308116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7847b6aaf6b7d47b27a2471b57d5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - Dialog: Not bad Noir
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 30
+    textcolor: {r: 0, g: 0.14117648, b: 1, a: 0}
+    timeitdisappear: 3
+  - Dialog: Nevermind Weiss- Wait!!! How the **** you know my name!!!
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0, b: 0.08880377, a: 0}
+    timeitdisappear: 5
+  - Dialog: Hey, we are the same body. We can know each other by sense.
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 50
+    textcolor: {r: 0.085258484, g: 0, b: 1, a: 0}
+    timeitdisappear: 5
+  - Dialog: " But I can\u2019t get any information from you except your name."
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0, b: 0.030630589, a: 0}
+    timeitdisappear: 5
+  - Dialog: Yeah, I can remember only my name.
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 50
+    textcolor: {r: 0, g: 0.060156107, b: 1, a: 0}
+    timeitdisappear: 5
+  - Dialog: "That\u2019s not fair!!!"
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0, b: 0.107281685, a: 0}
+    timeitdisappear: 5
+  Dialogbox: {fileID: 2076580059}
+  BackgroudDialogbox: {fileID: 440125015}
+  playerIcon: {fileID: 994491862}
+  timeitdisappear: 3
+  fadedtime: 3
+--- !u!61 &270308118
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270308116}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.14563417}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 11.485438}
+  m_EdgeRadius: 0
+--- !u!4 &270308119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270308116}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 347.61, y: 0.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 59
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277305630
 GameObject:
   m_ObjectHideFlags: 0
@@ -23879,6 +23985,97 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &899813494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899813497}
+  - component: {fileID: 899813496}
+  - component: {fileID: 899813495}
+  m_Layer: 0
+  m_Name: DialogTrigger1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &899813495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899813494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7847b6aaf6b7d47b27a2471b57d5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogs:
+  - Dialog: ' I feel like some of the memory has come back.'
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 30
+    textcolor: {r: 0, g: 0.14117648, b: 1, a: 0}
+    timeitdisappear: 3
+  - Dialog: "So\u2026. shell we go next."
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0, b: 0.08880377, a: 0}
+    timeitdisappear: 5
+  - Dialog: Yeah, we might find more information about these bonds.
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 50
+    textcolor: {r: 0.085258484, g: 0, b: 1, a: 0}
+    timeitdisappear: 5
+  Dialogbox: {fileID: 2076580059}
+  BackgroudDialogbox: {fileID: 440125015}
+  playerIcon: {fileID: 994491862}
+  timeitdisappear: 3
+  fadedtime: 3
+--- !u!61 &899813496
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899813494}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.14563417}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 11.485438}
+  m_EdgeRadius: 0
+--- !u!4 &899813497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899813494}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 443.29, y: 0.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 60
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899982422
 GameObject:
   m_ObjectHideFlags: 0
@@ -34008,22 +34205,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogs:
-  - Dialog: ' Why are you there?!'
+  - Dialog: "Uhh\u2026.Where am I?"
     faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
-    fontsize: 20
+    fontsize: 30
     textcolor: {r: 1, g: 0, b: 0, a: 0}
-    timeitdisappear: 5
-  - Dialog: What going on
+    timeitdisappear: 3
+  - Dialog: You are in the abandoned grave.
     faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
     fontsize: 30
-    textcolor: {r: 0, g: 1, b: 0, a: 0}
-    timeitdisappear: 1
-  - Dialog: KOKOKOKO
+    textcolor: {r: 0, g: 0.14117648, b: 1, a: 0}
+    timeitdisappear: 3
+  - Dialog: "What\u2019s the sound?"
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 50
+    textcolor: {r: 1, g: 0, b: 0.010215759, a: 0}
+    timeitdisappear: 3
+  - Dialog: "Oh, It\u2019s my voice, and I live in your body."
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 30
+    textcolor: {r: 0, g: 0, b: 1, a: 0}
+    timeitdisappear: 5
+  - Dialog: ' What!!!?'
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 50
+    textcolor: {r: 1, g: 0, b: 0.009897232, a: 0}
+    timeitdisappear: 5
+  - Dialog: Why do spirits live in my body!? Am I dead?
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0, b: 0.107281685, a: 0}
+    timeitdisappear: 5
+  - Dialog: "Actually, I can say \u201Cyes\u201D and \u201Cno\u201D because we are
+      in between the living and dead or Alter living."
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 30
+    textcolor: {r: 0, g: 0, b: 1, a: 0}
+    timeitdisappear: 10
+  - Dialog: Is it happening because I picked up this sword?
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 50
+    textcolor: {r: 1, g: 0, b: 0.061853886, a: 0}
+    timeitdisappear: 5
+  - Dialog: ' Yes, that sword seals my soul with it for a long time ago.'
     faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
     fontsize: 50
     textcolor: {r: 0, g: 0, b: 1, a: 0}
     timeitdisappear: 5
-  - Dialog: wjdiwjdiwjdiwjdw
+  - Dialog: Okay...How can I return to the normal human?
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 50
+    textcolor: {r: 1, g: 0, b: 0.067070484, a: 0}
+    timeitdisappear: 5
+  - Dialog: "Normally, Alter living cannot separate from each other until they died,
+      but our case is not the same as others. I also don\u2019t sure that we can
+      separate from each other or not\u2026."
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 20
+    textcolor: {r: 0, g: 0, b: 1, a: 0}
+    timeitdisappear: 15
+  - Dialog: Okay...How can I return to the normal human?
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 50
+    textcolor: {r: 0, g: 0, b: 1, a: 0}
+    timeitdisappear: 5
+  - Dialog: "Ummmm\u2026. \n\u201CYou already know where you can find me.\u201D"
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 30
+    textcolor: {r: 1, g: 0, b: 0.039559364, a: 0}
+    timeitdisappear: 10
+  - Dialog: Did you hear that voice too?
+    faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
+    fontsize: 50
+    textcolor: {r: 0, g: 0, b: 1, a: 0}
+    timeitdisappear: 5
+  - Dialog: "Ah\u2026 We must go this way."
+    faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
+    fontsize: 50
+    textcolor: {r: 1, g: 0, b: 0.08327961, a: 0}
+    timeitdisappear: 5
+  - Dialog: I hope your sense is correct.
     faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
     fontsize: 50
     textcolor: {r: 0, g: 0, b: 1, a: 0}
@@ -34067,7 +34327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356435428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 405.97, y: 0, z: 0}
+  m_LocalPosition: {x: -26.49, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
