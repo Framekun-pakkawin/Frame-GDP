@@ -59,4 +59,8 @@ public class StageUnlock : MonoBehaviour
             stage2Unlock = true;
         }
     }
+    public void Go_StageGoBack()
+    {
+        SceneManager.LoadScene("Main_Menu");
+    }
 }
