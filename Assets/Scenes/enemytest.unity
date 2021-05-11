@@ -5167,6 +5167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
   isPermenent: 0
   EnemyMaxHp: 30
   Enemyhp: 20
@@ -5174,6 +5175,7 @@ MonoBehaviour:
   isknockbackable: 1
   enemyhp: 20
   slashfx: {fileID: 0}
+  isBoss2: 0
 --- !u!1 &437698363
 GameObject:
   m_ObjectHideFlags: 0
@@ -8440,6 +8442,7 @@ GameObject:
   - component: {fileID: 601538514}
   - component: {fileID: 601538515}
   - component: {fileID: 601538516}
+  - component: {fileID: 601538517}
   m_Layer: 12
   m_Name: InsectSprite
   m_TagString: Untagged
@@ -8531,6 +8534,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &601538517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601538513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d6d1424d38c244b9f2761316e25b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacktime: 3
+  attackdelay: 2
+  fireball: {fileID: 1237915573}
+  Insert: {fileID: 1524385716}
+  anim: {fileID: 601538516}
 --- !u!1 &607350010
 GameObject:
   m_ObjectHideFlags: 0
@@ -11161,6 +11181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
   isPermenent: 0
   EnemyMaxHp: 10
   Enemyhp: 20
@@ -11168,6 +11189,7 @@ MonoBehaviour:
   isknockbackable: 1
   enemyhp: 20
   slashfx: {fileID: 0}
+  isBoss2: 0
 --- !u!61 &914775476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11281,6 +11303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
   isPermenent: 0
   EnemyMaxHp: 20
   Enemyhp: 20
@@ -11288,6 +11311,7 @@ MonoBehaviour:
   isknockbackable: 1
   enemyhp: 20
   slashfx: {fileID: 0}
+  isBoss2: 0
 --- !u!58 &921250996
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11318,8 +11342,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 20
+  patrolspeed: 8
   delay: 1
   patroldistance: 5
+  Waittime: 1
 --- !u!50 &921250999
 Rigidbody2D:
   serializedVersion: 4
@@ -12180,6 +12206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
   isPermenent: 1
   EnemyMaxHp: 30
   Enemyhp: 30
@@ -12187,6 +12214,7 @@ MonoBehaviour:
   isknockbackable: 1
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
+  isBoss2: 0
 --- !u!114 &1021327546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14174,6 +14202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
   isPermenent: 0
   EnemyMaxHp: 50
   Enemyhp: 20
@@ -14181,6 +14210,7 @@ MonoBehaviour:
   isknockbackable: 1
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
+  isBoss2: 0
 --- !u!114 &1267809133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16444,7 +16474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1506476228
 Transform:
   m_ObjectHideFlags: 0
@@ -16545,7 +16575,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1524385717}
   - component: {fileID: 1524385716}
-  - component: {fileID: 1524385718}
   - component: {fileID: 1524385715}
   - component: {fileID: 1524385714}
   - component: {fileID: 1524385719}
@@ -16641,22 +16670,6 @@ Transform:
   m_Father: {fileID: 1672134061}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1524385718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524385713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d6d1424d38c244b9f2761316e25b51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attacktime: 1.5
-  attackdelay: 4
-  fireball: {fileID: 1237915573}
-  Insert: {fileID: 1524385716}
 --- !u!114 &1524385719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16669,6 +16682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b286a6bf3dff446b063b7bb4e0c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyName: 
   isPermenent: 0
   EnemyMaxHp: 20
   Enemyhp: 20
@@ -16676,6 +16690,7 @@ MonoBehaviour:
   isknockbackable: 1
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
+  isBoss2: 0
 --- !u!1 &1527223922
 GameObject:
   m_ObjectHideFlags: 0
@@ -17118,6 +17133,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6fec7a856c4a94c975bfe2573e033d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onSwitchCharacter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 764423881}
+        m_MethodName: SwitchCam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   player1code: {fileID: 704389216}
   player1object: {fileID: 704389215}
   player2code: {fileID: 743886315}
@@ -20546,7 +20575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b581d6c9a7aa0cd438e1767703b4b2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenu: 
   Pause: {fileID: 1136736270}
   isPause: 0
   Option: {fileID: 0}

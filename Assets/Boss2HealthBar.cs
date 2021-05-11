@@ -36,6 +36,10 @@ public class Boss2HealthBar : MonoBehaviour
         {
             fill.color = new Color(1, 0, 0, 1);
         }
+        else if (boss2.CompareTag("DoubleType"))
+        {
+            
+        }
         else
         {
             fill.color = new Color(0, 1, 1, 1);

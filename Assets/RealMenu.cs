@@ -14,7 +14,7 @@ public class RealMenu : MonoBehaviour
 
     public void Go_Play()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("StageSelection");
     }
 
 

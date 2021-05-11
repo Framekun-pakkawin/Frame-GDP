@@ -11,6 +11,7 @@ TagManager:
   - Player1spritefound
   - Player2sprite
   - Player2spritefound
+  - DoubleType
   layers:
   - Default
   - TransparentFX

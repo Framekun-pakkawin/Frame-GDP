@@ -25,17 +25,38 @@ public class Boss2Behavior : MonoBehaviour
     string RisingUp = "boss2risingup";
     string FallingDown = "boss2fallingdown";
     string BlueAtk = "boss2blueatk";
+    string RedDead = "boss2deathdemon";
+    string BlueDead = "boss2deathspirit";
+    [HideInInspector]public bool isDead = false;
 
     void Update()
     {
         ChangingType();
-        if (target == null)
+        if (!isDead)
         {
-            Ideal();
+            if (target == null)
+            {
+                Ideal();
+            }
+            else
+            {
+                Attack();
+            }
         }
         else
         {
-            Attack();
+            DeadAnim();
+        }
+    }
+    void DeadAnim()
+    {
+        if (isDemon)
+        {
+            ChangeAnimationState(RedDead);
+        }
+        else
+        {
+            ChangeAnimationState(BlueDead);
         }
     }
     void ChangingType()

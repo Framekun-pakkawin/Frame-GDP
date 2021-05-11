@@ -38,6 +38,14 @@ public class chargeballhitbox : MonoBehaviour
             rb.velocity = transform.right * 0;
             ishiting = true;
         }
+        if (hitInfo.gameObject.CompareTag("Demon") == true)
+        {
+            enemyposition = hitInfo.transform;
+            enemy = hitInfo.GetComponent<EnemyStatus>();
+            anim.SetBool("isHiting", true);
+            rb.velocity = transform.right * 0;
+            ishiting = true;
+        }
     }
     public void DestroyObject()
     {

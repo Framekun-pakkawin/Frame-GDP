@@ -13,6 +13,8 @@ public class EnemyStatus : MonoBehaviour
     public bool isknockbackable = true;
     public float enemyhp = 20.0f;
     public GameObject slashfx;
+    public bool isBoss2 = false;
+    Boss2Behavior boss2;
     Rigidbody2D rb;
     void Start()
     {
@@ -22,6 +24,10 @@ public class EnemyStatus : MonoBehaviour
         {
             Enemyhp = 0;
             gameObject.SetActive(false);
+        }
+        if (isBoss2)
+        {
+            boss2 = gameObject.GetComponent<Boss2Behavior>();
         }
     }
 
@@ -42,7 +48,14 @@ public class EnemyStatus : MonoBehaviour
             {
                 Alreadydead.Add(KeyName);
             }
-            gameObject.SetActive(false);
+            if (isBoss2 == true)
+            {
+                boss2.isDead = true;
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
     public void knockback(float forceX, float forceY)

@@ -10,15 +10,16 @@ public class Boss2Gate : MonoBehaviour
     public GameObject wall2;
     public GameObject boss2hpbar;
     public float zoomsize = 0.0f;
+    Boss2Behavior boss2code;
     bool Actived = false;
     void Start()
     {
-
+        boss2code = boss2.GetComponent<Boss2Behavior>();
     }
 
     void Update()
     {
-        if (!boss2.activeSelf)
+        if (boss2code.isDead)
         {
             wall1.SetActive(false);
             wall2.SetActive(false);

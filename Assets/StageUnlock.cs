@@ -56,7 +56,7 @@ public class StageUnlock : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.F1))
         {
-            stage1Unlock = true;
+            stage2Unlock = true;
         }
     }
 }
