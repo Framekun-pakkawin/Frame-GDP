@@ -38,7 +38,7 @@ public class chargeballhitbox : MonoBehaviour
             rb.velocity = transform.right * 0;
             ishiting = true;
         }
-        if (hitInfo.gameObject.CompareTag("Demon") == true)
+        if (hitInfo.gameObject.CompareTag("DoubleType") == true)
         {
             enemyposition = hitInfo.transform;
             enemy = hitInfo.GetComponent<EnemyStatus>();

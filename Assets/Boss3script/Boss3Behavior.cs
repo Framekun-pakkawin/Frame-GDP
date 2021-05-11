@@ -8,7 +8,7 @@ public class Boss3Behavior : MonoBehaviour
     [HideInInspector] public Transform maintarget = null;
     [HideInInspector] public Transform target1 = null;
     [HideInInspector] public Transform target2 = null;
-    public float WaitingDelay = 1.0f;
+    public float WaitingDelay = 2.0f;
     public float WarningDelay = 1.0f;
     public float Delay = 3.0f;
     public bool isAttacking = false;
@@ -17,6 +17,8 @@ public class Boss3Behavior : MonoBehaviour
     int[] formatkrate = new int[100];
     int closeatk, middleatk, faratk1, faratk2;
     bool once = false;
+    bool alreadyhalfhp = false;
+    bool alreadylowhp = false;
     string CurrentState = "xxx";
     string IDEAL = "Idel";
     string ATTACK1 = "Attack01";
@@ -24,6 +26,9 @@ public class Boss3Behavior : MonoBehaviour
     string ATTACK3 = "Attack3";
     string ATTACK4 = "Attack4";
     string ATTACK5 = "Attack5";
+
+
+
     void Start()
     {
         formatkrate = new int[100];
@@ -66,10 +71,10 @@ public class Boss3Behavior : MonoBehaviour
     {
         if (target1 != null)
         {
-            closeatk = 50;
+            closeatk = 40;
             middleatk = 30;
-            faratk1 = 10;
-            faratk2 = 10;
+            faratk1 = 15;
+            faratk2 = 15;
         }
         else if (target2 != null)
         {
@@ -119,6 +124,16 @@ public class Boss3Behavior : MonoBehaviour
         else if (!isAttacking && isWaiting)
         {
             ChangeAnimationState(IDEAL);
+        }
+        if (status.Enemyhp <= status.EnemyMaxHp/2.0f && !alreadyhalfhp)
+        {
+
+            alreadyhalfhp = true;
+        }
+        if (status.Enemyhp <= status.EnemyMaxHp / 4.0f && !alreadylowhp)
+        {
+
+            alreadylowhp = true;
         }
     }
     void Attackform(int form)

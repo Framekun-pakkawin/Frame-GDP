@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Beam: {fileID: 1827624010612603012}
   DelayBeam: 5
+  Delaybeforeshoot: 0.5
   MaxScale: 30
 --- !u!1 &1827624010612603012
 GameObject:

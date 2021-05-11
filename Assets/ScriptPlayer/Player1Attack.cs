@@ -10,6 +10,18 @@ public class Player1Attack : MonoBehaviour
     public PlayerMovement playermove;
     [HideInInspector]public float charge = 0.0f;
     public float maxcharge = 3.0f;
+
+    SwitchCenter switchCenter;
+    public string soundname = "xxx";
+    AudioManager audiomanager;
+
+    void Start()
+    {
+        GameObject AM = GameObject.Find("AudioManager");
+        audiomanager = AM.GetComponent<AudioManager>();
+        GameObject SC = GameObject.Find("switchcenter");
+        switchCenter = SC.GetComponent<SwitchCenter>();
+    }
     void Update()
     {
         if (playermove.isGround)
@@ -44,6 +56,10 @@ public class Player1Attack : MonoBehaviour
     }
     public void Active_airhitBox()
     {
+        if (switchCenter.isplayer1)
+        {
+            audiomanager.Play(soundname);
+        }
         AirHitBox.SetActive(true);
     }
     public void Deactive_airhitBox()
@@ -52,6 +68,10 @@ public class Player1Attack : MonoBehaviour
     }
     public void Active_chargehitBox()
     {
+        if (switchCenter.isplayer1)
+        {
+            audiomanager.Play(soundname);
+        }
         ChargeHitBox.SetActive(true);
     }
     public void Deactive_chargehitBox()
@@ -60,6 +80,10 @@ public class Player1Attack : MonoBehaviour
     }
     public void Active_hitBox()
     {
+        if (switchCenter.isplayer1)
+        {
+            audiomanager.Play(soundname);
+        }
         HitBox.SetActive(true);
     }
     public void Deactive_hitBox()

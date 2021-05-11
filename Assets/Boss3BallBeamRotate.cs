@@ -8,10 +8,12 @@ public class Boss3BallBeamRotate : MonoBehaviour
     SwitchCenter switchcenter;
     public GameObject Beam;
     public float DelayBeam = 5.0f;
+    public float Delaybeforeshoot = 1.0f;
     public float MaxScale = 5.0f;
     float CurrScale = 0.5f;
     bool isStarting = false;
     bool isShooting = false;
+    bool StartShoot = false;
     void Start()
     {
         GameObject switchcenterobj;
@@ -36,7 +38,7 @@ public class Boss3BallBeamRotate : MonoBehaviour
             }
             BeamRotating();
         }
-        else
+        else if (isShooting && StartShoot)
         {
             CurrScale += MaxScale * Time.deltaTime;
             if (CurrScale >= MaxScale)
@@ -60,6 +62,8 @@ public class Boss3BallBeamRotate : MonoBehaviour
             isStarting = true;
             yield return new WaitForSeconds(DelayBeam);
             isShooting = true;
+            yield return new WaitForSeconds(Delaybeforeshoot);
+            StartShoot = true;
         }
     }
 }

@@ -44,9 +44,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: maintheme
+  - name: Map1theme
     clip: {fileID: 8300000, guid: 040a81faf830e604b89ae9c890ce70a1, type: 3}
     volume: 1
     pitch: 1
+    isMusic: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Map2theme
+    clip: {fileID: 8300000, guid: 4d03fc754b07d694caf6baa2efe7f43c, type: 3}
+    volume: 1
+    pitch: 1
+    isMusic: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Map3theme
+    clip: {fileID: 8300000, guid: 37d86733b8c094d4594aaf59a6e81e88, type: 3}
+    volume: 1
+    pitch: 1
+    isMusic: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Mainmenu
+    clip: {fileID: 8300000, guid: b0a8502a3e397374383fcb5a9312edce, type: 3}
+    volume: 1
+    pitch: 1
+    isMusic: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Slash1
+    clip: {fileID: 8300000, guid: 3f012d8c87480e14480a65d76893d969, type: 3}
+    volume: 1
+    pitch: 1
+    isMusic: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Slash1
+    clip: {fileID: 8300000, guid: 3f012d8c87480e14480a65d76893d969, type: 3}
+    volume: 1
+    pitch: 1
+    isMusic: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Slash2
+    clip: {fileID: 8300000, guid: 3f012d8c87480e14480a65d76893d969, type: 3}
+    volume: 1
+    pitch: 1
+    isMusic: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: MenuClick
+    clip: {fileID: 8300000, guid: 0098a181182d4fb41ad460ae2d9f8ff3, type: 3}
+    volume: 1
+    pitch: 1
+    isMusic: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Walking
+    clip: {fileID: 8300000, guid: 795778474f35a1346bf0c8b5d05d6588, type: 3}
+    volume: 1
+    pitch: 1
+    isMusic: 0
     loop: 1
     source: {fileID: 0}

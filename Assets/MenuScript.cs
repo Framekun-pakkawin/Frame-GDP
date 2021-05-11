@@ -11,6 +11,15 @@ public class MenuScript : MonoBehaviour
     public GameObject Control;
     public GameObject Audio;
     bool isControl = true;
+
+    public string soundname = "xxx";
+    AudioManager audiomanager;
+
+    void Start()
+    {
+        GameObject AM = GameObject.Find("AudioManager");
+        audiomanager = AM.GetComponent<AudioManager>();
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -29,21 +38,23 @@ public class MenuScript : MonoBehaviour
     }
     public void Go_Tutorial()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("NewTutorial");
     }
     public void Go_Play()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Potae");
     }
 
 
     public void Go_Exit ()
     {
+        audiomanager.Play(soundname);
         Application.Quit();
     }
 
     public void resumeGame()
     {
+        audiomanager.Play(soundname);
         isPause = false;
         Pause.SetActive(false);
         Time.timeScale = 1f;
@@ -52,11 +63,13 @@ public class MenuScript : MonoBehaviour
 
     public void Go_Mainmenu()
     {
+        audiomanager.Play(soundname);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
     public void OptionMenu()
     {
+        audiomanager.Play(soundname);
         Option.SetActive(true);
         Pause.SetActive(false);
         Audio.SetActive(false);
@@ -65,7 +78,8 @@ public class MenuScript : MonoBehaviour
     }
     public void ControlMenu()
     {
-        if(isControl == false)
+        audiomanager.Play(soundname);
+        if (isControl == false)
         {
             Control.SetActive(true);
             Audio.SetActive(false);
@@ -75,7 +89,8 @@ public class MenuScript : MonoBehaviour
     }
     public void AudioMenu()
     {
-        if(isControl == true)
+        audiomanager.Play(soundname);
+        if (isControl == true)
         {
             Audio.SetActive(true);
             Control.SetActive(false);
@@ -85,6 +100,7 @@ public class MenuScript : MonoBehaviour
     }
     public void BackToPause()
     {
+        audiomanager.Play(soundname);
         Pause.SetActive(true);
         Option.SetActive(false);
     }

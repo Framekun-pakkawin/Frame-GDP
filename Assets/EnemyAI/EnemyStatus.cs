@@ -38,7 +38,7 @@ public class EnemyStatus : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         Enemyhp -= Damage;
-        if (gameObject.CompareTag("Demon"))
+        if (gameObject.CompareTag("Demon") || gameObject.CompareTag("DoubleType"))
         {
             Instantiate(slashfx,gameObject.transform.position,gameObject.transform.rotation);
         }

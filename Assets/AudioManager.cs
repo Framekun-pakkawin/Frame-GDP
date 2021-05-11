@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-        Play("maintheme");
+        
     }
     void Update()
     {
@@ -63,6 +63,13 @@ public class AudioManager : MonoBehaviour
             {
                 s.source.Play();
             }
+        }
+    }
+    public void StopAll()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.Stop();
         }
     }
     public void Stop(string name)

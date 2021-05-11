@@ -25,15 +25,19 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool isMoving = false;
     [HideInInspector] public bool isAttacking = false;
     [HideInInspector] public bool isAirAttacking = false;
-    [HideInInspector] public bool isGround = true;
+    [SerializeField] public bool isGround = false;
     [HideInInspector] public bool isFalling = false;
     [HideInInspector] public bool isDamaged = false;
     [HideInInspector] public bool isDamagedanim = false;
     [HideInInspector] public bool ChargeAttacking = false;
 
+    public string soundname = "xxx";
+    AudioManager audiomanager;
+
     void Start()
     {
-
+        GameObject AM = GameObject.Find("AudioManager");
+        audiomanager = AM.GetComponent<AudioManager>();
     }
 
     void Update()
@@ -77,7 +81,17 @@ public class PlayerMovement : MonoBehaviour
         {
             runspeed = normalrunspeed;
         }
-        
+        if (isMoving)
+        {
+            if (!isGround)
+            {
+                audiomanager.Play(soundname);
+            }
+        }
+        else
+        {
+            audiomanager.Stop(soundname);
+        }
     }
 
     void FixedUpdate()

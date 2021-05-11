@@ -19,7 +19,6 @@ public class DialogTemplate : MonoBehaviour
     public GameObject Dialogbox;
     public GameObject BackgroudDialogbox;
     public GameObject playerIcon;
-    public float timeitdisappear = 3.0f;
     public float fadedtime = 3.0f;
     bool isActive = false;
     float curralpha = 0.0f;

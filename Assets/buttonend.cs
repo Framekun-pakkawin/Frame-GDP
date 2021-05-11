@@ -14,10 +14,12 @@ public class buttonend : MonoBehaviour
             EnemyStatus.Alreadydead.Clear();
             if (inTutorial)
             {
+                SoundPlayer.Alreadyplay.Clear();
                 SceneManager.LoadScene("Potae");
             }
             else
             {
+                SoundPlayer.Alreadyplay.Clear();
                 PlayerMovement.currentcheckpoint = 0;
                 SceneManager.LoadScene("Map2");
             }

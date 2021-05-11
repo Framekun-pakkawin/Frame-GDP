@@ -14,13 +14,25 @@ public class StageUnlock : MonoBehaviour
     public GameObject Lock2;
     public GameObject Lock3;
 
+    public string soundname = "xxx";
+    AudioManager audiomanager;
+
+    void Start()
+    {
+        GameObject AM = GameObject.Find("AudioManager");
+        audiomanager = AM.GetComponent<AudioManager>();
+    }
     public void goTutorial()
     {
+        audiomanager.Play(soundname);
+        SoundPlayer.Alreadyplay.Clear();
         SceneManager.LoadScene ("NewTutorial");
     }
     public void goStage1()
     {
-        if(stage1Unlock)
+        audiomanager.Play(soundname);
+        SoundPlayer.Alreadyplay.Clear();
+        if (stage1Unlock)
         {
             SceneManager.LoadScene("Potae");
         }
@@ -28,6 +40,8 @@ public class StageUnlock : MonoBehaviour
     }
     public void goStage2()
     {
+        audiomanager.Play(soundname);
+        SoundPlayer.Alreadyplay.Clear();
         if (stage2Unlock)
         {
             SceneManager.LoadScene("Map2");
@@ -35,6 +49,8 @@ public class StageUnlock : MonoBehaviour
     }
     public void goStage3()
     {
+        audiomanager.Play(soundname);
+        SoundPlayer.Alreadyplay.Clear();
         if (stage3Unlock)
         {
             SceneManager.LoadScene("Map3");
@@ -61,6 +77,7 @@ public class StageUnlock : MonoBehaviour
     }
     public void Go_StageGoBack()
     {
+        audiomanager.Play(soundname);
         SceneManager.LoadScene("Main_Menu");
     }
 }
