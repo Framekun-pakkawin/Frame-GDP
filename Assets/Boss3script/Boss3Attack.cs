@@ -6,9 +6,17 @@ public class Boss3Attack : MonoBehaviour
 {
     public GameObject Attack1Hitbox;
     public GameObject Attack2Hitbox;
+    public GameObject Attack3Hitbox;
     public GameObject boss3Object;
     public GameObject bullettosummon;
     public GameObject bullettopcheck;
+    public GameObject bullettpoint1;
+    public GameObject bullettpoint2;
+    public GameObject bullettpoint3;
+    public GameObject bullettpoint4;
+    public GameObject bullettpoint5;
+    public GameObject bullettpoint6;
+    public GameObject finalwarppoint;
     public GameObject balltosummon;
     public GameObject ballpoint;
     public int amoungtosummon = 10;
@@ -35,6 +43,14 @@ public class Boss3Attack : MonoBehaviour
     public void DeactiveHitBox2()
     {
         Attack2Hitbox.SetActive(false);
+    }
+    public void ActiveHitBox3()
+    {
+        Attack3Hitbox.SetActive(true);
+    }
+    public void DeactiveHitBox3()
+    {
+        Attack3Hitbox.SetActive(false);
     }
     public void FinishAttacking()
     {
@@ -69,5 +85,24 @@ public class Boss3Attack : MonoBehaviour
     public void BallSummoning()
     {
         Instantiate(balltosummon,ballpoint.transform.position,ballpoint.transform.rotation);
+    }
+    public void FinalSwordSum1()
+    {
+        Instantiate(bullettosummon, bullettpoint1.transform.position, bullettpoint1.transform.rotation);
+        Instantiate(bullettosummon, bullettpoint2.transform.position, bullettpoint2.transform.rotation);
+    }
+    public void FinalSwordSum2()
+    {
+        Instantiate(bullettosummon, bullettpoint3.transform.position, bullettpoint3.transform.rotation);
+        Instantiate(bullettosummon, bullettpoint4.transform.position, bullettpoint4.transform.rotation);
+    }
+    public void FinalSwordSum3()
+    {
+        Instantiate(bullettosummon, bullettpoint5.transform.position, bullettpoint5.transform.rotation);
+        Instantiate(bullettosummon, bullettpoint6.transform.position, bullettpoint6.transform.rotation);
+    }
+    public void FinalWrap()
+    {
+        boss3Object.transform.position = finalwarppoint.transform.position;
     }
 }

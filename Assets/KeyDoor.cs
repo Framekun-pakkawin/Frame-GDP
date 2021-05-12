@@ -19,4 +19,11 @@ public class KeyDoor : MonoBehaviour
             }
         }
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            key = 3;
+        }
+    }
 }

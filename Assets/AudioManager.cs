@@ -65,6 +65,27 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+    public void StopAllExcept(string name)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.name != name)
+            {
+                s.source.Stop();
+            }
+        }
+    }
+    public bool isPlaying(string name)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.name == name)
+            {
+                return s.source.isPlaying;
+            }
+        }
+        return false;
+    }
     public void StopAll()
     {
         foreach (Sound s in sounds)

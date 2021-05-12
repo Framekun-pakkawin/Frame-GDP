@@ -22,10 +22,10 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector] public bool isFacingright = true;
     [HideInInspector] public bool jump = false;
-    [HideInInspector] public bool isMoving = false;
+    public bool isMoving = false;
     [HideInInspector] public bool isAttacking = false;
     [HideInInspector] public bool isAirAttacking = false;
-    [SerializeField] public bool isGround = false;
+    public bool isGround = false;
     [HideInInspector] public bool isFalling = false;
     [HideInInspector] public bool isDamaged = false;
     [HideInInspector] public bool isDamagedanim = false;
@@ -81,9 +81,9 @@ public class PlayerMovement : MonoBehaviour
         {
             runspeed = normalrunspeed;
         }
-        if (isMoving)
+        if (isMoving && isGround)
         {
-            if (!isGround)
+            if (!audiomanager.isPlaying(soundname))
             {
                 audiomanager.Play(soundname);
             }
@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         {
             audiomanager.Stop(soundname);
         }
+        
     }
 
     void FixedUpdate()

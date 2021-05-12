@@ -12,15 +12,16 @@ public class buttonend : MonoBehaviour
         if (hitInfo.gameObject.CompareTag("Player"))
         {
             EnemyStatus.Alreadydead.Clear();
+            KeyItem.Alreadycollect.Clear();
+            PlayerMovement.currentcheckpoint = 0;
             if (inTutorial)
             {
-                SoundPlayer.Alreadyplay.Clear();
-                SceneManager.LoadScene("Potae");
+                StageUnlock.stage1Unlock = true;
+                SceneManager.LoadScene("IntroMap1");
             }
             else
             {
-                SoundPlayer.Alreadyplay.Clear();
-                PlayerMovement.currentcheckpoint = 0;
+                StageUnlock.stage2Unlock = true;
                 SceneManager.LoadScene("Map2");
             }
         }

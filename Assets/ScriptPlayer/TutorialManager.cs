@@ -79,8 +79,7 @@ public class TutorialManager : MonoBehaviour
         {
             if (!isDelay)
             {
-                SoundPlayer.Alreadyplay.Clear();
-                SceneManager.LoadScene("Potae");
+                SceneManager.LoadScene("IntroMap1");
             }
         }
 

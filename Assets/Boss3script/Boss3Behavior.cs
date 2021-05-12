@@ -57,12 +57,14 @@ public class Boss3Behavior : MonoBehaviour
             if (gameObject.transform.position.x >= maintarget.position.x)
             {
                 status.knockbackright = true;
-                gameObject.transform.localScale = new Vector3(Mathf.Abs(gameObject.transform.localScale.x), gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                gameObject.transform.eulerAngles = new Vector3(0,0,0);
+                //gameObject.transform.localScale = new Vector3(Mathf.Abs(gameObject.transform.localScale.x), gameObject.transform.localScale.y, gameObject.transform.localScale.z);
             }
             else
             {
                 status.knockbackright = false;
-                gameObject.transform.localScale = new Vector3(-Mathf.Abs(gameObject.transform.localScale.x), gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+                //gameObject.transform.localScale = new Vector3(-Mathf.Abs(gameObject.transform.localScale.x), gameObject.transform.localScale.y, gameObject.transform.localScale.z);
             }
 
         }
@@ -127,12 +129,14 @@ public class Boss3Behavior : MonoBehaviour
         }
         if (status.Enemyhp <= status.EnemyMaxHp/2.0f && !alreadyhalfhp)
         {
-
+            isAttacking = true;
+            ChangeAnimationState(ATTACK5);
             alreadyhalfhp = true;
         }
         if (status.Enemyhp <= status.EnemyMaxHp / 4.0f && !alreadylowhp)
         {
-
+            isAttacking = true;
+            ChangeAnimationState(ATTACK5);
             alreadylowhp = true;
         }
     }

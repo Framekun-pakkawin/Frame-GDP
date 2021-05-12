@@ -22,6 +22,7 @@ public class Boss3SlashHitBox : MonoBehaviour
                 player.knockbackright = true;
             }
             player.knockbackwithdamage(Damage, knockbackX, knockbackY);
+            gameObject.SetActive(false);
         }
     }
 }

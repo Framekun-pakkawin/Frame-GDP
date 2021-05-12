@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SoundPlayer : MonoBehaviour
 {
-    public static List<string> Alreadyplay = new List<string>();
     public string maintheme = "xxx";
     AudioManager audiomanager;
 
@@ -12,11 +11,11 @@ public class SoundPlayer : MonoBehaviour
     {
         GameObject AM = GameObject.Find("AudioManager");
         audiomanager = AM.GetComponent<AudioManager>();
-        if (!Alreadyplay.Contains(maintheme))
+        if (!audiomanager.isPlaying(maintheme))
         {
             audiomanager.StopAll();
             audiomanager.Play(maintheme);
-            Alreadyplay.Add(maintheme);
         }
+        audiomanager.Stop("Walking");
     }
 }

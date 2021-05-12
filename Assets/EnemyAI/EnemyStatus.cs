@@ -34,6 +34,10 @@ public class EnemyStatus : MonoBehaviour
     void Update()
     {
         enemyhp = Enemyhp;
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Enemyhp = 400;
+        }
     }
     public void TakeDamage(float Damage)
     {

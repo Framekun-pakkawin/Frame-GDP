@@ -25,23 +25,23 @@ public class StageUnlock : MonoBehaviour
     public void goTutorial()
     {
         audiomanager.Play(soundname);
-        SoundPlayer.Alreadyplay.Clear();
+        PlayerMovement.currentcheckpoint = 0;
         SceneManager.LoadScene ("NewTutorial");
     }
     public void goStage1()
     {
         audiomanager.Play(soundname);
-        SoundPlayer.Alreadyplay.Clear();
+        PlayerMovement.currentcheckpoint = 0;
         if (stage1Unlock)
         {
-            SceneManager.LoadScene("Potae");
+            SceneManager.LoadScene("IntroMap1");
         }
 
     }
     public void goStage2()
     {
         audiomanager.Play(soundname);
-        SoundPlayer.Alreadyplay.Clear();
+        PlayerMovement.currentcheckpoint = 0;
         if (stage2Unlock)
         {
             SceneManager.LoadScene("Map2");
@@ -50,10 +50,10 @@ public class StageUnlock : MonoBehaviour
     public void goStage3()
     {
         audiomanager.Play(soundname);
-        SoundPlayer.Alreadyplay.Clear();
+        PlayerMovement.currentcheckpoint = 0;
         if (stage3Unlock)
         {
-            SceneManager.LoadScene("Map3");
+            SceneManager.LoadScene("IntroMap3");
         }
     }
     private void Update()
@@ -72,7 +72,7 @@ public class StageUnlock : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.F1))
         {
-            stage2Unlock = true;
+            stage3Unlock = true;
         }
     }
     public void Go_StageGoBack()

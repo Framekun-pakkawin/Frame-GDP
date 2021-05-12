@@ -15,11 +15,23 @@ EditorBuildSettings:
     path: Assets/Scenes/NewTutorial.unity
     guid: 544525b4b68bceb459644ff48c33ad1a
   - enabled: 1
+    path: Assets/Scenes/IntroMap1.unity
+    guid: 5d6bd7f41e707e947944fc668fa4424a
+  - enabled: 1
     path: Assets/Scenes/Potae.unity
     guid: 3a32bef4be16bfd4695fed0c7f7102cb
   - enabled: 1
     path: Assets/Scenes/Map2.unity
     guid: a82c8214a3558874c9f76a6c980e73bc
+  - enabled: 1
+    path: Assets/Scenes/EndingMap2.unity
+    guid: 8ac51d50751937b4a8a87503e12e1ddf
+  - enabled: 1
+    path: Assets/Scenes/IntroMap3.unity
+    guid: 45dd926989c1a2a4081cb5ab7cc06bd0
+  - enabled: 1
+    path: Assets/Scenes/Map3.unity
+    guid: 5c0cff91ce19c8e4989b792ef3ae1c35
   - enabled: 1
     path: Assets/Scenes/ThankEngineProof.unity
     guid: df6e3d5b0be415246a840fd23bf25241

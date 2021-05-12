@@ -8,6 +8,7 @@ public class Boss2Gate : MonoBehaviour
     public GameObject boss2;
     public GameObject wall1;
     public GameObject wall2;
+    public GameObject KeyUI;
     public GameObject boss2hpbar;
     public float zoomsize = 0.0f;
     Boss2Behavior boss2code;
@@ -30,6 +31,7 @@ public class Boss2Gate : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Player") && !Actived)
         {
+            KeyUI.SetActive(false);
             wall1.SetActive(true);
             wall2.SetActive(true);
             boss2hpbar.SetActive(true);
