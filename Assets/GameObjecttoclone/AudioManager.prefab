@@ -79,16 +79,16 @@ MonoBehaviour:
     isMusic: 0
     loop: 0
     source: {fileID: 0}
-  - name: Slash1
-    clip: {fileID: 8300000, guid: 3f012d8c87480e14480a65d76893d969, type: 3}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: c0ca3ba0757d67a448a84047cc5c4953, type: 3}
     volume: 1
     pitch: 1
     isMusic: 0
     loop: 0
     source: {fileID: 0}
-  - name: Slash2
-    clip: {fileID: 8300000, guid: 3f012d8c87480e14480a65d76893d969, type: 3}
-    volume: 1
+  - name: Player2atk
+    clip: {fileID: 8300000, guid: 966d20df59f04ef41b53e78efdd24ce9, type: 3}
+    volume: 0.5
     pitch: 1
     isMusic: 0
     loop: 0

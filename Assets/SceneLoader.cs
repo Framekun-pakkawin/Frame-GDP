@@ -12,7 +12,6 @@ public class SceneLoader : MonoBehaviour
     {
         if (hitInfo.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(scenenametoload);
             PlayerMovement.currentcheckpoint = 0;
             if (endofMap1)
             {
@@ -22,6 +21,11 @@ public class SceneLoader : MonoBehaviour
             {
                 StageUnlock.stage3Unlock = true;
             }
+            SceneManager.LoadScene(scenenametoload);
         }
+    }
+    public void loadingscene()
+    {
+        SceneManager.LoadScene(scenenametoload);
     }
 }

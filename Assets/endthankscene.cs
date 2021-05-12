@@ -7,6 +7,6 @@ public class endthankscene : MonoBehaviour
 {
     public void Backtomainmenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main_Menu");
     }
 }

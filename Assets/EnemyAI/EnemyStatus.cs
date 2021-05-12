@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyStatus : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class EnemyStatus : MonoBehaviour
     public float enemyhp = 20.0f;
     public GameObject slashfx;
     public bool isBoss2 = false;
+    public bool isBoss3 = false;
+    public GameObject Flashtosummon;
+    bool boss3alreadydead = false;
     Boss2Behavior boss2;
     Rigidbody2D rb;
     void Start()
@@ -52,7 +56,11 @@ public class EnemyStatus : MonoBehaviour
             {
                 Alreadydead.Add(KeyName);
             }
-            if (isBoss2 == true)
+            if (isBoss3 && !boss3alreadydead)
+            {
+                StartCoroutine(DeadFlash());
+            }
+            else if (isBoss2 == true)
             {
                 boss2.isDead = true;
             }
@@ -61,6 +69,13 @@ public class EnemyStatus : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+    }
+    IEnumerator DeadFlash()
+    {
+        boss3alreadydead = true;
+        Instantiate(Flashtosummon,gameObject.transform.position,gameObject.transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("EndCredit");
     }
     public void knockback(float forceX, float forceY)
     {

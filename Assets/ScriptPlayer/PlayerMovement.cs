@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool ChargeAttacking = false;
 
     public string soundname = "xxx";
+    public string Hurtsound = "Hurt";
     AudioManager audiomanager;
 
     void Start()
@@ -135,6 +136,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDamaged)
         {
+            audiomanager.Play(Hurtsound);
             playerhp.currentHealth -= damage;
             healthBar.SetHealth(playerhp.currentHealth);
             StartCoroutine(IframeCountdown());
@@ -144,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDamaged)
         {
+            audiomanager.Play(Hurtsound);
             if (knockbackright == false)
             {
                 forceX = -forceX;
@@ -160,6 +163,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isDamaged)
         {
+            audiomanager.Play(Hurtsound);
             if (knockbackright == false)
             {
                 forceX = -forceX;

@@ -7252,6 +7252,7 @@ MonoBehaviour:
   isDamagedanim: 0
   ChargeAttacking: 0
   soundname: Walking
+  Hurtsound: Hurt
 --- !u!114 &1087699502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7536,6 +7537,7 @@ MonoBehaviour:
   isDamagedanim: 0
   ChargeAttacking: 0
   soundname: xxx
+  Hurtsound: Hurt
 --- !u!114 &1135808753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7663,6 +7665,7 @@ MonoBehaviour:
   charge: 0
   maxcharge: 3
   isClick: 0
+  soundname: Player2atk
 --- !u!114 &1135808759
 MonoBehaviour:
   m_ObjectHideFlags: 0

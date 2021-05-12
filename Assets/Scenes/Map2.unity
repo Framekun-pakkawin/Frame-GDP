@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1356,6 +1356,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &27149004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2408,6 +2410,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &63441022
 Rigidbody2D:
   serializedVersion: 4
@@ -2835,6 +2839,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &69384712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3333,75 +3339,6 @@ Transform:
   m_Father: {fileID: 1775781740}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &81818168
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7120884970241649062, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 252885483aa0ea04893574e891d9656d, type: 3}
 --- !u!1 &82472795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3847,6 +3784,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &85758691
 Rigidbody2D:
   serializedVersion: 4
@@ -4243,6 +4182,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &94636931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4709,6 +4650,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &101232587
 Rigidbody2D:
   serializedVersion: 4
@@ -6889,6 +6832,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &144956583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9071,6 +9016,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &184187867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10651,6 +10598,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &217495356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11480,6 +11429,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &239632065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11900,6 +11851,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &251503186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12136,6 +12089,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &256294900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12534,6 +12489,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &265911954
 Rigidbody2D:
   serializedVersion: 4
@@ -13928,6 +13885,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &293979691
 Rigidbody2D:
   serializedVersion: 4
@@ -14362,6 +14321,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &303419549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18923,6 +18884,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &410900836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19910,6 +19873,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &431174921
 Rigidbody2D:
   serializedVersion: 4
@@ -20796,6 +20761,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &461218015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21566,6 +21533,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &473481762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23649,6 +23618,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &522307393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25217,6 +25188,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &557188204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26584,6 +26557,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &579174950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27020,6 +26995,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &590709834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28731,6 +28708,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &638040619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29032,6 +29011,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &639088866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29822,6 +29803,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &654336580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30675,6 +30658,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &666190690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31402,6 +31387,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &683344596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32686,6 +32673,7 @@ MonoBehaviour:
   charge: 0
   maxcharge: 2
   isClick: 0
+  soundname: Player2atk
 --- !u!114 &713315789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32736,6 +32724,7 @@ MonoBehaviour:
   isDamagedanim: 0
   ChargeAttacking: 0
   soundname: xxx
+  Hurtsound: Hurt
 --- !u!114 &713315791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33643,6 +33632,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &726093948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34551,6 +34542,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &769363667
 Rigidbody2D:
   serializedVersion: 4
@@ -34773,6 +34766,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &771579265
 Rigidbody2D:
   serializedVersion: 4
@@ -36491,6 +36486,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &807653461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37074,6 +37071,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &819823377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37859,6 +37858,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &826664666
 Rigidbody2D:
   serializedVersion: 4
@@ -38120,6 +38121,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &830327580
 Rigidbody2D:
   serializedVersion: 4
@@ -38546,6 +38549,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &836292957
 Rigidbody2D:
   serializedVersion: 4
@@ -39652,6 +39657,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &854238311
 Rigidbody2D:
   serializedVersion: 4
@@ -41450,6 +41457,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &899635486
 Rigidbody2D:
   serializedVersion: 4
@@ -42355,6 +42364,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &912915000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43859,6 +43870,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &950572118
 Rigidbody2D:
   serializedVersion: 4
@@ -44866,6 +44879,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &975758273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45499,6 +45514,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &989838829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46912,6 +46929,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1016550278
 Rigidbody2D:
   serializedVersion: 4
@@ -48199,6 +48218,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1041604845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49004,6 +49025,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1060694066
 Rigidbody2D:
   serializedVersion: 4
@@ -49312,6 +49335,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1071725966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49831,6 +49856,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &1081493192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49945,6 +49972,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1085351370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52152,6 +52181,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1146033541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52506,6 +52537,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1150387870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53355,6 +53388,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1167094566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54868,6 +54903,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &1198990233
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55165,6 +55202,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &1207889257
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56907,6 +56946,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 6381967152323117777, guid: 39d9151393fc8be42b1e9fc7acebf0a1, type: 3}
   isBoss2: 1
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1237848426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59053,6 +59094,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1273680540
 Rigidbody2D:
   serializedVersion: 4
@@ -59165,6 +59208,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &1273785878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59750,6 +59795,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1281376056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60723,6 +60770,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1311234425
 Rigidbody2D:
   serializedVersion: 4
@@ -63383,6 +63432,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &1327279960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63551,6 +63602,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1331065273
 Rigidbody2D:
   serializedVersion: 4
@@ -63762,6 +63815,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1334905411
 Rigidbody2D:
   serializedVersion: 4
@@ -64718,6 +64773,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1361465356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7120884970241649062, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120884970241649063, guid: 252885483aa0ea04893574e891d9656d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 252885483aa0ea04893574e891d9656d, type: 3}
 --- !u!1 &1361481902
 GameObject:
   m_ObjectHideFlags: 0
@@ -64949,6 +65073,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1362169463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66836,6 +66962,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1420584980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66992,6 +67120,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &1421339006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67251,6 +67381,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1425388911
 Rigidbody2D:
   serializedVersion: 4
@@ -71012,6 +71144,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1463706615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73136,6 +73270,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &1521278041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73543,6 +73679,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1528349335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73847,6 +73985,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1534647162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75326,6 +75466,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1554704180
 Rigidbody2D:
   serializedVersion: 4
@@ -76202,6 +76344,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1577184332
 Rigidbody2D:
   serializedVersion: 4
@@ -77722,6 +77866,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1609838588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78023,6 +78169,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1621894445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78796,6 +78944,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1645029243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79164,6 +79314,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1659694042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79376,6 +79528,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1660724874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80860,6 +81014,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1695119002
 Rigidbody2D:
   serializedVersion: 4
@@ -81480,6 +81636,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1723523425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82429,6 +82587,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1740182595
 Rigidbody2D:
   serializedVersion: 4
@@ -82751,6 +82911,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1749213252
 Rigidbody2D:
   serializedVersion: 4
@@ -84306,6 +84468,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &1789313329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84522,6 +84686,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &1794291936
 Rigidbody2D:
   serializedVersion: 4
@@ -88825,6 +88991,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1906584948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89682,6 +89850,7 @@ MonoBehaviour:
   isDamagedanim: 0
   ChargeAttacking: 0
   soundname: Walking
+  Hurtsound: Hurt
 --- !u!114 &1932268606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90443,6 +90612,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1943060289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91707,6 +91878,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1971884691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92359,6 +92532,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &1986823247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94060,6 +94235,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &2029692933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94334,6 +94511,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!50 &2034490364
 Rigidbody2D:
   serializedVersion: 4
@@ -96495,6 +96674,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!61 &2100141888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -97233,6 +97414,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 0}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &2116516469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98567,6 +98750,8 @@ MonoBehaviour:
   enemyhp: 20
   slashfx: {fileID: 1695696767386341521, guid: 9ef1e9d02146a0c46bbc91c9e46c678f, type: 3}
   isBoss2: 0
+  isBoss3: 0
+  Flashtosummon: {fileID: 0}
 --- !u!114 &2139349413
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,19 @@ public class Player2Attack : MonoBehaviour
     [HideInInspector]public float charge = 0.0f;
     public float maxcharge = 3.0f;
     public bool isClick = false;
+
+    SwitchCenter switchCenter;
+    public string soundname = "xxx";
+    AudioManager audiomanager;
+
+    void Start()
+    {
+        GameObject AM = GameObject.Find("AudioManager");
+        audiomanager = AM.GetComponent<AudioManager>();
+        GameObject SC = GameObject.Find("switchcenter");
+        switchCenter = SC.GetComponent<SwitchCenter>();
+    }
+
     void Update()
     {
         Transform[] allfirepoint = { firepoint1, firepoint2, firepoint3};
@@ -65,6 +78,10 @@ public class Player2Attack : MonoBehaviour
     }
     void Shoot(Transform firepoint)
     {
+        if (!switchCenter.isplayer1)
+        {
+            audiomanager.Play(soundname);
+        }
         Instantiate(bulletPrefab,firepoint.position,firepoint.rotation);
     }
 }
