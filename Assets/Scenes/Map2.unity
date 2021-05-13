@@ -56939,7 +56939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KeyName: 
   isPermenent: 0
-  EnemyMaxHp: 10
+  EnemyMaxHp: 800
   Enemyhp: 20
   knockbackright: 1
   isknockbackable: 1

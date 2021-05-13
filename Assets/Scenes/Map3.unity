@@ -7861,7 +7861,7 @@ MonoBehaviour:
   isDamagedanim: 0
   ChargeAttacking: 0
   soundname: xxx
-  hurtsoundname: hurt
+  Hurtsound: Hurt
 --- !u!114 &757397922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14415,7 +14415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KeyName: 
   isPermenent: 0
-  EnemyMaxHp: 800
+  EnemyMaxHp: 1000
   Enemyhp: 20
   knockbackright: 1
   isknockbackable: 1
@@ -16857,7 +16857,7 @@ MonoBehaviour:
   isDamagedanim: 0
   ChargeAttacking: 0
   soundname: Walking
-  hurtsoundname: Hurt
+  Hurtsound: Hurt
 --- !u!114 &1704215493
 MonoBehaviour:
   m_ObjectHideFlags: 0

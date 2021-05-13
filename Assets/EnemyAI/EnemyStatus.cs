@@ -64,7 +64,7 @@ public class EnemyStatus : MonoBehaviour
             {
                 boss2.isDead = true;
             }
-            else
+            else if(!isBoss3)
             {
                 gameObject.SetActive(false);
             }
@@ -74,7 +74,7 @@ public class EnemyStatus : MonoBehaviour
     {
         boss3alreadydead = true;
         Instantiate(Flashtosummon,gameObject.transform.position,gameObject.transform.rotation);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("EndCredit");
     }
     public void knockback(float forceX, float forceY)
