@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8678,12 +8678,12 @@ MonoBehaviour:
   - Dialog: "Ummmm\u2026I remember that I created some Organization to fight with
       the monster."
     faceSprite: {fileID: 21300000, guid: a715d5607d2822145990299d2b7f647b, type: 3}
-    fontsize: 30
+    fontsize: 20
     textcolor: {r: 0, g: 0.14117648, b: 1, a: 0}
     timeitdisappear: 3
   - Dialog: " You mean \u201CHoly Saint Guild\u201D..."
     faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
-    fontsize: 50
+    fontsize: 20
     textcolor: {r: 1, g: 0, b: 0.010215759, a: 0}
     timeitdisappear: 3
   - Dialog: "Yeah\u2026"
@@ -8693,7 +8693,7 @@ MonoBehaviour:
     timeitdisappear: 3
   - Dialog: "Well\u2026  looks like you are my senior "
     faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
-    fontsize: 50
+    fontsize: 20
     textcolor: {r: 1, g: 0, b: 0.009897232, a: 0}
     timeitdisappear: 5
   - Dialog: That is my honor to be a guide for a newbie like you.
@@ -40700,7 +40700,7 @@ MonoBehaviour:
     timeitdisappear: 3
   - Dialog: (Eve, the hero who ends the Eden war!?)
     faceSprite: {fileID: 21300000, guid: 8ab500ed127974d4b8a6e3052ca8f848, type: 3}
-    fontsize: 50
+    fontsize: 20
     textcolor: {r: 1, g: 0, b: 0.009897232, a: 0}
     timeitdisappear: 5
   Dialogbox: {fileID: 778458583}
